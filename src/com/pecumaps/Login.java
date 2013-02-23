@@ -1,13 +1,21 @@
 package com.pecumaps;
 
+import java.util.HashMap;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.json.JSONObject;
+
+import android.net.ParseException;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Login extends Activity {
 	
@@ -17,6 +25,7 @@ public class Login extends Activity {
 	private TextView logSign;
 	private TextView loginError;
 	private Button toggleButton;
+	private Button goButton;
 	
 	private boolean registering;
 	
@@ -32,9 +41,12 @@ public class Login extends Activity {
 		logSign = (TextView) findViewById(R.id.outText_log_sign);
 		loginError = (TextView) findViewById(R.id.outText_login_error);
 		toggleButton = (Button) findViewById(R.id.btn_log_sign_toggle);
+		goButton = (Button) findViewById(R.id.btn_go);
+		
 		
 		//set up for login/register toggling
 		registering = false;
+		
 		
 		toggleButton.setOnClickListener(
 			new View.OnClickListener() {
@@ -54,9 +66,31 @@ public class Login extends Activity {
 					}
 				}
 			});
+		goButton.setOnClickListener(
+			new View.OnClickListener() {
+				@Override
+				public void onClick(View view) {
+					
+					if(registering){
+						
+					}
+					else{
+						HashMap<String,String> data = new HashMap<String,String>();
+						data.put("email", eMailText.getText().toString());
+						data.put("password", passText.getText().toString());
+						AsyncHttpPost asyncHttpPost = new AsyncHttpPost(data);
+						asyncHttpPost.execute("http://cool-maps-stuff.herokuapp.com/login/");
+						
+					}
+				}
+			});
 		
 		
-		
+	}
+	
+	private void putToast(String message) {
+		Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+		toast.show();
 	}
 
 	@Override
@@ -65,5 +99,25 @@ public class Login extends Activity {
 		getMenuInflater().inflate(R.menu.login_screen, menu);
 		return true;
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
