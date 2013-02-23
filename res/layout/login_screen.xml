@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login" >
+
+    <Button
+        android:id="@+id/btn_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Go" />
+
+    <EditText
+        android:id="@+id/inText_pass1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/inText_email"
+        android:layout_alignRight="@+id/inText_email"
+        android:layout_below="@+id/inText_email"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/inText_pass2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/inText_pass1"
+        android:layout_alignRight="@+id/inText_pass1"
+        android:layout_below="@+id/inText_pass1"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/inText_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_log_sign_toggle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:hint="Email" />
+
+    <Button
+        android:id="@+id/btn_log_sign_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:text="Sign Up" />
+
+    <TextView
+        android:id="@+id/outText_log_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/inText_email"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:text="Log In"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/outText_login_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_go"
+        android:layout_alignLeft="@+id/inText_pass2"
+        android:layout_alignRight="@+id/inText_pass2"
+        android:layout_marginBottom="44dp"
+        android:text="" />
+
+</RelativeLayout>
