@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/inText_search"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Search" />
+
+        <Button
+            android:id="@+id/btn_editProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit" />
+
+        <Button
+            android:id="@+id/btn_closeMP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Close" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/inText_firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="95dp"
+        android:enabled="false"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/inText_firstName"
+        android:layout_alignBottom="@+id/inText_firstName"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/inText_firstName"
+        android:layout_marginLeft="10dp"
+        android:text="First Name" />
+
+    <EditText
+        android:id="@+id/inText_lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/inText_firstName"
+        android:layout_below="@+id/inText_firstName"
+        android:layout_marginTop="15dp"
+        android:enabled="false"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/inText_lastName"
+        android:layout_alignBottom="@+id/inText_lastName"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:text="Last Name" />
+
+    <EditText
+        android:id="@+id/inText_phone"
+        android:inputType="phone" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/inText_lastName"
+        android:layout_below="@+id/inText_lastName"
+        android:layout_marginTop="15dp"
+        android:enabled="false"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/inText_phone"
+        android:layout_alignBottom="@+id/inText_phone"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/textView2"
+        android:text="Phone" />
+
+    <TextView
+        android:id="@+id/outText_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/outText_screenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/outText_score"
+        android:layout_alignBottom="@+id/outText_score"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_toLeftOf="@+id/outText_score"
+        android:text="" />
+
+
+</RelativeLayout>

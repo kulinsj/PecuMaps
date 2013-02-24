@@ -135,6 +135,8 @@ containing a value of this type.
         public static final int bottomBar=0x7f040019;
         public static final int bottom_layout=0x7f040014;
         public static final int btn_close=0x7f040018;
+        public static final int btn_closeMP=0x7f04001f;
+        public static final int btn_editProfile=0x7f04001e;
         public static final int btn_go=0x7f040007;
         public static final int btn_log_sign_toggle=0x7f04000c;
         public static final int btn_menu=0x7f040010;
@@ -142,17 +144,22 @@ containing a value of this type.
         public static final int btn_postAJob=0x7f04001c;
         public static final int btn_settings=0x7f04001a;
         public static final int inText_email=0x7f04000b;
+        public static final int inText_firstName=0x7f040020;
+        public static final int inText_lastName=0x7f040022;
         public static final int inText_pass1=0x7f040009;
         public static final int inText_pass2=0x7f04000a;
+        public static final int inText_phone=0x7f040024;
         public static final int inText_search=0x7f04000f;
         public static final int loadingCont=0x7f040004;
         public static final int map=0x7f040013;
-        public static final int menu_settings=0x7f04001f;
+        public static final int menu_settings=0x7f040028;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
         public static final int notificationsListView=0x7f04001d;
         public static final int outText_log_sign=0x7f04000d;
         public static final int outText_login_error=0x7f040008;
+        public static final int outText_score=0x7f040026;
+        public static final int outText_screenName=0x7f040027;
         public static final int progressBar1=0x7f040005;
         public static final int resultScroller=0x7f040015;
         public static final int resultViewLayout=0x7f040017;
@@ -160,7 +167,9 @@ containing a value of this type.
         public static final int satellite=0x7f040002;
         public static final int searchTools_layout=0x7f040012;
         public static final int terrain=0x7f040003;
-        public static final int textView1=0x7f04001e;
+        public static final int textView1=0x7f040021;
+        public static final int textView2=0x7f040023;
+        public static final int textView3=0x7f040025;
         public static final int topBar=0x7f04000e;
         public static final int top_layout=0x7f040011;
     }
@@ -168,7 +177,8 @@ containing a value of this type.
         public static final int login_screen=0x7f030000;
         public static final int main_view=0x7f030001;
         public static final int menu=0x7f030002;
-        public static final int user_profile=0x7f030003;
+        public static final int my_profile=0x7f030003;
+        public static final int user_profile=0x7f030004;
     }
     public static final class menu {
         public static final int login_screen=0x7f070000;
