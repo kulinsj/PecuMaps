@@ -13,11 +13,13 @@ import org.json.JSONTokener;
 import android.net.ParseException;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.pecumaps.AsyncHttpPost.GetJSONListener;
@@ -32,6 +34,8 @@ public class Login extends Activity implements GetJSONListener{
 	private TextView loginError;
 	private Button toggleButton;
 	private Button goButton;
+	private RelativeLayout MainCont;
+	private RelativeLayout loadingCont;
 	
 	//set up private variables
 	private boolean registering;
@@ -50,6 +54,8 @@ public class Login extends Activity implements GetJSONListener{
 		loginError = (TextView) findViewById(R.id.outText_login_error);
 		toggleButton = (Button) findViewById(R.id.btn_log_sign_toggle);
 		goButton = (Button) findViewById(R.id.btn_go);
+		MainCont = (RelativeLayout) findViewById(R.id.MainCont);
+		loadingCont = (RelativeLayout) findViewById(R.id.loadingCont);
 		
 		
 		//set up for login/register toggling
@@ -74,18 +80,24 @@ public class Login extends Activity implements GetJSONListener{
 					}
 				}
 			});
+		//on Go buttin click
 		goButton.setOnClickListener(
 			new View.OnClickListener() {
 				@Override
 				public void onClick(View view) {
-					
-					
-					
-					HashMap<String,String> data = new HashMap<String,String>();
-					data.put("email", eMailText.getText().toString());
-					data.put("password", passText.getText().toString());
-					AsyncHttpPost asyncHttpPost = new AsyncHttpPost(data,act);
-					asyncHttpPost.execute("login/");
+					//either log in
+					if(!registering){
+						loadingCont.setVisibility(View.VISIBLE);
+						HashMap<String,String> data = new HashMap<String,String>();
+						data.put("email", eMailText.getText().toString());
+						data.put("password", passText.getText().toString());
+						AsyncHttpPost asyncHttpPost = new AsyncHttpPost(data,act);
+						asyncHttpPost.execute("login/");
+					}
+					//or register
+					else{
+						//TO-DO:  REGISTER NEW USER HERE
+					}
 				}
 			});
 	}
@@ -109,7 +121,20 @@ public class Login extends Activity implements GetJSONListener{
 		try{
 			response = (JSONObject) new JSONTokener(jsonFromNet).nextValue();
 			if(response != null){
-				Log.d("success", "success  is  "+response.getString("success"));
+				if(response.getString("success")=="false"){
+					loadingCont.setVisibility(View.INVISIBLE);
+					putToast(response.getString("message"));
+				}
+				else if(!registering){
+					//login successful
+					Intent intent = new Intent(this, MainActivity.class);
+					startActivity(intent);
+					finish();
+				}
+				else{
+					//register successful
+					
+				}
 			}
 		} catch (JSONException e) {
 	        e.printStackTrace();
