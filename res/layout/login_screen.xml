@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="160dp"
             android:text="Go" />
 
         <TextView
@@ -51,21 +51,6 @@
             android:layout_above="@+id/btn_go"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp" />
-
-        <EditText
-            android:id="@+id/inText_pass2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/outText_login_error"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="28dp"
-            android:ems="10"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:visibility="invisible" >
-
-            <requestFocus />
-        </EditText>
 
         <EditText
             android:id="@+id/inText_pass1"
@@ -109,6 +94,17 @@
             android:text="Log In"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
+        <EditText
+            android:id="@+id/inText_pass2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/outText_login_error"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:ems="10"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:visibility="invisible" />
 
     </RelativeLayout>
 

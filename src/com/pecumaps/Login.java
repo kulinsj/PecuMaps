@@ -122,6 +122,7 @@ public class Login extends Activity implements GetJSONListener{
 			response = (JSONObject) new JSONTokener(jsonFromNet).nextValue();
 			if(response != null){
 				if(response.getString("success")=="false"){
+					//failed, notify user why
 					loadingCont.setVisibility(View.INVISIBLE);
 					putToast(response.getString("message"));
 				}
