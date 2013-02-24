@@ -42,7 +42,7 @@ public class AsyncHttpPost extends AsyncTask<String, String, String>{
 	
     public AsyncHttpPost(HashMap<String, String> data, GetJSONListener listener) {
         mData = data;
-        Log.d("1", data.toString());
+        Log.d("data", data.toString());
         this.getJSONListener = listener;
     }
 
@@ -87,7 +87,6 @@ public class AsyncHttpPost extends AsyncTask<String, String, String>{
      */
     @Override
     protected void onPostExecute(String json) {
-    	Log.d("here I am", json);
     	getJSONListener.onRemoteCallComplete(json);
     }
 

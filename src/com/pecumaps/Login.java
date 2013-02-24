@@ -1,5 +1,6 @@
 package com.pecumaps;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.apache.http.HttpEntity;
@@ -7,6 +8,7 @@ import org.apache.http.HttpResponse;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.JSONTokener;
 
 import android.net.ParseException;
 import android.os.Bundle;
@@ -103,7 +105,15 @@ public class Login extends Activity implements GetJSONListener{
 	@Override
 	public void onRemoteCallComplete(String jsonFromNet) {
 		Log.d("got it back!", jsonFromNet);
-		//JSONObject
+		JSONObject response;
+		try{
+			response = (JSONObject) new JSONTokener(jsonFromNet).nextValue();
+			if(response != null){
+				Log.d("success", "success  is  "+response.getString("success"));
+			}
+		} catch (JSONException e) {
+	        e.printStackTrace();
+	    } 
 	}
 }
 
