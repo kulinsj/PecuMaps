@@ -35,24 +35,25 @@ import android.widget.Toast;
 public class AsyncHttpPost extends AsyncTask<String, String, String>{
 	
 	private HashMap<String, String> mData = null;// post data
-
-    /**
-     * constructor
-     */
-    public AsyncHttpPost(HashMap<String, String> data) {
+	private String BASE_URL ="http://cool-maps-stuff.herokuapp.com/";
+    
+	
+	GetJSONListener getJSONListener;
+	
+    public AsyncHttpPost(HashMap<String, String> data, GetJSONListener listener) {
         mData = data;
         Log.d("1", data.toString());
+        this.getJSONListener = listener;
     }
 
-    /**
-     * background
-     */
+    /* background */
     @Override
     protected String doInBackground(String... params) {
         byte[] result = null;
         String str = "";
         HttpClient client = new DefaultHttpClient();
-        HttpPost post = new HttpPost(params[0]);// in this case, params[0] is URL
+        Log.d("url", BASE_URL+params[0]);
+        HttpPost post = new HttpPost(BASE_URL+params[0]);// in this case, params[0] is URL
         try {
             // set up post data
             ArrayList<NameValuePair> nameValuePair = new ArrayList<NameValuePair>();
@@ -85,9 +86,14 @@ public class AsyncHttpPost extends AsyncTask<String, String, String>{
      * on getting result
      */
     @Override
-    protected void onPostExecute(String result) {
-    	Log.d("force","log to show");
-        Log.d("result", result);
+    protected void onPostExecute(String json) {
+    	Log.d("here I am", json);
+    	getJSONListener.onRemoteCallComplete(json);
+    }
+
+
+    public interface GetJSONListener {
+        public void onRemoteCallComplete(String jsonFromNet);
     }
 }
 	

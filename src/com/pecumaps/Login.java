@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.net.ParseException;
@@ -16,9 +18,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.pecumaps.AsyncHttpPost.GetJSONListener;
 
-public class Login extends Activity {
+public class Login extends Activity implements GetJSONListener{
 	
+	//declare UI elements
 	private EditText eMailText;
 	private EditText passText;
 	private EditText passConfText;
@@ -27,12 +31,14 @@ public class Login extends Activity {
 	private Button toggleButton;
 	private Button goButton;
 	
+	//set up private variables
 	private boolean registering;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login_screen);
+		final Login act = this;
 		
 		//connect UI elements
 		eMailText = (EditText) findViewById(R.id.inText_email);
@@ -71,21 +77,15 @@ public class Login extends Activity {
 				@Override
 				public void onClick(View view) {
 					
-					if(registering){
-						
-					}
-					else{
-						HashMap<String,String> data = new HashMap<String,String>();
-						data.put("email", eMailText.getText().toString());
-						data.put("password", passText.getText().toString());
-						AsyncHttpPost asyncHttpPost = new AsyncHttpPost(data);
-						asyncHttpPost.execute("http://cool-maps-stuff.herokuapp.com/login/");
-						
-					}
+					
+					
+					HashMap<String,String> data = new HashMap<String,String>();
+					data.put("email", eMailText.getText().toString());
+					data.put("password", passText.getText().toString());
+					AsyncHttpPost asyncHttpPost = new AsyncHttpPost(data,act);
+					asyncHttpPost.execute("login/");
 				}
 			});
-		
-		
 	}
 	
 	private void putToast(String message) {
@@ -98,6 +98,12 @@ public class Login extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.login_screen, menu);
 		return true;
+	}
+	
+	@Override
+	public void onRemoteCallComplete(String jsonFromNet) {
+		Log.d("got it back!", jsonFromNet);
+		//JSONObject
 	}
 }
 
