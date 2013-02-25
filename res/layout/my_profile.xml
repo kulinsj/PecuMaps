@@ -8,12 +8,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <EditText
-            android:id="@+id/inText_search"
-            android:layout_width="133dp"
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Search" />
+            android:layout_weight="1"
+            android:text="My Profile"
+            android:layout_marginLeft="15dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <Button
             android:id="@+id/btn_editProfile"
@@ -62,7 +64,6 @@
         android:enabled="false"
         android:ems="10" >
 
-        <requestFocus />
     </EditText>
 
     <TextView

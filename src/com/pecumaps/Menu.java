@@ -45,7 +45,7 @@ public class Menu extends Activity{
 		btnPostAJob.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				//OPEN post a job screen
+				openPostJob();
 			}
 		});
 		btnClose.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +63,10 @@ public class Menu extends Activity{
 	
 	private void openMyProfile(){
 		Intent intent = new Intent(this, MyProfile.class);
+		startActivity(intent);
+	}
+	private void openPostJob(){
+		Intent intent = new Intent(this, PostJob.class);
 		startActivity(intent);
 	}
 }

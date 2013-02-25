@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/btn_closePJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:text="Cancel" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btn_closePJ"
+            android:layout_alignBottom="@+id/btn_closePJ"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:text="Post a Job"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/inText_jobTitile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/topBar"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Job Title" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/inText_jobLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/inText_jobTitile"
+        android:layout_alignRight="@+id/inText_jobTitile"
+        android:layout_below="@+id/inText_jobTitile"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:hint="Location" />
+
+    <EditText
+        android:id="@+id/inText_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_alignLeft="@+id/inText_jobLocation"
+        android:layout_alignRight="@+id/inText_jobLocation"
+        android:layout_below="@+id/inText_jobLocation"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/inText_desc"
+        android:layout_below="@+id/inText_desc"
+        android:layout_marginTop="36dp"
+        android:text="$"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/inText_pay"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <CheckBox
+        android:id="@+id/checkBox_flatRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/inText_pay"
+        android:layout_marginTop="16dp"
+        android:checked="true"
+        android:text="Flat" />
+
+    <TextView
+        android:id="@+id/outText_per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/checkBox_flatRate"
+        android:layout_toRightOf="@+id/inText_pay"
+        android:text="per"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/inText_perWhat"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/outText_per"
+        android:layout_alignBottom="@+id/outText_per"
+        android:layout_alignRight="@+id/inText_desc"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/outText_per"
+        android:ems="10" 
+        android:hint="per what?"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_postJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/checkBox_flatRate"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/inText_perWhat"
+        android:layout_marginBottom="15dp"
+        android:text="Post" />
+    
+</RelativeLayout>
