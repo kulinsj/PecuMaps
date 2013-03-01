@@ -96,7 +96,10 @@ public class Login extends Activity implements GetJSONListener{
 					}
 					//or register
 					else{
-						//TO-DO:  REGISTER NEW USER HERE
+						//TODO:
+						//Check for uniqueness of email
+						//If unique, go to profile setup screen to finish registering
+						openProfileSetup(eMailText.getText().toString());
 					}
 				}
 			});
@@ -133,6 +136,9 @@ public class Login extends Activity implements GetJSONListener{
 					finish();
 				}
 				else{
+					//TODO:
+					
+					
 					//register successful
 					
 				}
@@ -141,6 +147,14 @@ public class Login extends Activity implements GetJSONListener{
 	        e.printStackTrace();
 	    } 
 	}
+	
+	private void openProfileSetup(String email){
+		//TODO: validate email, check it's unique
+		Intent intent = new Intent(this, ProfileSetup.class);
+		intent.putExtra("email", email);
+		startActivity(intent);
+	}
+	
 }
 
 

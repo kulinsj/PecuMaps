@@ -28,48 +28,33 @@
         
         
         <activity
-            android:name="com.pecumaps.Login"
+            android:name=".Login"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         
-        <activity android:name="com.pecumaps.MainActivity"
+        <activity android:name=".MainActivity"
                   android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         
-        <activity android:name="com.pecumaps.Menu"
+        <activity android:name=".Menu"
                   android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         
-        <activity android:name="com.pecumaps.MyProfile"
+        <activity android:name=".MyProfile"
                   android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         
-        <activity android:name="com.pecumaps.PostJob"
+        <activity android:name=".PostJob"
                   android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         
-        
+        <activity android:name=".ProfileSetup"
+                  android:label="@string/app_name">
+        </activity>
         
         
         <meta-data

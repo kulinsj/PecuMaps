@@ -134,9 +134,11 @@ containing a value of this type.
         public static final int MainCont=0x7f040006;
         public static final int bottomBar=0x7f04001a;
         public static final int bottom_layout=0x7f040014;
+        public static final int btn_cancelPS=0x7f040032;
         public static final int btn_close=0x7f040019;
         public static final int btn_closeMP=0x7f040021;
         public static final int btn_closePJ=0x7f040029;
+        public static final int btn_createProfile=0x7f040039;
         public static final int btn_editProfile=0x7f040020;
         public static final int btn_go=0x7f040007;
         public static final int btn_log_sign_toggle=0x7f04000c;
@@ -145,6 +147,8 @@ containing a value of this type.
         public static final int btn_postAJob=0x7f04001d;
         public static final int btn_postJob=0x7f040031;
         public static final int btn_settings=0x7f04001b;
+        public static final int checkBox_CallOK=0x7f040036;
+        public static final int checkBox_TextOK=0x7f040035;
         public static final int checkBox_flatRate=0x7f04002e;
         public static final int inText_desc=0x7f04002c;
         public static final int inText_email=0x7f04000b;
@@ -157,10 +161,11 @@ containing a value of this type.
         public static final int inText_pay=0x7f04002d;
         public static final int inText_perWhat=0x7f040030;
         public static final int inText_phone=0x7f040025;
+        public static final int inText_screenName=0x7f040033;
         public static final int inText_search=0x7f04000f;
         public static final int loadingCont=0x7f040004;
         public static final int map=0x7f040013;
-        public static final int menu_settings=0x7f040032;
+        public static final int menu_settings=0x7f04003a;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
         public static final int notificationsListView=0x7f04001e;
@@ -180,6 +185,9 @@ containing a value of this type.
         public static final int textView2=0x7f040024;
         public static final int textView3=0x7f040026;
         public static final int textView4=0x7f04001f;
+        public static final int textView5=0x7f040034;
+        public static final int textView6=0x7f040037;
+        public static final int textView7=0x7f040038;
         public static final int topBar=0x7f04000e;
         public static final int top_layout=0x7f040011;
     }
@@ -189,7 +197,8 @@ containing a value of this type.
         public static final int menu=0x7f030002;
         public static final int my_profile=0x7f030003;
         public static final int post_a_job=0x7f030004;
-        public static final int user_profile=0x7f030005;
+        public static final int profile_setup=0x7f030005;
+        public static final int user_profile=0x7f030006;
     }
     public static final class menu {
         public static final int login_screen=0x7f070000;
