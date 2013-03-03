@@ -1,0 +1,17 @@
+input {
+	width:284px;
+	background-image: url('../images/textBG300.png');
+	height: 34px;
+	padding: 0 8px;
+}
+input:focus {
+	background-position: 0 -34px;
+}
+input.medium {
+	width:184px;
+	background-image: url('../images/textBG200.png');
+}
+input.small {
+	width:109px;
+	background-image: url('../images/textBG125.png');
+}
