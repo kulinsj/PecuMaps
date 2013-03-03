@@ -115,121 +115,103 @@
 		}
 		"item": {
 			"type":"0",
-			"poster":"",
+			"poster":"RogerFederer",
 			"reviewID":"8",
-			"name":"",
-			"description":"",
-			"cost":"",
-			"payPer":"",
+			"name":"Ball Picker",
+			"description":"Looking for healthy and passionate youths to pick tennis balls off the court",
+			"cost":"100",
+			"payPer":"day",
 			"location":{
-				"lat":"",
-				"long":"",
-				"readable":""
+				"lat":"43.473229",
+				"long":"43.473229,-80.524335",
+				"readable":"Co-op and Career Center, Waterloo, On"
 			},
 			"postDate":"",
 			"expiryDate":"",
 			"claims": {
 				"user": "JohnK",
-				"user": "TomSun",
-				"user": "MattNg",
-				"user": "FeyiA",
 				"user": "AftadZ",
 				"user": "BillyRayCharles"
 			}
 		}
 		"item": {
 			"type":"0",
-			"poster":"",
-			"reviewID":"8",
-			"name":"",
-			"description":"",
-			"cost":"",
-			"payPer":"",
+			"poster":"LoisDane",
+			"reviewID":"18",
+			"name":"Library Shelving",
+			"description":"Volunteers needed for shelving books for the library",
+			"cost":"0",
+			"payPer":"flat",
 			"location":{
-				"lat":"",
-				"long":"",
-				"readable":""
+				"lat":"43.471968",
+				"long":"-80.524056",
+				"readable":"150 King Street West, Waterloo, On"
 			},
 			"postDate":"",
 			"expiryDate":"",
 			"claims": {
-				"user": "JohnK",
-				"user": "TomSun",
+
 				"user": "MattNg",
 				"user": "FeyiA",
 				"user": "AftadZ",
-				"user": "BillyRayCharles"
 			}
 		}
 		"item": {
 			"type":"0",
-			"poster":"",
+			"poster":"FranciscoDestinee",
 			"reviewID":"8",
-			"name":"",
-			"description":"",
-			"cost":"",
-			"payPer":"",
+			"name":"Child Actors Needed",
+			"description":"Looking for male child actor between age 7-11 with acting experiences for a short film. Send headshot to john@inproduction.com",
+			"cost":"200",
+			"payPer":"day",
 			"location":{
-				"lat":"",
-				"long":"",
-				"readable":""
+				"lat":"43.469493",
+				"long":"-80.523562",
+				"readable":"170 King Street West, Waterloo, On"
 			},
 			"postDate":"",
 			"expiryDate":"",
 			"claims": {
-				"user": "JohnK",
 				"user": "TomSun",
 				"user": "MattNg",
 				"user": "FeyiA",
-				"user": "AftadZ",
-				"user": "BillyRayCharles"
 			}
 		}
 		"item": {
 			"type":"0",
-			"poster":"",
+			"poster":"JamesMatador",
 			"reviewID":"8",
-			"name":"",
-			"description":"",
-			"cost":"",
-			"payPer":"",
+			"name":"Access Database Setup",
+			"description":"Need IT professional for Database setup for Microsoft Access.",
+			"cost":"100",
+			"payPer":"setup",
 			"location":{
-				"lat":"",
-				"long":"",
-				"readable":""
+				"lat":"43.473791",
+				"long":"-80.531631",
+				"readable":"University and Albert, Waterloo, On"
 			},
 			"postDate":"",
 			"expiryDate":"",
 			"claims": {
 				"user": "JohnK",
-				"user": "TomSun",
-				"user": "MattNg",
-				"user": "FeyiA",
-				"user": "AftadZ",
-				"user": "BillyRayCharles"
 			}
 		}
 		"item": {
 			"type":"0",
-			"poster":"",
+			"poster":"JustinDoaug",
 			"reviewID":"8",
-			"name":"",
-			"description":"",
-			"cost":"",
-			"payPer":"",
+			"name":"SEO Expertise",
+			"description":"Need expert on search engine optimization to work on our new website. Must have 3-5 years of experience working in SEO",
+			"cost":"200",
+			"payPer":"day",
 			"location":{
-				"lat":"",
-				"long":"",
-				"readable":""
+				"lat":"43.476158",
+				"long":"-80.524764",
+				"readable":"King and University, Waterloo, On"
 			},
 			"postDate":"",
 			"expiryDate":"",
 			"claims": {
-				"user": "JohnK",
-				"user": "TomSun",
-				"user": "MattNg",
-				"user": "FeyiA",
-				"user": "AftadZ",
 				"user": "BillyRayCharles"
 			}
 		}
