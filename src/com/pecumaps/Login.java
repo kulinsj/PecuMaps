@@ -12,6 +12,7 @@ import org.json.JSONTokener;
 
 import android.net.ParseException;
 import android.os.Bundle;
+import android.os.Handler;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
@@ -39,6 +40,10 @@ public class Login extends Activity implements GetJSONListener{
 	
 	//set up private variables
 	private boolean registering;
+	
+	
+	//FOR DEMO PURPOSES
+	private boolean DEMOMODE = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -91,8 +96,27 @@ public class Login extends Activity implements GetJSONListener{
 						HashMap<String,String> data = new HashMap<String,String>();
 						data.put("email", eMailText.getText().toString());
 						data.put("password", passText.getText().toString());
-						AsyncHttpPost asyncHttpPost = new AsyncHttpPost(data,act);
-						asyncHttpPost.execute("login/");
+						if(DEMOMODE){
+							//Cheat a little to make the demo work quickly. 
+							if(eMailText.getText().toString() == "a@a.aaa" && passText.getText().toString() == "123456"){
+								final Handler handler = new Handler();
+								handler.postDelayed(new Runnable() {
+									
+									  @Override
+									  public void run() {
+										  openMainScreen();
+									  }
+								}, 2000);
+							}
+							else {
+								AsyncHttpPost asyncHttpPost = new AsyncHttpPost(data,act);
+								asyncHttpPost.execute("login/");
+							}
+						}
+						else{
+							AsyncHttpPost asyncHttpPost = new AsyncHttpPost(data,act);
+							asyncHttpPost.execute("login/");
+						}
 					}
 					//or register
 					else{
@@ -153,6 +177,12 @@ public class Login extends Activity implements GetJSONListener{
 		Intent intent = new Intent(this, ProfileSetup.class);
 		intent.putExtra("email", email);
 		startActivity(intent);
+	}
+	
+	private void openMainScreen(){
+		Intent intent = new Intent(this, MainActivity.class);
+		startActivity(intent);
+		finish();
 	}
 	
 }
