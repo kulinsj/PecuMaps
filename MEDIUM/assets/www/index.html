@@ -1,10 +1,170 @@
 <!doctype html>
 <html>
 <head>
-</head>
-<body>
-hello
+	<style>
+	body{
+		height: 1280px;
+		width: 720px;
+		border: 1px solid black;
+	}
+	#loginpage{
+		display:none ;
+	}
+	#loadingpage{
+		height:100%;
+		width:100%;
+		float:center;
+		background-color: #02d23a;	
+	}
 
+	.credential{
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+	.email {
+		border-bottom: solid 1px cyan;
+  		border-left: solid 1px cyan;
+  		margin: 20px;
+  		border-right: solid 1px cyan;
+  		overflow: visible;
+  		max-height: 0.2em;
+  		display: block;
+  		padding: 2px;
+  		width: 300px;
+  		margin-left: auto;
+  		margin-right: auto;
+	}
+	.email input[type="text"]{
+		outline: none;
+  		border: none;
+  		background: transparent;
+  		display: block;
+  		position: relative;
+  		left: 0.5em;
+  		bottom: 1.2em;
+  		width: 300px;
+	}
+	.password {
+		border-bottom: solid 1px cyan;
+  		border-left: solid 1px cyan;
+  		margin: 20px;
+  		border-right: solid 1px cyan;
+  		overflow: visible;
+  		max-height: 0.2em;
+  		display: block;
+  		padding: 2px;
+  		width: 300px;
+  		margin-left: auto;
+  		margin-right: auto;
+	}
+	.password input[type="password"]{
+		outline: none;
+  		border: none;
+  		background: transparent;
+  		display: block;
+  		position: relative;
+  		left: 0.5em;
+  		bottom: 1.2em;
+	}
+	
+	.buttongroup{
+		
+		margin-right: auto;
+		margin-left: auto;
+		width:245px;
+		margin-top: 200px;
+		margin-bottom: 200px
+	}
+
+	.button {
+      border:1px solid #4297ce;
+      display:inline-block;
+      color:#174e71;
+      font-family:arial;
+      font-size:20px;
+      padding:7px 24px;
+      text-decoration:none;
+      position: relative;
+      height:36px;
+      width: 70px;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
+
+      }.button:hover {
+        /*background-color:#8dccf5;*/
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DCCF5), color-stop(1, #68AFDE));
+        border: 1px solid #2c7eb3;
+
+      }.button:active {
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5));
+        border: 1px solid #2c7eb3;
+      }
+	</style>
+	<script>
+	function hideLoadingPage(){
+		document.getElementById('loadingpage').style.display="none";
+		document.getElementById('loginpage').style.display="block";
+	}
+
+	function delayedHideLoadingPage(){
+	window.setTimeout(function() {
+        hideLoadingPage();
+    }, 3000);
+	}
+
+	function activateSignin(){
+		document.getElementsByTagName('login').style.
+	}
+	</script>
+</head>
+
+
+<body onload="delayedHideLoadingPage()">
+
+<div id="loadingpage">
+	<img src="./images/index.png" style="height:200px; width: 720px; margin-top: 500px"/>
+</div>
+
+<div id="loginpage">
+<div class="logo">
+	<img src="./images/index.png" style="height:200px; width: 720px"/>
+</div>
+
+<div class="buttongroup">
+
+	<div class="button" tag="login">
+		Login
+	</div>
+
+	<div class="button" tag="signup">
+		Sign Up
+	</div>
+</div>
+
+<div class="credential">
+	<div class="email">
+	        <form method="get" action="/search">
+	          <input name="email" type="text" size="30" placeholder="Email"/>
+	        </form>
+	</div>
+
+	<div class="password">
+		<form method="get" action="/search">
+	          <input name="password" type="password" size="30" placeholder="Password"/>
+	        </form>
+	</div>
+
+	<div class="password">
+		<form method="get" action="/search">
+	          <input name="confirmpassword" type="password" size="30" placeholder="Confirm Password"/>
+	        </form>
+	</div>
+
+	<div class="button" style="display: block; margin-left: 400px; margin-top: 50px;">
+		Go
+	</div>
+</div>
+</div>
 </body>
 
 </html>
