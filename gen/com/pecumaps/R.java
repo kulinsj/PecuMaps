@@ -8,6 +8,9 @@
 package com.pecumaps;
 
 public final class R {
+    public static final class anim {
+        public static final int clockwise_rot=0x7f040000;
+    }
     public static final class attr {
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
@@ -128,128 +131,134 @@ containing a value of this type.
         public static final int zOrderOnTop=0x7f01000d;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int gif=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int logo=0x7f020002;
+        public static final int logotrim=0x7f020003;
     }
     public static final class id {
-        public static final int MainCont=0x7f040006;
-        public static final int bottomBar=0x7f04001a;
-        public static final int bottom_layout=0x7f040014;
-        public static final int btn_cancelPS=0x7f040032;
-        public static final int btn_close=0x7f040019;
-        public static final int btn_closeMP=0x7f040021;
-        public static final int btn_closePJ=0x7f040029;
-        public static final int btn_createProfile=0x7f040039;
-        public static final int btn_editProfile=0x7f040020;
-        public static final int btn_go=0x7f040007;
-        public static final int btn_log_sign_toggle=0x7f04000c;
-        public static final int btn_menu=0x7f040010;
-        public static final int btn_myProfile=0x7f04001c;
-        public static final int btn_postAJob=0x7f04001d;
-        public static final int btn_postJob=0x7f040031;
-        public static final int btn_settings=0x7f04001b;
-        public static final int checkBox_CallOK=0x7f040036;
-        public static final int checkBox_TextOK=0x7f040035;
-        public static final int checkBox_flatRate=0x7f04002e;
-        public static final int inText_desc=0x7f04002c;
-        public static final int inText_email=0x7f04000b;
-        public static final int inText_firstName=0x7f040022;
-        public static final int inText_jobLocation=0x7f04002b;
-        public static final int inText_jobTitile=0x7f04002a;
-        public static final int inText_lastName=0x7f040023;
-        public static final int inText_pass1=0x7f040009;
-        public static final int inText_pass2=0x7f04000a;
-        public static final int inText_pay=0x7f04002d;
-        public static final int inText_perWhat=0x7f040030;
-        public static final int inText_phone=0x7f040025;
-        public static final int inText_screenName=0x7f040033;
-        public static final int inText_search=0x7f04000f;
-        public static final int loadingCont=0x7f040004;
-        public static final int map=0x7f040013;
-        public static final int menu_settings=0x7f04003a;
-        public static final int none=0x7f040000;
-        public static final int normal=0x7f040001;
-        public static final int notificationsListView=0x7f04001e;
-        public static final int outText_log_sign=0x7f04000d;
-        public static final int outText_login_error=0x7f040008;
-        public static final int outText_per=0x7f04002f;
-        public static final int outText_score=0x7f040027;
-        public static final int outText_screenName=0x7f040028;
-        public static final int progressBar1=0x7f040005;
-        public static final int resultScroller=0x7f040015;
-        public static final int resultViewLayout=0x7f040017;
-        public static final int resultsLinearLayout=0x7f040016;
-        public static final int satellite=0x7f040002;
-        public static final int searchTools_layout=0x7f040012;
-        public static final int terrain=0x7f040003;
-        public static final int textView1=0x7f040018;
-        public static final int textView2=0x7f040024;
-        public static final int textView3=0x7f040026;
-        public static final int textView4=0x7f04001f;
-        public static final int textView5=0x7f040034;
-        public static final int textView6=0x7f040037;
-        public static final int textView7=0x7f040038;
-        public static final int topBar=0x7f04000e;
-        public static final int top_layout=0x7f040011;
+        public static final int MainCont=0x7f050008;
+        public static final int bottomBar=0x7f05001c;
+        public static final int bottom_layout=0x7f050016;
+        public static final int btn_cancelPS=0x7f050034;
+        public static final int btn_close=0x7f05001b;
+        public static final int btn_closeMP=0x7f050023;
+        public static final int btn_closePJ=0x7f05002b;
+        public static final int btn_createProfile=0x7f05003b;
+        public static final int btn_editProfile=0x7f050022;
+        public static final int btn_go=0x7f050009;
+        public static final int btn_log_sign_toggle=0x7f05000e;
+        public static final int btn_menu=0x7f050012;
+        public static final int btn_myProfile=0x7f05001e;
+        public static final int btn_postAJob=0x7f05001f;
+        public static final int btn_postJob=0x7f050033;
+        public static final int btn_settings=0x7f05001d;
+        public static final int checkBox_CallOK=0x7f050038;
+        public static final int checkBox_TextOK=0x7f050037;
+        public static final int checkBox_flatRate=0x7f050030;
+        public static final int imageView1=0x7f050004;
+        public static final int inText_desc=0x7f05002e;
+        public static final int inText_email=0x7f05000d;
+        public static final int inText_firstName=0x7f050024;
+        public static final int inText_jobLocation=0x7f05002d;
+        public static final int inText_jobTitile=0x7f05002c;
+        public static final int inText_lastName=0x7f050025;
+        public static final int inText_pass1=0x7f05000b;
+        public static final int inText_pass2=0x7f05000c;
+        public static final int inText_pay=0x7f05002f;
+        public static final int inText_perWhat=0x7f050032;
+        public static final int inText_phone=0x7f050027;
+        public static final int inText_screenName=0x7f050035;
+        public static final int inText_search=0x7f050011;
+        public static final int loadingCont=0x7f050006;
+        public static final int logoRotate=0x7f050005;
+        public static final int map=0x7f050015;
+        public static final int menu_settings=0x7f05003c;
+        public static final int none=0x7f050000;
+        public static final int normal=0x7f050001;
+        public static final int notificationsListView=0x7f050020;
+        public static final int outText_log_sign=0x7f05000f;
+        public static final int outText_login_error=0x7f05000a;
+        public static final int outText_per=0x7f050031;
+        public static final int outText_score=0x7f050029;
+        public static final int outText_screenName=0x7f05002a;
+        public static final int progressBar1=0x7f050007;
+        public static final int resultScroller=0x7f050017;
+        public static final int resultViewLayout=0x7f050019;
+        public static final int resultsLinearLayout=0x7f050018;
+        public static final int satellite=0x7f050002;
+        public static final int searchTools_layout=0x7f050014;
+        public static final int terrain=0x7f050003;
+        public static final int textView1=0x7f05001a;
+        public static final int textView2=0x7f050026;
+        public static final int textView3=0x7f050028;
+        public static final int textView4=0x7f050021;
+        public static final int textView5=0x7f050036;
+        public static final int textView6=0x7f050039;
+        public static final int textView7=0x7f05003a;
+        public static final int topBar=0x7f050010;
+        public static final int top_layout=0x7f050013;
     }
     public static final class layout {
-        public static final int login_screen=0x7f030000;
-        public static final int main_view=0x7f030001;
-        public static final int menu=0x7f030002;
-        public static final int my_profile=0x7f030003;
-        public static final int post_a_job=0x7f030004;
-        public static final int profile_setup=0x7f030005;
-        public static final int user_profile=0x7f030006;
+        public static final int loading_screen=0x7f030000;
+        public static final int login_screen=0x7f030001;
+        public static final int main_view=0x7f030002;
+        public static final int menu=0x7f030003;
+        public static final int my_profile=0x7f030004;
+        public static final int post_a_job=0x7f030005;
+        public static final int profile_setup=0x7f030006;
+        public static final int user_profile=0x7f030007;
     }
     public static final class menu {
-        public static final int login_screen=0x7f070000;
+        public static final int login_screen=0x7f080000;
     }
     public static final class string {
-        public static final int app_name=0x7f05000b;
+        public static final int app_name=0x7f06000b;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=30] 
          */
-        public static final int common_google_play_services_enable_button=0x7f050006;
+        public static final int common_google_play_services_enable_button=0x7f060006;
         /**  Message in confirmation dialog informing user they need to enable
         Google Play services in application settings [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_enable_text=0x7f050005;
+        public static final int common_google_play_services_enable_text=0x7f060005;
         /**  Title of confirmation dialog informing user they need to enable
         Google Play services in application settings [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_enable_title=0x7f050004;
+        public static final int common_google_play_services_enable_title=0x7f060004;
         /**  Button in confirmation dialog for installing Google Play services [CHAR LIMIT=30] 
          */
-        public static final int common_google_play_services_install_button=0x7f050003;
+        public static final int common_google_play_services_install_button=0x7f060003;
         /**  (For phones) Message in confirmation dialog informing user that
         they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_install_text_phone=0x7f050001;
+        public static final int common_google_play_services_install_text_phone=0x7f060001;
         /**  (For tablets) Message in confirmation dialog informing user that
         they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_install_text_tablet=0x7f050002;
+        public static final int common_google_play_services_install_text_tablet=0x7f060002;
         /**  Title of confirmation dialog informing user that they need to install
         Google Play services (from Play Store) [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_install_title=0x7f050000;
+        public static final int common_google_play_services_install_title=0x7f060000;
         /**  Message in confirmation dialog informing user there is an unknow issue in Google Player
         services [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_unknown_issue=0x7f050009;
+        public static final int common_google_play_services_unknown_issue=0x7f060009;
         /**  Button in confirmation dialog for updating Google Play services [CHAR LIMIT=20] 
          */
-        public static final int common_google_play_services_update_button=0x7f05000a;
+        public static final int common_google_play_services_update_button=0x7f06000a;
         /**  Message in confirmation dialog informing user that they need to update
         Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_update_text=0x7f050008;
+        public static final int common_google_play_services_update_text=0x7f060008;
         /**  Title of confirmation dialog informing user that they need to update
         Google Play services (from Play Store) [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_update_title=0x7f050007;
-        public static final int hello_world=0x7f05000c;
-        public static final int menu_settings=0x7f05000d;
+        public static final int common_google_play_services_update_title=0x7f060007;
+        public static final int hello_world=0x7f06000c;
+        public static final int menu_settings=0x7f06000d;
     }
     public static final class style {
         /** 
@@ -273,11 +282,11 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
     public static final class styleable {
         /** Attributes that can be used with a MapAttrs.
