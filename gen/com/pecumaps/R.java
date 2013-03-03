@@ -135,6 +135,7 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020001;
         public static final int logo=0x7f020002;
         public static final int logotrim=0x7f020003;
+        public static final int orng=0x7f020004;
     }
     public static final class id {
         public static final int MainCont=0x7f050008;
