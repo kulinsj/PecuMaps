@@ -146,7 +146,7 @@ containing a value of this type.
         public static final int btn_closePJ=0x7f05002b;
         public static final int btn_createProfile=0x7f05003b;
         public static final int btn_editProfile=0x7f050022;
-        public static final int btn_go=0x7f050009;
+        public static final int btn_go=0x7f05000a;
         public static final int btn_log_sign_toggle=0x7f05000e;
         public static final int btn_menu=0x7f050012;
         public static final int btn_myProfile=0x7f05001e;
@@ -178,7 +178,7 @@ containing a value of this type.
         public static final int normal=0x7f050001;
         public static final int notificationsListView=0x7f050020;
         public static final int outText_log_sign=0x7f05000f;
-        public static final int outText_login_error=0x7f05000a;
+        public static final int outText_login_error=0x7f050009;
         public static final int outText_per=0x7f050031;
         public static final int outText_score=0x7f050029;
         public static final int outText_screenName=0x7f05002a;
