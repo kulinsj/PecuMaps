@@ -14,8 +14,8 @@
 				"long":"-80.525551",
 				"readable":"316 King St N, Waterloo, ON"
 			},
-			"postDate":"",
-			"expiryDate":"",
+			"postDate":"1358348828",
+			"expiryDate":"1358953628",
 			"claims": {
 				"user": "JohnK",
 				"user": "TomSun",
@@ -37,8 +37,8 @@
 				"long":"80.554708",
 				"readable":"430 Midwood Cres, Waterloo, On"
 			},
-			"postDate":"",
-			"expiryDate":"",
+			"postDate":"1361632028",
+			"expiryDate":"1364051228",
 			"claims": {
 				"user": "JohnK",
 				"user": "MattNg"
@@ -57,8 +57,8 @@
 				"long":"-80.541340",
 				"readable":"271 Westcourt Pl, Waterloo, On"
 			},
-			"postDate":"",
-			"expiryDate":"",
+			"postDate":"1362321848",
+			"expiryDate":"1365000248",
 			"claims": {
 				"user": "BillyRayCharles"
 			}
@@ -76,8 +76,8 @@
 				"long":"-80.569890",
 				"readable":"24 Gatestone Blvd, Waterloo, ON"
 			},
-			"postDate":"",
-			"expiryDate":"",
+			"postDate":"1362062648",
+			"expiryDate":"1364481848",
 			"claims": {
 				"user": "JohnK",
 				"user": "TomSun",
@@ -97,8 +97,8 @@
 				"long":"-80.545417",
 				"readable":"SLC Great Hall, Ring Road, Waterloo,On"
 			},
-			"postDate":"",
-			"expiryDate":"",
+			"postDate":"1361371448",
+			"expiryDate":"1362581048",
 			"claims": {
 				"user": "JohnK",
 				"user": "TomSun",
@@ -126,8 +126,8 @@
 				"long":"43.473229,-80.524335",
 				"readable":"Co-op and Career Center, Waterloo, On"
 			},
-			"postDate":"",
-			"expiryDate":"",
+			"postDate":"1362062648",
+			"expiryDate":"1363358648",
 			"claims": {
 				"user": "JohnK",
 				"user": "AftadZ",
@@ -147,8 +147,8 @@
 				"long":"-80.524056",
 				"readable":"150 King Street West, Waterloo, On"
 			},
-			"postDate":"",
-			"expiryDate":"",
+			"postDate":"1362235448",
+			"expiryDate":"1364913848",
 			"claims": {
 
 				"user": "MattNg",
@@ -160,17 +160,17 @@
 			"type":"0",
 			"poster":"FranciscoDestinee",
 			"reviewID":"8",
-			"name":"Child Actors Needed",
-			"description":"Looking for male child actor between age 7-11 with acting experiences for a short film. Send headshot to john@inproduction.com",
-			"cost":"200",
-			"payPer":"day",
+			"name":"Shovel the sidewalk",
+			"description":"Looking for someone to keep my sidewalk shovelled this winter. I'll give you $20 each time you have to come out.",
+			"cost":"20",
+			"payPer":"shovelling",
 			"location":{
 				"lat":"43.469493",
 				"long":"-80.523562",
 				"readable":"170 King Street West, Waterloo, On"
 			},
-			"postDate":"",
-			"expiryDate":"",
+			"postDate":"1361630648",
+			"expiryDate":"1363272248",
 			"claims": {
 				"user": "TomSun",
 				"user": "MattNg",
@@ -190,8 +190,8 @@
 				"long":"-80.531631",
 				"readable":"University and Albert, Waterloo, On"
 			},
-			"postDate":"",
-			"expiryDate":"",
+			"postDate":"1360853048",
+			"expiryDate":"1362667448",
 			"claims": {
 				"user": "JohnK",
 			}
@@ -202,16 +202,17 @@
 			"reviewID":"8",
 			"name":"SEO Expertise",
 			"description":"Need expert on search engine optimization to work on our new website. Must have 3-5 years of experience working in SEO",
-			"cost":"200",
+			"cost":"120",
 			"payPer":"day",
 			"location":{
 				"lat":"43.476158",
 				"long":"-80.524764",
 				"readable":"King and University, Waterloo, On"
 			},
-			"postDate":"",
-			"expiryDate":"",
+			"postDate":"1360248248",
+			"expiryDate":"1362494648",
 			"claims": {
+				"user": "JohnK",
 				"user": "BillyRayCharles"
 			}
 		}

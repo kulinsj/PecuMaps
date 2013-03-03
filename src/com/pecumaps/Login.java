@@ -43,7 +43,7 @@ public class Login extends Activity implements GetJSONListener{
 	
 	
 	//FOR DEMO PURPOSES
-	private boolean DEMOMODE = false;
+	private boolean DEMOMODE = true;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
