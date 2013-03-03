@@ -2,7 +2,6 @@
 <html data-role="page">
 <head>
 	<style>
-
 	body{
 		height: 1280px;
 		width: 720px;
@@ -108,12 +107,21 @@
 	}
 
 	function delayedHideLoadingPage(){
-		window.setTimeout(function() {
-	        hideLoadingPage();
-	    }, 3000);
+	window.setTimeout(function() {
+        hideLoadingPage();
+    }, 3000);
+	}
+
+	function activateSignin(){
+		document.getElementsByTagName('login').style.
 	}
 	</script>
 </head>
+<<<<<<< HEAD
+=======
+<body>
+<a href="MainScreen.html">hello</a>
+>>>>>>> 35fabd016a5ccd9ab407ac74dc3b46de2366ffdb
 
 
 <body onload="delayedHideLoadingPage()">
