@@ -15,6 +15,10 @@ input {
 input:focus {
 	background-position: 0 -34px;
 }
+input.mediumLarge {
+	width:258px;
+	background-image: url('../images/textBG274.png');
+}
 input.medium {
 	width:184px;
 	background-image: url('../images/textBG200.png');
