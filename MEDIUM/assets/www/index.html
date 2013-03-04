@@ -5,9 +5,8 @@
 	<style>
 
 	body{
-		height: 1280px;
-		width: 720px;
-		border: 1px solid black;
+		height: 414px;
+		width: 360px;
 	}
 	
 	#loginpage{
@@ -23,7 +22,7 @@
 	.credential{
 		margin-left: auto;
 		margin-right: auto;
-		width: 300px;
+		width: 200px;
 		height: 110px;
 	}
 	
@@ -31,9 +30,9 @@
 	.buttongroup{
 		margin-right: auto;
 		margin-left: auto;
-		width:240px;
-		margin-top: 200px;
-		margin-bottom: 200px
+		width:200px;
+		margin-top: 25px;
+		margin-bottom: 25px;
 	}
 
 	.button {
@@ -48,8 +47,8 @@
       vertical-align: top;
       text-decoration:none;
       position: relative;
-      height:36px;
-      width:88px;
+      height:30px;
+      width:70px;
       margin-right:-5px;
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
 
@@ -97,13 +96,13 @@
 
 	
 	<div id="loadingpage">
-		<img src="./images/index.png" style="height:200px; width: 720px; margin-top: 500px"/>
+		<img src="./images/index.png" style="height:100px; width: 360px; margin-top: 150px"/>
 	</div>
 
 	<div id="loginpage">
 		
 		<div class="logo">
-			<img src="./images/index.png" style="height:200px; width: 720px"/>
+			<img src="./images/index.png" style="height:100px; width: 360px"/>
 		</div>
 
 		<div class="buttongroup">
@@ -119,14 +118,14 @@
 
 		<div class="credential">
 			<form method="get" action="/search">
-			    <input name="email" type="text" size="30" placeholder="Email" style="display:block" />
-			    <input name="password" type="password" size="30" placeholder="Password" style="display:block"/>
-			    <input name="confirmpassword" type="password" size="30" placeholder="Confirm Password" style="display:block" id="confirmpassword"/>
+			    <input class="medium" name="email" type="text" size="30" placeholder="Email" style="display:block" />
+			    <input class="medium" name="password" type="password" size="30" placeholder="Password" style="display:block"/>
+			    <input class="medium" name="confirmpassword" type="password" size="30" placeholder="Confirm Password" style="display:block" id="confirmpassword"/>
 			</form>
 		</div>
 
-		<a href="./MainScreen.html">
-			<div class="button" style="display: block; margin-left: 400px; margin-top: 50px;">
+		<a href="MainScreen.html">
+			<div class="button" style="display: block; margin-left: 180px; margin-top: 25px;">
 				Go
 			</div>
 		</a>
