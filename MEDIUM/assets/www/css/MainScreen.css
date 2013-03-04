@@ -52,6 +52,7 @@ body{
 div.resultSmall{
 	display: inline-block;
 	border-right: 1px solid #555;
+	border-bottom: 1px solid #555;
 	height: 40px;
 	width: 50px;
 	line-height: 40px;
@@ -82,5 +83,7 @@ h1{
 	bottom: 0;
 	width: 360px;
 	text-align: center;
-
+}
+div.sel{
+	background: #ddd;
 }
