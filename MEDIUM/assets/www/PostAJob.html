@@ -1,44 +1,15 @@
 <!doctype html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="./css/global.css"/>
+	<link rel="stylesheet" type="text/css" href="css/global.css"/>
 
 	<style>
 
 	body{
 		height: 615px;
 		width: 360px;
-		border: 1px solid black;
-	}
-
-	.postTitle{
-		display: inline-block;
-		font-size: 24px;
-		font-family: arial;
-		margin-left:30px;
-		margin-top:20px;
-	}
-	
-	.buttongroup{
-		margin-right: auto;
-		margin-left: auto;
-		width:240px;
-		margin-top: 200px;
-		margin-bottom: 200px
-	}
-
-	#cancelButton{
-		display: inline-block;
-		float:right;
-		right:40px;
-		top: 10px;
-	}
-
-	.job_title_locn_desc{
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 40px;
-		width: 300px;
+		margin: 0;
+		position:relative;
 	}
 
 	.button {
@@ -53,19 +24,95 @@
       vertical-align: top;
       text-decoration:none;
       position: relative;
-      height:25px;
-      width:60px;
+      height:30px;
+      /*width:60px;*/
       margin-right:-5px;
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
+    }
 
-      }.button:hover {
+    .button:hover {
         background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DCCF5), color-stop(1, #68AFDE));
         border: 1px solid #2c7eb3;
 
-      }.button:active {
+    }
+
+    .button:active {
         background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5));
         border: 1px solid #2c7eb3;
-      }
+    }
+
+    /*.buttongroup{
+		margin-right: auto;
+		margin-left: auto;
+		width:240px;
+		margin-top: 200px;
+		margin-bottom: 200px
+	}*/
+
+/*All the UI components are described here*/
+	.postTitle{
+		display: inline-block;
+		font-size: 24px;
+		font-family: arial;
+		margin-left:30px;
+		margin-top:20px;
+	}
+
+	#cancelButton{
+		display: inline-block;
+		float:right;
+		right:40px;
+		top: 10px;
+	}
+
+	.job_title_locn_desc{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 60px;
+		width: 300px;
+		font-size: 30px;
+	}
+
+	#Description{
+		height: 100px;
+		/*border: 1px solid black;*/
+		margin-top: 40px;
+		/*border:none;*/
+	}
+
+	.priceLabel{
+		display: inline-block;
+		font-size: 24px;
+		margin-left:30px;
+		/*margin-top: 80px;*/
+	}
+
+	.priceInput{
+		margin-top: 10px;
+		display: inline-block;
+		
+	}
+
+	/*This is the text component of .priceInput*/
+	.priceInput input[type="text"]{
+		
+	}
+
+	.checkBoxes{
+		margin: 15px 0 0 15px;
+		font-family: arial;
+		width: 300px;
+	}
+
+	#postButton{
+		position: absolute;
+		float:bottom;
+		margin-left:auto;
+		bottom:10px;
+		left: 14px;
+		display:block;
+		width: 300px;
+	}
     </style>
 
 </head>
@@ -73,25 +120,45 @@
 
 <body>
 
-<div class="postTitle">Post a Job</div>
+	<div class="postTitle">Post a Job</div>
 
-<div class="button" id="cancelButton">
-	Cancel
-</div>
+	<div class="button" id="cancelButton">Cancel</div>
 
+	<div class="job_title_locn_desc">
+		<form method="get" action="/search">
+			<input name="jobtitle" type="text" placeholder="Job Title" style="display:block" />
+			<input name="location" type="text" placeholder="Location" style="display:block"/>
+			<textarea rows="10" cols="34" name="description" type="text" placeholder="Description"  id="Description"></textarea>
+		</form></div>
 
-<div class="job_title_locn_desc">
-	
-	<form method="get" action="/search">
-			    <input name="jobtitle" type="text" size="30" placeholder="Job Title" style="display:block" />
-			    <input name="location" type="text" size="30" placeholder="Location" style="display:block"/>
-			    <input name="description" type="text" size="30" placeholder="Description" style="display:block"/>
-			</form>
-</div>
-<div class="priceLabel"></div>
-<div class="priceInput"></div>
-<div class="flatRateCheckbox"></div>
-<div class="postButton"></div>
+		<div class="priceLabel">$:</div>
+
+	<div class="priceInput">
+		<form method="get" action="/search">
+			<input name="price" type="text" class="tiny" maxlength="10" placeholder="CAD" />
+		</form></div>
+
+	<!-- <div class="priceInput">
+			<form method="get" action="/search"> 
+				<input name="price" type="text" maxlength="10" placeholder="CAD">
+			</form></div>	 -->
+
+	<div class="checkBoxes">
+			<form action="">
+				<input type="checkbox" name="priceType" value="flatFee">Flat Fee<br>
+			</form></div>
+
+	<!-- <table id="Checkboxlist1" border="1px" width="300px">
+		<tr>
+			<td><input id="Checkboxlist1_0" type="checkbox" name="Checkboxlist1$0" value="red" /><label for="Checkboxlist1_0">Red</label></td></tr>
+		<tr>
+			<td><input id="Checkboxlist1_1" type="checkbox" name="Checkboxlist1$1" value="blue" /><label for="Checkboxlist1_1">Blue</label></td></tr>
+		<tr>
+		    <td><input id="Checkboxlist1_2" type="checkbox" name="Checkboxlist1$2" value="green" /><label for="Checkboxlist1_2">Green</label></td></tr>
+		</table> -->
+
+	<div class="button" id="postButton">Post</div>
+
 </body>
 
 </html>
