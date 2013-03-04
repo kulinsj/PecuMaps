@@ -25,7 +25,7 @@
       <file leaf-file-name="MainScreen.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/MainScreen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="36" selection-start="1677" selection-end="1677" vertical-scroll-proportion="-21.838709">
+            <state line="64" column="98" selection-start="1712" selection-end="1712" vertical-scroll-proportion="-21.064516">
               <folding>
                 <element signature="tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
               </folding>
@@ -33,19 +33,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainScreen.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainScreen.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/css/MainScreen.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="51" column="22" selection-start="720" selection-end="720" vertical-scroll-proportion="0.6254876">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainScreen.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainScreen.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/js/MainScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="560" selection-end="560" vertical-scroll-proportion="0.5896033">
+            <state line="19" column="0" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -67,10 +67,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/assets/www/index.html" />
-        <option value="$PROJECT_DIR$/assets/www/css/MainScreen.css" />
+        <option value="$PROJECT_DIR$/assets/www/css/global.css" />
         <option value="$PROJECT_DIR$/assets/www/js/MainScreen.js" />
         <option value="$PROJECT_DIR$/assets/www/MainScreen.html" />
-        <option value="$PROJECT_DIR$/assets/www/css/global.css" />
+        <option value="$PROJECT_DIR$/assets/www/css/MainScreen.css" />
       </list>
     </option>
   </component>
@@ -369,22 +369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/css/MainScreen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/MainScreen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="36" selection-start="1677" selection-end="1677" vertical-scroll-proportion="-21.838709">
-          <folding>
-            <element signature="tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/css/global.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="10" selection-start="493" selection-end="493" vertical-scroll-proportion="0.8439532">
@@ -394,7 +378,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/js/MainScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="560" selection-end="560" vertical-scroll-proportion="0.5896033">
+        <state line="19" column="0" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/MainScreen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="98" selection-start="1712" selection-end="1712" vertical-scroll-proportion="-21.064516">
+          <folding>
+            <element signature="tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/css/MainScreen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="22" selection-start="720" selection-end="720" vertical-scroll-proportion="0.6254876">
           <folding />
         </state>
       </provider>

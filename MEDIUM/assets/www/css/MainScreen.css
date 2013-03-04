@@ -30,7 +30,7 @@ body{
 	background: #90ee90;
 }
 #bottomBar{
-	background: yellow;
+	background: #fff;
 	height: 235px;
 }
 #map_canvas{
@@ -55,4 +55,7 @@ div.resultSmall{
 	width: 50px;
 	line-height: 40px;
 	text-align: center;
+}
+h1{
+	margin: 10px;
 }
