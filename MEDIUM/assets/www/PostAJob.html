@@ -2,9 +2,50 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/global.css"/>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script language="javascript">
+
+		function inputAddressValidation(){
+			if(document.getElementById("location").value=="")
+			{
+			alert("Your Address is Empty. Please Enter a valid address");
+			}else{
+				getAddressLatLng(document.getElementById("location").value);
+			}
+			return;
+		}
+
+/*		function getLatLng(){
+			var sAddress = document.getElementById("location").value;
+			geocoder.geocode({'address':sAddress}, function(results, status){
+					if(status== google.maps.GeocoderStatus.OK){
+						var coords = new google.maps.LatLng(
+							results[0].geometry.location.lat(),
+							results[0].geometry.location.lng()
+						);
+						alert(coords.lat + coords.lng;
+					}else{
+						alert("Geocode was not successful for the following reason: " + status);
+					}
+
+			});
+		}
+*/
+
+	var geocoder = new google.maps.Geocoder();
+
+	function getAddressLatLng(inputAddress){
+		geocoder.geocode( { 'address': inputAddress}, function(results, status) {
+		if (status == google.maps.GeocoderStatus.OK) {
+		    	var latitude = results[0].geometry.location.lat().toString();
+		    	var longitude = results[0].geometry.location.lng().toString();
+		    alert(latitude + longitude);
+    		} 
+		}); 
+		}
+	</script>
 
 	<style>
-
 	body{
 		height: 615px;
 		width: 360px;
@@ -118,7 +159,7 @@
 </head>
 
 
-<body>
+<body onload="initialize()">
 
 	<div class="postTitle">Post a Job</div>
 
@@ -127,7 +168,7 @@
 	<div class="job_title_locn_desc">
 		<form method="get" action="/search">
 			<input name="jobtitle" type="text" placeholder="Job Title" style="display:block" />
-			<input name="location" type="text" placeholder="Location" style="display:block"/>
+			<input name="location" type="text" placeholder="Location" style="display:block" id="location"/>
 			<textarea rows="10" cols="34" name="description" type="text" placeholder="Description"  id="Description"></textarea>
 		</form></div>
 
@@ -138,26 +179,13 @@
 			<input name="price" type="text" class="tiny" maxlength="10" placeholder="CAD" />
 		</form></div>
 
-	<!-- <div class="priceInput">
-			<form method="get" action="/search"> 
-				<input name="price" type="text" maxlength="10" placeholder="CAD">
-			</form></div>	 -->
-
 	<div class="checkBoxes">
 			<form action="">
 				<input type="checkbox" name="priceType" value="flatFee">Flat Fee<br>
 			</form></div>
 
-	<!-- <table id="Checkboxlist1" border="1px" width="300px">
-		<tr>
-			<td><input id="Checkboxlist1_0" type="checkbox" name="Checkboxlist1$0" value="red" /><label for="Checkboxlist1_0">Red</label></td></tr>
-		<tr>
-			<td><input id="Checkboxlist1_1" type="checkbox" name="Checkboxlist1$1" value="blue" /><label for="Checkboxlist1_1">Blue</label></td></tr>
-		<tr>
-		    <td><input id="Checkboxlist1_2" type="checkbox" name="Checkboxlist1$2" value="green" /><label for="Checkboxlist1_2">Green</label></td></tr>
-		</table> -->
-
-	<div class="button" id="postButton">Post</div>
+	<div class="button" id="postButton" onclick="return inputAddressValidation()">Post</div>
+	<div class="button" id="test" onclick="getAddressLatLng()">Test</div>
 
 </body>
 
