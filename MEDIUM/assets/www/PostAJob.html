@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./css/global.css"/>
+
+	<style>
+
+	body{
+		height: 615px;
+		width: 360px;
+		border: 1px solid black;
+	}
+
+	.postTitle{
+		display: inline-block;
+		font-size: 24px;
+		font-family: arial;
+		margin-left:30px;
+		margin-top:20px;
+	}
+	
+	.buttongroup{
+		margin-right: auto;
+		margin-left: auto;
+		width:240px;
+		margin-top: 200px;
+		margin-bottom: 200px
+	}
+
+	#cancelButton{
+		display: inline-block;
+		float:right;
+		right:40px;
+		top: 10px;
+	}
+
+	.job_title_locn_desc{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 40px;
+		width: 300px;
+	}
+
+	.button {
+      border:1px solid #4297ce;
+      text-align: center;
+      line-height: 25px;
+      display:inline-block;
+      color:#174e71;
+      font-family:arial;
+      font-size:20px;
+      padding:10px 15px;
+      vertical-align: top;
+      text-decoration:none;
+      position: relative;
+      height:25px;
+      width:60px;
+      margin-right:-5px;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
+
+      }.button:hover {
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DCCF5), color-stop(1, #68AFDE));
+        border: 1px solid #2c7eb3;
+
+      }.button:active {
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5));
+        border: 1px solid #2c7eb3;
+      }
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="postTitle">Post a Job</div>
+
+<div class="button" id="cancelButton">
+	Cancel
+</div>
+
+
+<div class="job_title_locn_desc">
+	
+	<form method="get" action="/search">
+			    <input name="jobtitle" type="text" size="30" placeholder="Job Title" style="display:block" />
+			    <input name="location" type="text" size="30" placeholder="Location" style="display:block"/>
+			    <input name="description" type="text" size="30" placeholder="Description" style="display:block"/>
+			</form>
+</div>
+<div class="priceLabel"></div>
+<div class="priceInput"></div>
+<div class="flatRateCheckbox"></div>
+<div class="postButton"></div>
+</body>
+
+</html>
