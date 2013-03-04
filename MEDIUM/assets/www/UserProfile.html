@@ -3,7 +3,8 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="allPages.css"/>
 	<title>User Profile</title>
-
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/userProfile.js"></script>
 	<style type="text/css">
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -123,13 +124,13 @@
 	</style>
 
 </head>
-<body>
+<body onload="switch()">
 
 	<!-- User Information/Profile Picture -->
 	<div class="profilepic"><img src="./images/small-largegif.gif"></div>
 	<div class ="userinfo">
 		<div class="username">User1234</div>
-		<div class="emailaddress">user1234@jademap.com</div>
+		<div class="emailaddress"></div>
 		<div class="rating">RATING</div>
 		<div class="percentage">90%</div>
 	</div>
