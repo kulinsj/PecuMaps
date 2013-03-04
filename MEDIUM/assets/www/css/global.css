@@ -3,7 +3,7 @@ body{
 	padding: 0;
 	border: 0;
 }
-input {
+input[type=text]{
 	width:284px;
 	background-image: url('../images/textBG300.png');
 	height: 34px;

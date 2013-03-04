@@ -2,122 +2,11 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/global.css"/>
-
-	<style>
-
-	body{
-		height: 615px;
-		width: 360px;
-		margin: 0;
-		position:relative;
-	}
-
-	.button {
-      border:1px solid #4297ce;
-      text-align: center;
-      line-height: 25px;
-      display:inline-block;
-      color:#174e71;
-      font-family:arial;
-      font-size:20px;
-      padding:10px 15px;
-      vertical-align: top;
-      text-decoration:none;
-      position: relative;
-      height:30px;
-      /*width:60px;*/
-      margin-right:-5px;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
-    }
-
-    .button:hover {
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DCCF5), color-stop(1, #68AFDE));
-        border: 1px solid #2c7eb3;
-
-    }
-
-    .button:active {
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5));
-        border: 1px solid #2c7eb3;
-    }
-
-    /*.buttongroup{
-		margin-right: auto;
-		margin-left: auto;
-		width:240px;
-		margin-top: 200px;
-		margin-bottom: 200px
-	}*/
-
-/*All the UI components are described here*/
-	.postTitle{
-		display: inline-block;
-		font-size: 24px;
-		font-family: arial;
-		margin-left:30px;
-		margin-top:20px;
-	}
-
-	#cancelButton{
-		display: inline-block;
-		float:right;
-		right:40px;
-		top: 10px;
-	}
-
-	.job_title_locn_desc{
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 60px;
-		width: 300px;
-		font-size: 30px;
-	}
-
-	#Description{
-		height: 100px;
-		/*border: 1px solid black;*/
-		margin-top: 40px;
-		/*border:none;*/
-	}
-
-	.priceLabel{
-		display: inline-block;
-		font-size: 24px;
-		margin-left:30px;
-		/*margin-top: 80px;*/
-	}
-
-	.priceInput{
-		margin-top: 10px;
-		display: inline-block;
-		
-	}
-
-	/*This is the text component of .priceInput*/
-	.priceInput input[type="text"]{
-		
-	}
-
-	.checkBoxes{
-		margin: 15px 0 0 15px;
-		font-family: arial;
-		width: 300px;
-	}
-
-	#postButton{
-		position: absolute;
-		float:bottom;
-		margin-left:auto;
-		bottom:10px;
-		left: 14px;
-		display:block;
-		width: 300px;
-	}
-    </style>
-
+	<link rel="stylesheet" href="css/PostAJob.css" type="text/css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="js/PostAJob.js"></script>
 </head>
-
-
 <body>
 
 	<div class="postTitle">Post a Job</div>
@@ -125,37 +14,38 @@
 	<div class="button" id="cancelButton">Cancel</div>
 
 	<div class="job_title_locn_desc">
-		<form method="get" action="/search">
-			<input name="jobtitle" type="text" placeholder="Job Title" style="display:block" />
-			<input name="location" type="text" placeholder="Location" style="display:block"/>
-			<textarea rows="10" cols="34" name="description" type="text" placeholder="Description"  id="Description"></textarea>
-		</form></div>
+		<input name="jobtitle" id="jobTitle" type="text" placeholder="Job Title" style="display:block" />
+		<input name="location" id="jobLocation"  type="text" placeholder="Location" style="display:block"/>
+		<textarea rows="10" id="jobDescription" cols="34" name="description" type="text" placeholder="Description"  id="Description"></textarea>
 
-		<div class="priceLabel">$:</div>
 
-	<div class="priceInput">
-		<form method="get" action="/search">
-			<input name="price" type="text" class="tiny" maxlength="10" placeholder="CAD" />
-		</form></div>
+		<span class="priceLabel">$</span>
 
-	<!-- <div class="priceInput">
-			<form method="get" action="/search"> 
-				<input name="price" type="text" maxlength="10" placeholder="CAD">
-			</form></div>	 -->
-
-	<div class="checkBoxes">
-			<form action="">
-				<input type="checkbox" name="priceType" value="flatFee">Flat Fee<br>
-			</form></div>
-
-	<!-- <table id="Checkboxlist1" border="1px" width="300px">
-		<tr>
-			<td><input id="Checkboxlist1_0" type="checkbox" name="Checkboxlist1$0" value="red" /><label for="Checkboxlist1_0">Red</label></td></tr>
-		<tr>
-			<td><input id="Checkboxlist1_1" type="checkbox" name="Checkboxlist1$1" value="blue" /><label for="Checkboxlist1_1">Blue</label></td></tr>
-		<tr>
-		    <td><input id="Checkboxlist1_2" type="checkbox" name="Checkboxlist1$2" value="green" /><label for="Checkboxlist1_2">Green</label></td></tr>
-		</table> -->
+		<div class="priceInput">
+			<input id="jobPay"  name="price" type="text" class="tiny" maxlength="10" placeholder="CAD" /><span id="flatVanisher"><span id="spacer"> per </span><input id="payPer" name="per" type="text" class="small" placeholder="per what?" /></span>
+		</div>
+		<div id="checkWrap">
+			<input type="checkbox" id="flatCheck" checked="true"> Flat Fee
+		</div>
+		<div id="expiryWrap">
+			<span>Post will expire in</span><select id="dateNum">
+			    <option value="1">1</option>
+			    <option value="2" selected="selected">2</option>
+			    <option value="3">3</option>
+			    <option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			</select>
+			<select id="dateType" >
+				<option value="days">days</option>
+				<option value="weeks" selected="selected">weeks</option>
+				<option value="months">months</option>
+			</select>
+		</div>
+	</div>
 
 	<div class="button" id="postButton">Post</div>
 

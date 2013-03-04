@@ -1,0 +1,130 @@
+body{
+	height: 615px;
+	width: 360px;
+	margin: 0;
+	position:relative;
+	font-family: arial, sans-serif;
+}
+
+.button {
+  border:1px solid #4297ce;
+  text-align: center;
+  line-height: 25px;
+  display:inline-block;
+  color:#174e71;
+  font-family:arial;
+  font-size:20px;
+  padding:10px 15px;
+  vertical-align: top;
+  text-decoration:none;
+  position: relative;
+  height:30px;
+  /*width:60px;*/
+  margin-right:-5px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
+}
+
+.button:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DCCF5), color-stop(1, #68AFDE));
+    border: 1px solid #2c7eb3;
+}
+
+.button:active {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5));
+    border: 1px solid #2c7eb3;
+}
+
+/*.buttongroup{
+	margin-right: auto;
+	margin-left: auto;
+	width:240px;
+	margin-top: 200px;
+	margin-bottom: 200px
+}*/
+
+/*All the UI components are described here*/
+.postTitle{
+	display: inline-block;
+	font-size: 24px;
+	font-family: arial;
+	margin-left:30px;
+	margin-top:20px;
+}
+
+#cancelButton{
+	display: inline-block;
+	float:right;
+	right:40px;
+	top: 10px;
+}
+
+.job_title_locn_desc{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+	width: 300px;
+}
+
+#jobDescription{
+	display: block;
+	margin-top: 15px;
+	width: 293px;
+	height: 125px;
+}
+
+#Description{
+	height: 100px;
+	/*border: 1px solid black;*/
+	margin-top: 40px;
+	/*border:none;*/
+}
+
+.priceLabel{
+	display: inline-block;
+	font-size: 24px;
+}
+#spacer{
+	display: inline-block;
+	margin: 0 20px;
+}
+#flatCheck{
+	font-size: 19px;
+}
+
+.priceInput{
+	margin-top: 10px;
+	display: inline-block;
+}
+#flatVanisher{
+	font-size: 17px;
+}
+
+.checkBoxes{
+	margin: 15px 0 0 15px;
+	font-family: arial;
+	width: 300px;
+}
+
+#postButton{
+	position: absolute;
+	margin-left:auto;
+	bottom:15px;
+	left: 14px;
+	display:block;
+	width: 300px;
+}
+input.invalid{
+	border-color: red;
+}
+
+#checkWrap{
+	margin: 15px 0 0 0;
+}
+
+#expiryWrap{
+	margin-top: 15px;
+}
+
+select{
+	margin-left: 10px;
+}
