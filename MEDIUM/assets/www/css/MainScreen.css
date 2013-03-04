@@ -36,3 +36,23 @@ body{
 #map_canvas{
 	height: 320px;
 }
+#resultsScroll{
+	height: 40px;
+	background: white;
+	overflow: auto;
+	overflow-y: hidden;
+}
+#resultsScrollChild{
+	height: 40px;
+	min-width: 600px;
+	overflow: auto;
+	overflow-y: hidden;
+}
+div.resultSmall{
+	display: inline-block;
+	border-right: 1px solid #555;
+	height: 40px;
+	width: 50px;
+	line-height: 40px;
+	text-align: center;
+}

@@ -27,3 +27,7 @@ input.small {
 	width:109px;
 	background-image: url('../images/textBG125.png');
 }
+input.tiny {
+	width:78px;
+	background-image: url('../images/textBG94.png');
+}
