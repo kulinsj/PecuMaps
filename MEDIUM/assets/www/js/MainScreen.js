@@ -1,10 +1,20 @@
 var TheJobs;
+var markers = new Array();
 
 $(document).ready(function(){
 	var $body = $('body');
 	//alert($body.height());
 	var map = new GoogleMap();
     var mapRef = map.initialize();
+	console.log(markers);
+	for(var i=0; i<markers.length;i++){
+		google.maps.event.addListener(markers[i], "click", function() {
+		    console.log(markers[i]);
+		});
+	}
+	/*google.maps.event.addListener(marker, "click", function() {
+	    console.log(marker);
+	});*/
 
 	var $searchBox = $('#topBar input');
 	var $map = $('#map_canvas > div');
@@ -77,10 +87,9 @@ var addMarkersToMap = function(map){
 			position: latLong,
 			map: map
 			});
-			//mapBounds.extend(marker);
+			markers[i]=marker;
 		}
 		//map.fitBounds(mapBounds);
-
 	}
     else{
 		alert(jobs.message || "could not get jobss");

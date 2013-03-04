@@ -30,8 +30,9 @@ body{
 	background: #90ee90;
 }
 #bottomBar{
-	background: yellow;
+	background: #fff;
 	height: 235px;
+	position: relative;
 }
 #map_canvas{
 	height: 320px;
@@ -55,4 +56,31 @@ div.resultSmall{
 	width: 50px;
 	line-height: 40px;
 	text-align: center;
+}
+h1{
+	margin: 10px 0 0 10px;;
+}
+#username{
+	margin-left: 10px;
+}
+#pay{
+	position: absolute;
+	top:50px;
+	right:10px;
+}
+#moneyWrap{
+	display: block;
+	color: #222;
+	font-size: 19pt;
+	text-align: center;
+}
+#description{
+	padding: 0 10px;
+}
+#readMore{
+	position: absolute;
+	bottom: 0;
+	width: 360px;
+	text-align: center;
+
 }
