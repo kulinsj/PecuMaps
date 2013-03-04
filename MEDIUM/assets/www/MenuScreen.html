@@ -2,31 +2,171 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="./css/global.css"/>
+
+	<style>
+	body{
+		height:615px;
+		width:360px;
+		border: 1px solid black;
+		position:relative;
+		font-family: arial;
+	}
+	.button {
+      border:1px solid #4297ce;
+      text-align: center;
+      line-height: 36px;
+      color:#174e71;
+      font-family:arial;
+      font-size:14px;
+      padding:10px 15px;
+      vertical-align: top;
+      text-decoration:none;
+      position: relative;
+      height:30px;
+      width:70px;
+      margin-right:-5px;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
+
+      }.button:hover {
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DCCF5), color-stop(1, #68AFDE));
+        border: 1px solid #2c7eb3;
+
+      }.button:active {
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5));
+        border: 1px solid #2c7eb3;
+      }
+
+      .menuLabel{
+      	display:inline-block;
+      	font-size: 30px;
+      	margin-left: 10px;
+      	margin-top: 20px;
+      }
+
+      #close{
+      	display:inline-block;
+      	float:right;
+      	margin-right: 10px;
+      	margin-top: 20px;
+      }
+      #myProfile{
+      	display:inline-block;
+      	width:65px;
+      }
+      #settings{
+      	display:inline-block;
+      	width:60px;
+      	margin-left: 5px;
+      }
+      #postaJob{
+      	display:inline-block;
+      	width:100px;
+      	float:right;
+      	margin-right: 0px;
+      }
+
+      .bottomBar{
+      	width:340px;
+      	display: block;
+      	position: absolute;
+      	bottom: 10px;
+      	margin-left: 10px;
+      }
+
+      .notificationItem{
+      	height: 100px;
+      	width: 340px;
+      }
+
+      .notificationItemList{
+      	display: block;
+      	width:340px;
+      	margin-right: auto;
+      	margin-left: auto;
+      }
+
+      .topbar{
+      	width: 360px;
+      	height: 100px;
+      	display:block;
+      }
+
+      .itemTitle{
+      	font-size: 22px;
+      	margin-left: 10px;
+      	margin-top: 10px;
+      	margin-bottom: 5px;
+      }
+      .itemDescription{
+      	font-size: 14px;
+      	margin-left: 10px;
+      }
+	</style>
+
+
 	<title>Menu</title>
 </head>
+
+
 <body>
-	Menu
-	<button type="button">Settings</button>
-	
-	<br>
-	Item 1 <br> Sub Item 1 <br>
-	Item 2 <br> Sub Item 2 <br>
-	Item 3 <br> Sub Item 3 <br>
-	Item 4 <br> Sub Item 4 <br>
 
-	<form name="groovyform">
-		<input
-		type="button"
-		name="groovybtn1"
-		class="groovybutton"
-		value="My Profile"
-		title="">
-   <button type="button">Settings</button>
-   <button type="button">Post a Job</button>
+<div class="topbar">
+	<div class="menuLabel">Menu</div>
+
+	<div class="button" id="close">Close</div>
+</div>
 
 
-</form>
+<div class="notificationItemList">
+	<div class="notificationItem">
+		<div class="itemTitle">
+			Item 1
+		</div>
+		
+		<div class="itemDescription">
+			Sub Item 1
+		</div>
+	</div>
 
+	<div class="notificationItem">
+		<div class="itemTitle">
+			Item 2
+		</div>
+
+		<div class="itemDescription">
+			Sub Item 2
+		</div>
+	</div>
+
+	<div class="notificationItem">
+		<div class="itemTitle">
+			Item 3
+		</div>
+		
+		<div class="itemDescription">
+			Sub Item 3
+		</div>
+		
+	</div>
+
+	<div class="notificationItem">
+		<div class="itemTitle">
+			Item 4
+		</div>
+			
+		<div class="itemDescription">
+			Sub Item 4
+		</div>
+		
+	</div>
+
+</div>
+
+<div class="bottomBar">
+	<div class="button" id="myProfile">My Profile</div>
+	<div class="button" id="settings">Settings</div>
+	<div class="button" id="postaJob">Post A Job</div>
+</div>
 
 </body>
 
