@@ -103,7 +103,7 @@ $(document).ready(function(){
 				sort(itemsArray, "cost", false);
 			}else if ($calender.parent().hasClass("selected")){
 				sort(itemsArray, "date", false);
-			
+
 			/*for (var i=0; i<itemsArray.length; i++){
 				console.log(itemsArray[i].cost);
 				console.log(Date(itemsArray[i].expiryDate));
@@ -112,7 +112,7 @@ $(document).ready(function(){
 	}
 }
 
-	
+
 	var $searchBox = $('#topBar input');
 	var $map = $('#map_canvas > div');
 	var $searchToolsBox = $('#searchTools');
@@ -274,7 +274,7 @@ var addMarkersToMap = function(map){
 	searchRetract();
 
  }
- 
+
 function searchDropDown(){
 		document.getElementById('searchWindow').style.visibility="visible";
 		hideSortTools();
