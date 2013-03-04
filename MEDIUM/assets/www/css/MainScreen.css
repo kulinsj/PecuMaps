@@ -1,20 +1,29 @@
+html{
+	background: #444;
+}
 body{
+	background: #fff;
 	width: 360px;
-	height: 100%;
+	height: 615px;
+	position: relative;
+	font-family: arial, sans-serif;
 }
 #topBar{
 	height: 60px;
 }
 #topBar input{
-	margin: 13px;
+	margin: 13px 50px;
 }
 #menu{
 	height: 60px;
 	width: 60px;
-	background: green;
-	position:relative;
+	position:absolute;
 	right:0;
+	display: inline-block;
+	background: #ddd;
+	line-height: 60px;
+	text-align: center;
 }
 #map_canvas{
-	height: 200px;
+	height: 320px;
 }

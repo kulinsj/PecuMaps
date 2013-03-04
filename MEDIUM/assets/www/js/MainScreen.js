@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	var $body = $('body');
+	//alert($body.height());
 	var map = new GoogleMap();
     map.initialize();
 });
