@@ -25,16 +25,7 @@
       <file leaf-file-name="MainScreen.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/MainScreen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.7741935">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="7" selection-start="115" selection-end="115" vertical-scroll-proportion="0.29916897">
+            <state line="7" column="4" selection-start="363" selection-end="363" vertical-scroll-proportion="-5.419355">
               <folding />
             </state>
           </provider>
@@ -43,16 +34,16 @@
       <file leaf-file-name="MainScreen.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/www/css/MainScreen.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="12" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+            <state line="19" column="1" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainScreen.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainScreen.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/www/js/MainScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="3" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+            <state line="8" column="20" selection-start="158" selection-end="158" vertical-scroll-proportion="0.25945947">
               <folding />
             </state>
           </provider>
@@ -82,16 +73,16 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/assets/www/index.html" />
-        <option value="$PROJECT_DIR$/assets/www/js/MainScreen.js" />
-        <option value="$PROJECT_DIR$/assets/www/MainScreen.html" />
         <option value="$PROJECT_DIR$/assets/www/css/MainScreen.css" />
         <option value="$PROJECT_DIR$/assets/www/css/global.css" />
+        <option value="$PROJECT_DIR$/assets/www/index.html" />
+        <option value="$PROJECT_DIR$/assets/www/MainScreen.html" />
+        <option value="$PROJECT_DIR$/assets/www/js/MainScreen.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1145" />
+    <option name="width" value="840" />
     <option name="height" value="860" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -266,14 +257,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1145" height="860" extended-state="0" />
+    <frame x="0" y="0" width="840" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32595217" sideWeight="0.5413333" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27305827" sideWeight="0.5413333" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -347,30 +338,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/js/MainScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="3" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/css/MainScreen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/www/MainScreen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.7741935">
+        <state line="19" column="1" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="115" selection-end="115" vertical-scroll-proportion="0.29916897">
+        <state line="2" column="6" selection-start="46" selection-end="46" vertical-scroll-proportion="0.06648199">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/MainScreen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="363" selection-end="363" vertical-scroll-proportion="-5.419355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/www/js/MainScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="20" selection-start="158" selection-end="158" vertical-scroll-proportion="0.25945947">
           <folding />
         </state>
       </provider>

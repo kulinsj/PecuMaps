@@ -15,3 +15,6 @@ body{
 	position:relative;
 	right:0;
 }
+#map_canvas{
+	height: 200px;
+}
