@@ -2,6 +2,8 @@ body{
 	margin:0;
 	padding: 0;
 	border: 0;
+	height: 615px;
+	width: 360px;
 }
 input[type=text]{
 	width:284px;
@@ -12,6 +14,17 @@ input[type=text]{
 	margin:0;
 	outline: 0;
 }
+
+input[type=password]{
+	width:284px;
+	background-image: url('../images/textBG300.png');
+	height: 34px;
+	padding: 0 8px;
+	border:0;
+	margin:0;
+	outline: 0;
+}
+
 input:focus {
 	background-position: 0 -34px;
 }
