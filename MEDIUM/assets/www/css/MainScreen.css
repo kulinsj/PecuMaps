@@ -27,9 +27,7 @@ body{
 	background-color: #02d238;
 	border-left: 1px solid #009627;
 }
-img #menu{
-	vertical-align:middle;
-}
+
 #searchTools{
 	height: 235px;
 	background: #90ee90;
@@ -118,10 +116,13 @@ h1{
 	padding: 0 10px;
 }
 #readMore{
+	width:70px;
 	position: absolute;
 	bottom: 0;
-	width: 360px;
 	text-align: center;
+	margin-left: 140px;
+	float:right;
+    display: block;
 }
 div.sel{
 	background: #ddd;
