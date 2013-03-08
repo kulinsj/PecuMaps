@@ -11,9 +11,10 @@ body{
 	border: 1px solid #009627;
 }
 #topBar input.mediumLarge{
-	margin: 13px;
+	margin: 12px;
 	height: 34px;
 	background: #67f18b;
+	border: 1px solid #009627;
 }
 #menu{
 	height: 60px;
@@ -37,7 +38,7 @@ body{
 	background: #90ee90;
 }
 #bottomBar{
-	background: #fff;
+	background: #efefef;
 	height: 330px;
 	position: relative;
 }
@@ -52,25 +53,32 @@ body{
 }
 
 #sort_by{
-	padding-left: 19px;
-	padding-top: 10px;
-	
-	width: 140px;
+	margin-left: 19px;
+	margin-top: 10px;
+	margin-bottom: 7px;
+	width: 165px;
 	height: 60px;
 	padding-bottom: 5px;
 	display: inline-block;
 }
 
 #lo-hi{
-	width: 85px;
+	width: 105px;
 	height: 60px;
-	position: relative;
+	position: absolute;
+	top: 0;
+	right: 4px;
 	display: inline-block;
-	
+	text-align: center;
+
+	margin-top: 10px;
+	margin-bottom: 7px;
+
 }
 .sort_text{
 	font: 17px, arial, bold;
 	color: #444444;
+	padding-bottom: 5px;
 }
 
 .sort_button{
@@ -78,6 +86,8 @@ body{
 	width: 35px;
 	background-image: url('../images/lo-hi.png');
 	display: inline-block;
+	margin-right: 10px;
+
 }
 
 #resultsScroll{
@@ -103,6 +113,10 @@ div.resultSmall{
 	font: bold 19px arial;
 	color: #444444;
 	line-height: 50px;
+	 background: -webkit-linear-gradient(top, #efefef, #dcdcdc);
+	background: -moz-linear-gradient(top, #efefef, #dcdcdc);
+  
+
 }
 h1{
 	margin: 10px 0 0 10px;;
