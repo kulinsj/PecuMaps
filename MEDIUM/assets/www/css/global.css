@@ -47,20 +47,20 @@ input.tiny {
 }
 
 .button{
-	border:1px solid #4297ce;
+	border:1px solid #009627;
     text-align: center;
-    color:#174e71;
+    color:#009627;
 	font-family:arial;
 	font-size:20px;
 	padding:10px 15px;
 	vertical-align: top;
 	text-decoration:none;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #02d238), color-stop(1, #67f18b));
 }.button:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DCCF5), color-stop(1, #68AFDE));
-    border: 1px solid #2c7eb3;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #67f18b), color-stop(1, #02d238));
+    border: 1px solid #009627;
 
 }.button:active {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5));
-    border: 1px solid #2c7eb3;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #67f18b), color-stop(1, #02d238));
+    border: 1px solid #009627;
 }

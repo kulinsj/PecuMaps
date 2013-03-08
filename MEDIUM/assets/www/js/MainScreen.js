@@ -58,7 +58,7 @@ $(document).ready(function(){
 	var spare60 = ($bottomBox.height()+60).toString() +'px';
 	var $topBar = $('#topBar');
 
-	var $jobTitle = $('#bottomBar h1');
+	var $jobTitle = $('#bottomBar #title');
 	var $userLink = $('#userLink');
 	var $description = $('#description');
 	var $money = $('#money');
