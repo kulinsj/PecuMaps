@@ -2,18 +2,18 @@ html{
 	background: #444;
 }
 body{
-	background: #fff;
-	width: 360px;
-	height: 615px;
+	background: white;
 	position: relative;
-	font-family: arial, sans-serif;
 }
 #topBar{
 	height: 60px;
+	background-color: #02d238;
+	border: 1px solid #009627;
 }
-#topBar input{
+#topBar input.mediumLarge{
 	margin: 13px;
 	height: 34px;
+	background: #67f18b;
 }
 #menu{
 	height: 60px;
@@ -24,6 +24,11 @@ body{
 	background: #ddd;
 	line-height: 60px;
 	text-align: center;
+	background-color: #02d238;
+	border-left: 1px solid #009627;
+}
+img #menu{
+	vertical-align:middle;
 }
 #searchTools{
 	height: 235px;
