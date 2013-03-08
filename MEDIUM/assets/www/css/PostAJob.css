@@ -1,14 +1,10 @@
 body{
-	height: 615px;
-	width: 360px;
-	margin: 0;
 	position:relative;
-	font-family: arial, sans-serif;
 }
 
 .button {
-  border:1px solid #4297ce;
-  text-align: center;
+  
+  
   line-height: 25px;
   display:inline-block;
   color:#174e71;

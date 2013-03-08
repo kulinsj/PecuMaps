@@ -1,0 +1,35 @@
+	#loginpage{
+		display:none ;
+	}
+	
+	#loadingpage{
+		height:100%;
+		width:100%;
+		float:center;
+		background-color: #02d23a;	
+	}
+
+	.credential{
+		margin: 0px auto;
+	    width: 200px;
+	    height: 110px;
+	}
+							  
+	.buttongroup{
+	    width:200px;
+		margin:120px auto 40px auto;
+	}
+
+	.button {
+	    line-height: 36px;
+	    display:inline-block;
+	    vertical-align: top;
+	    text-decoration:none;
+	    position: relative;
+	    height:30px;
+	    width:70px;
+	    margin-right:-5px;
+	}
+     a{
+	text-decoration: none;
+      }

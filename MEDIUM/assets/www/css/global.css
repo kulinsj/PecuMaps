@@ -4,6 +4,7 @@ body{
 	border: 0;
 	height: 615px;
 	width: 360px;
+	font-family: arial, sans-serif;
 }
 input[type=text]{
 	width:284px;
@@ -43,4 +44,23 @@ input.small {
 input.tiny {
 	width:78px;
 	background-image: url('../images/textBG94.png');
+}
+
+.button{
+	border:1px solid #4297ce;
+    text-align: center;
+    color:#174e71;
+	font-family:arial;
+	font-size:20px;
+	padding:10px 15px;
+	vertical-align: top;
+	text-decoration:none;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
+}.button:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DCCF5), color-stop(1, #68AFDE));
+    border: 1px solid #2c7eb3;
+
+}.button:active {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5));
+    border: 1px solid #2c7eb3;
 }

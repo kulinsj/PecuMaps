@@ -1,0 +1,73 @@
+body{
+	    position:relative;
+}
+.button {
+      line-height: 36px;
+      position: relative;
+      margin-right:-5px;
+}
+
+.menuLabel{
+	    display:inline-block;
+     	font-size: 30px;
+     	margin: 20px 0px 0px 10px;
+}
+
+#close{
+      display:inline-block;
+      float:right;
+      margin: 20px 10px 0px 0px;
+      height:30px;
+      width:70px;
+}
+#myProfile{
+      display:inline-block;
+     	width:80px;
+      font-size: 16px;
+}
+#settings{
+      display:inline-block;
+      width:80px;
+      font-size: 16px;
+}
+#postaJob{
+      display:inline-block;
+      width:90px;
+      float:right;
+      margin-right: 0px;
+      font-size: 16px;
+}
+
+#bottomBar{
+      width: 360px;
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      margin-left: 10px;
+}
+
+.notificationItem{
+	    height: 100px;
+      width: 340px;
+}
+
+.notificationItemList{
+	    display: block;
+      width:340px;
+      margin:0px auto;
+}
+
+.topbar{
+    	height: 100px;
+     	display:block;
+}
+
+.itemTitle{
+	font-size: 22px;
+     	margin: 10px 0px 5px 15px;
+}
+
+.itemDescription{
+	    font-size: 14px;
+     	margin-left: 10px;
+}
