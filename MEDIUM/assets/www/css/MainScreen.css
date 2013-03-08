@@ -42,13 +42,42 @@ img #menu{
 #map_canvas{
 	height: 235px;
 }
+
 #sort_tools{
 	height: 75px;
 	background: #c1c1c1;
+	/*position: absolute;*/
 }
+
+#sort_by{
+	padding-left: 19px;
+	padding-top: 10px;
+	display: inline-block;
+	width: 140px;
+	height: 60px;
+	padding-bottom: 5px;
+}
+
+#lo-hi{
+	width: 85px;
+	height: 60px;
+	display: inline-block;
+}
+.sort_text{
+	font: 17px, arial, bold;
+	color: #444444;
+}
+
+.sort_button{
+	height: 35px;
+	width: 35px;
+	background-image: url('../images/lo-hi.png');
+	display: inline-block;
+}
+
 #resultsScroll{
 	height: 50px;
-	background: white;
+	background: #efefef;
 	overflow: auto;
 	overflow-y: hidden;
 }
@@ -60,12 +89,13 @@ img #menu{
 }
 div.resultSmall{
 	display: inline-block;
-	border-right: 1px solid #555;
-	border-bottom: 1px solid #555;
+	border-right: 1px solid #d1d2d2;
+	border-bottom: 1px solid #d1d2d2;
 	height: 50px;
 	width: 80px;
 	line-height: 40px;
 	text-align: center;
+	background: #e6e6e5;
 }
 h1{
 	margin: 10px 0 0 10px;;
