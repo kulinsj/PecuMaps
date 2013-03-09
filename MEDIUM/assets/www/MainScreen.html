@@ -7,18 +7,25 @@
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/MainScreen.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script>
+	function searchDropDown(){
+		document.getElementById('searchWindow').style.visibility="visible";
+	}
 
+	function searchRetract(){
+		document.getElementById('searchWindow').style.visibility="hidden";
+	}
+	</script>
 <head>
 </head>
 <body>
 	<div id="topBar">
-		<input type="text" class="mediumLarge" placeholder="Search"/>
+		<input type="text" class="mediumLarge" placeholder="Search" onfocus="searchDropDown()"/>
 		<a href="MenuScreen.html">
 			<div id="menu">
 				<img src="images/menu.png" style="vertical-align:middle">
 			</div>
 		</a>
-		<div id="searchTools">
 			<div id="searchWindow">
 				<div id="searchDistance">Search within <span id="searchDistanceDropDown">
 					<select>
@@ -29,26 +36,24 @@
 					</select>
 				</span>
 			</div>
-				<div id="searchLocation">of <span id="searchLocationDropDown">
+				<div id="searchLocation">Of <span id="searchLocationDropDown">
 					<input placeholder="my Location">
 				</span></div>
-				<div id="searchJob">for <span id="searchJobDropDown">
+				<div id="searchJob">For <span id="searchJobDropDown">
 					<select>
-  						<option value="volvo">Volvo</option>
-  						<option value="saab">Saab</option>
-						<option value="mercedes">Mercedes</option>
-						<option value="audi">Audi</option>
+  						<option value="jobs">jobs</option>
+  						<option value="items">items</option>
 					</select>
 				</span>
 			</div>
-				<div id="searchPay">paying from $ <span id="searchPayInput">
+				<div id="searchPay">Paying from $<span id="searchPayInput">
 					<input placeholder="min">
-				</span> to $ <span id="searchPayInput">
+				</span> to $<span id="searchPayInput" style="position:absolute;right:10px;">
 				<input placeholder="max">
 			</span></div>
-				<div id="searchButton">Search</div>
+				<div id="searchButton" onclick="searchRetract()">Search</div>
 			</div>
-		</div>
+		
 	</div>
 	<div id="map_canvas" style="width:100%" ></div>
 	<div id="bottom_icon"></div>

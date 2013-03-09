@@ -81,7 +81,7 @@ $(document).ready(function(){
 			google.maps.event.trigger(markers[i], 'click');
 		});
 	});
-
+/*
 	$searchBox.focus(function(){
 		$topBar.animate({
 		    height: spare60
@@ -106,6 +106,8 @@ $(document).ready(function(){
 		    // Animation complete.
 		  });
 	});
+*/
+
 	}
 
 });
