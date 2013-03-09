@@ -2,107 +2,24 @@
 <html data-role="page">
 <head>
 	<link rel="stylesheet" href="css/global.css" />
-	<style>
+	<link rel="stylesheet" href="css/index.css" />
+	<script src="js/index.js" type="text/javascript"></script>
 
-	body{
-		height: 615px;
-		width: 360px;
-	}
 	
-	#loginpage{
-		display:none ;
-	}
-	#loadingpage{
-		height:100%;
-		width:100%;
-		float:center;
-		background-color: #02d23a;	
-	}
-
-	.credential{
-		margin-left: auto;
-		margin-right: auto;
-		width: 200px;
-		height: 110px;
-	}
-	
-	
-	.buttongroup{
-		margin-right: auto;
-		margin-left: auto;
-		width:200px;
-		margin-top: 120px;
-		margin-bottom: 40px;
-	}
-
-	.button {
-      border:1px solid #4297ce;
-      text-align: center;
-      line-height: 36px;
-      display:inline-block;
-      color:#174e71;
-      font-family:arial;
-      font-size:20px;
-      padding:10px 15px;
-      vertical-align: top;
-      text-decoration:none;
-      position: relative;
-      height:30px;
-      width:70px;
-      margin-right:-5px;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
-
-      }.button:hover {
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DCCF5), color-stop(1, #68AFDE));
-        border: 1px solid #2c7eb3;
-
-      }.button:active {
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5));
-        border: 1px solid #2c7eb3;
-      }
-
-      a{
-      	text-decoration: none;
-      }
-	</style>
-	<script>
-	function hideLoadingPage(){
-		document.getElementById('loadingpage').style.display="none";
-		document.getElementById('loginpage').style.display="block";
-	}
-	
-	function delayedHideLoadingPage(){
-		window.setTimeout(function() {
-	        hideLoadingPage();
-	    }, 1700);
-	}
-
-	function activateLoginButton(){
-		document.getElementById("loginbutton").style.background='-webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5))'
-		document.getElementById("signupbutton").style.background='-webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2))'
-		document.getElementById("confirmpassword").style.display='none'
-	}
-
-	function activateSignupButton(){
-		document.getElementById("signupbutton").style.background='-webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5))'
-		document.getElementById("loginbutton").style.background='-webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2))'
-		document.getElementById("confirmpassword").style.display='block'
-	}
-	</script>
 </head>
 
 
-<body onload="delayedHideLoadingPage()">
+<body onload="delayedHideLoadingPage(); activateLoginButton();">
 
 	
 	<div id="loadingpage">
-		<img src="./images/index.png" style="height:100px; width: 360px; margin-top: 250px"/>
+		<img src="images/index.png" style="height:100px; width: 360px; margin-top: 250px"/>
 	</div>
 
 	<div id="loginpage">
 		
 		<div class="logo">
-			<img src="./images/index.png" style="height:100px; width: 360px"/>
+			<img src="images/index.png" style="height:100px; width: 360px"/>
 		</div>
 
 		<div class="buttongroup">

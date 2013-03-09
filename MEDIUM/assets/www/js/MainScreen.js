@@ -58,7 +58,7 @@ $(document).ready(function(){
 	var spare60 = ($bottomBox.height()+60).toString() +'px';
 	var $topBar = $('#topBar');
 
-	var $jobTitle = $('#bottomBar h1');
+	var $jobTitle = $('#bottomBar #title');
 	var $userLink = $('#userLink');
 	var $description = $('#description');
 	var $money = $('#money');
@@ -81,7 +81,7 @@ $(document).ready(function(){
 			google.maps.event.trigger(markers[i], 'click');
 		});
 	});
-
+/*
 	$searchBox.focus(function(){
 		$topBar.animate({
 		    height: spare60
@@ -106,6 +106,8 @@ $(document).ready(function(){
 		    // Animation complete.
 		  });
 	});
+*/
+
 	}
 
 });

@@ -1,173 +1,122 @@
 <!doctype html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="./css/global.css"/>
-
-	<style>
-	body{
-		height:615px;
-		width:360px;
-		position:relative;
-		font-family: arial;
-	}
-	.button {
-      border:1px solid #4297ce;
-      text-align: center;
-      line-height: 36px;
-      color:#174e71;
-      font-family:arial;
-      font-size:14px;
-      padding:10px 15px;
-      vertical-align: top;
-      text-decoration:none;
-      position: relative;
-      height:30px;
-      width:70px;
-      margin-right:-5px;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
-
-      }.button:hover {
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DCCF5), color-stop(1, #68AFDE));
-        border: 1px solid #2c7eb3;
-
-      }.button:active {
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5));
-        border: 1px solid #2c7eb3;
-      }
-
-      .menuLabel{
-      	display:inline-block;
-      	font-size: 30px;
-      	margin-left: 10px;
-      	margin-top: 20px;
-      }
-
-      #close{
-      	display:inline-block;
-      	float:right;
-      	margin-right: 10px;
-      	margin-top: 20px;
-      }
-      #myProfile{
-      	display:inline-block;
-      	width:65px;
-      }
-      #settings{
-      	display:inline-block;
-      	width:60px;
-      	margin-left: 5px;
-      }
-      #postaJob{
-      	display:inline-block;
-      	width:100px;
-      	float:right;
-      	margin-right: 0px;
-      }
-
-      .bottomBar{
-      	width:340px;
-      	display: block;
-      	position: absolute;
-      	bottom: 10px;
-      	margin-left: 10px;
-      }
-
-      .notificationItem{
-      	height: 100px;
-      	width: 340px;
-      }
-
-      .notificationItemList{
-      	display: block;
-      	width:340px;
-      	margin-right: auto;
-      	margin-left: auto;
-      }
-
-      .topbar{
-      	width: 360px;
-      	height: 100px;
-      	display:block;
-      }
-
-      .itemTitle{
-      	font-size: 22px;
-      	margin-left: 15px;
-      	margin-top: 10px;
-      	margin-bottom: 5px;
-      }
-      .itemDescription{
-      	font-size: 14px;
-      	margin-left: 10px;
-      }
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/global.css"/>
+      <link rel="stylesheet" type="text/css" href="css/MenuScreen.css"/>
+      <script src="js/MenuScreen.js" type="text/javascript"></script>
 
 
 	<title>Menu</title>
 </head>
 
 
-<body>
+<body onload="activateNotifications()">
 
-<div class="topbar">
-	<div class="menuLabel">Menu</div>
-	<a href="MainScreen.html">
-		<div class="button" id="close">Close</div>
-	</a>
-</div>
+	<div id="topBar">
+		<a href="MenuScreen.html">
+			<div id="menu">
+				<img src="images/menu.png" style="vertical-align:middle">
+			</div>
+		</a>
+	</div>
 
+	<div id="pagecontents">
+		<div id="menu_bar">
+			<div id="notifications_tab" onclick="activateNotifications()">Notifications
+			</div><div id="myposts_tab" onclick="activateMyPosts()">My Posts
+			</div><div id="myclaims_tab" onclick="activateMyClaims()">My Claims
+			</div>
+			<div id="myclaims">
+				<ul>
+					<li class="feed_item">
+						<article class="claims_article">
+							<span class="title">Mow my lawn</span>
+							<div class ="user_data">
+								<img class="user_avatar" width="40px" height="40px" src="./images/small-avatar.gif">
+								<span class="username">User1234</span>
+								<span class="rating_text">rating</span>
+								<span class="user_score">98%</span>
+							</div>
+							<span class ="cost">$11</span>
+							<aside>
+								<span class="time_left">50 min left</span>
+							</aside>
+						</article>
+					</li>
 
-<div class="notificationItemList">
-	<div class="notificationItem">
-		<div class="itemTitle">
-			Accepted Claims
-		</div>
-		
-		<div class="itemDescription">
-			Post: Tune My Guitar
+					<li class="feed_item">
+						<article class="claims_article">
+							<span class="title">Mow my lawn</span>
+							<div class ="user_data">
+								<img class="user_avatar" width="40px" height="40px" src="./images/small-avatar.gif">
+								<span class="username">User1234</span>
+								<span class="rating_text">rating</span>
+								<span class="user_score">98%</span>
+							</div>
+							<span class ="cost">$11</span>
+							<aside>
+								<span class="time_left">50 min left</span>
+							</aside>
+						</article>
+					</li>
+				</ul>
+			</div>
+
+			<div id="myposts">
+				<ul>
+					<li class="feed_item">
+						<article class="posts_article">
+							<span class="title">Teach Me to Pitch</span>
+							<span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate, est nec suscipit tempor...</span>
+							<span class="time_left">2 days left</span>
+							<span class="claims">4 claims</span>
+						</article>
+					</li>
+
+					<li class="feed_item">
+						<article class="posts_article">
+							<span class="title">Red 1957 Les Paul</span>
+							<span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate, est nec suscipit tempor...</span>
+							<span class="time_left">1 day left</span>
+							<span class="claims">12 claims</span>
+						</article>
+					</li>
+				</ul>
+			</div>
+
+			<div id="notifications">
+				<ul>
+					<li class="feed_item">
+						<article class="notif_article">
+							<img class="user_avatar" width="40px" height="40px" src="./images/small-avatar.gif">
+							<span class="message">
+								<span class="username">BobDole</span> has claimed <span class="title">"Teach me to pitch"</span> job
+							</span>
+							<span class ="date">2 days ago</span>
+
+						</article>
+					</li>
+
+					<li class="feed_item">
+						<article class="notif_article">
+							<img class="user_avatar" width="40px" height="40px" src="./images/small-avatar.gif">
+							<span class="message">
+								<span class="username">JimiHendrix</span> has claimed <span class="title">"Red 1957 Les Paul"</span> item
+							</span>
+							<span class ="date">5 days ago</span>
+
+						</article>
+					</li>
+			</div>
 		</div>
 	</div>
 
-	<div class="notificationItem">
-		<div class="itemTitle">
-			New Claim
-		</div>
 
-		<div class="itemDescription">
-			Post: Fix My Lawnmower
-		</div>
-	</div>
 
-	<div class="notificationItem">
-		<div class="itemTitle">
-			New Claim
-		</div>
-		
-		<div class="itemDescription">
-			Post: Cook and Deliver Dinner
-		</div>
-		
-	</div>
 
-	<div class="notificationItem">
-		<div class="itemTitle">
-			Claim Accepted
-		</div>
-			
-		<div class="itemDescription">
-			Post: Come Play Board Game
-		</div>
-		
-	</div>
-
-</div>
-
-<div class="bottomBar">
-	<div class="button" id="myProfile">My Profile</div>
-	<div class="button" id="settings">Settings</div>
-	<a href="PostAJob.html">
-		<div class="button" id="postaJob">Post A Job</div>
-	</a>
+<div id="bottomBar">
+	<a href="myProfile.html"><div class="button" id="myProfile">My Profile</div></a>
+	<a href="PostAJob.html"><div class="button" id="postaJob">Post A Job</div></a>
 </div>
 
 </body>

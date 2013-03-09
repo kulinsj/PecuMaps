@@ -7,65 +7,109 @@
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/MainScreen.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script>
+	function searchDropDown(){
+		document.getElementById('searchWindow').style.visibility="visible";
+	}
 
+	function searchRetract(){
+		document.getElementById('searchWindow').style.visibility="hidden";
+	}
+	</script>
 <head>
 </head>
 <body>
 	<div id="topBar">
-		<input type="text" class="mediumLarge" placeholder="Search"/>
+		<input type="text" class="mediumLarge" placeholder="Search" onfocus="searchDropDown()"/>
 		<a href="MenuScreen.html">
 			<div id="menu">
-				Menu
+				<img src="images/menu.png" style="vertical-align:middle">
 			</div>
 		</a>
-		<div id="searchTools">
-
-		</div>
+			<div id="searchWindow">
+				<div id="searchDistance">Search within <span id="searchDistanceDropDown">
+					<select>
+					  <option value="5km">5 km</option>
+					  <option value="10km">10 km</option>
+					  <option value="20km">20 km</option>
+					  <option value="50km">50 km</option>
+					</select>
+				</span>
+			</div>
+				<div id="searchLocation">Of <span id="searchLocationDropDown">
+					<input placeholder="my Location">
+				</span></div>
+				<div id="searchJob">For <span id="searchJobDropDown">
+					<select>
+  						<option value="jobs">jobs</option>
+  						<option value="items">items</option>
+					</select>
+				</span>
+			</div>
+				<div id="searchPay">Paying from $<span id="searchPayInput">
+					<input placeholder="min">
+				</span> to $<span id="searchPayInput" style="position:absolute;right:10px;">
+				<input placeholder="max">
+			</span></div>
+				<div id="searchButton" onclick="searchRetract()">Search</div>
+			</div>
+		
 	</div>
 	<div id="map_canvas" style="width:100%" ></div>
+	<div id="bottom_icon"></div>
 	<div id="bottomBar">
+		<div id ="sort_tools">
+			<div id="sort_by">
+				<div class="sort_text">Sort by $ amount</div>
+				<div class="sort_button"></div>
+				<div class="sort_button"></div>
+				<div class="sort_button"></div>
+			</div>
+
+			<div id="lo-hi">
+				<div class="sort_text">Lo to Hi</div> <!-- temporary-->
+				<div class ="sort_button"></div>
+				<div class ="sort_button"></div>
+			</div>
+		</div>
+
+
 		<div id="resultsScroll">
 			<div id="resultsScrollChild">
 				<div class="resultSmall" >
-					1
-				</div>
-				<div class="resultSmall">
-					2
-				</div>
-				<div class="resultSmall">
-					3
-				</div>
-				<div class="resultSmall">
-					4
-				</div>
-				<div class="resultSmall">
-					5
-				</div>
-				<div class="resultSmall">
-					6
-				</div>
-				<div class="resultSmall">
+					$200
+				</div><div class="resultSmall">
+					$120
+				</div><div class="resultSmall">
+					$80
+				</div><div class="resultSmall">
+					$35
+				</div><div class="resultSmall">
+					$35
+				</div><div class="resultSmall">
+					$25
+				</div><div class="resultSmall">
 					7
-				</div>
-				<div class="resultSmall">
+				</div><div class="resultSmall">
 					8
-				</div>
-				<div class="resultSmall">
+				</div><div class="resultSmall">
 					9
-				</div>
-				<div class="resultSmall">
+				</div><div class="resultSmall">
 					10
 				</div>
 			</div>
 		</div>
-		<h1>Title</h1>
-		<span id="username"><a id="userLink" href="UserProfile.html">DarcyMcMullun</a></span>(<span id="rating">98</span>%)
+	<div id="postDetail">
+		<div id="title">Shovel My Drive Way</div>
+		<div id="username"><a id="userLink" href="UserProfile.html">Darcy McMullun (98%)</a>	</div>
 		<div id="pay">
 			<span id="moneyWrap">$<span id="money">25</span></span>
 			<span id="perWrap">per <span id="perWhat">Guitar</span></span>
 		</div>
-		<p id="description">Some stuff that needs to be said about the thing that needs to be done</p>
-		<div id="readMore">Read More</div>
+		<div id="description">Some stuff that needs to be said about the thing that needs to be done</div>
+	</div>
+		<div id="readMore"><img src="images/readmore.png" style="display:block"></div>
+
 	</div>
 </body>
 </html>
