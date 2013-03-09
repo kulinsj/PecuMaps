@@ -19,7 +19,35 @@
 			</div>
 		</a>
 		<div id="searchTools">
-
+			<div id="searchWindow">
+				<div id="searchDistance">Search within <span id="searchDistanceDropDown">
+					<select>
+					  <option value="5km">5 km</option>
+					  <option value="10km">10 km</option>
+					  <option value="20km">20 km</option>
+					  <option value="50km">50 km</option>
+					</select>
+				</span>
+			</div>
+				<div id="searchLocation">of <span id="searchLocationDropDown">
+					<input placeholder="my Location">
+				</span></div>
+				<div id="searchJob">for <span id="searchJobDropDown">
+					<select>
+  						<option value="volvo">Volvo</option>
+  						<option value="saab">Saab</option>
+						<option value="mercedes">Mercedes</option>
+						<option value="audi">Audi</option>
+					</select>
+				</span>
+			</div>
+				<div id="searchPay">paying from $ <span id="searchPayInput">
+					<input placeholder="min">
+				</span> to $ <span id="searchPayInput">
+				<input placeholder="max">
+			</span></div>
+				<div id="searchButton">Search</div>
+			</div>
 		</div>
 	</div>
 	<div id="map_canvas" style="width:100%" ></div>
