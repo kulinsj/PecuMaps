@@ -7,6 +7,16 @@ body{
       margin-right:-5px;
 }
 
+#bottomBar{
+  height: 60px;
+  background: #dcdcdc;
+}
+
+#pagecontents{
+  height: 505px;
+  background: #efefef;
+}
+
 #menu_bar{
   height: 50px;
   background: #ececec;
@@ -20,16 +30,185 @@ body{
   display: inline-block;
   text-align: center;
   line-height: 50px;
-     background: -webkit-linear-gradient(top, #efefef, #dcdcdc);
+    background: -webkit-linear-gradient(top, #efefef, #dcdcdc);
   background: -moz-linear-gradient(top, #efefef, #dcdcdc);
 }
 
-#bottomBar{
-  height: 515px;
-  background: #dcdcdc;
+.menuLabel:active{
+  background: #efefef;
+
 }
 
-#bottom_area{
-  height: 455px;
+ul{
+  list-style-type: none;
+  margin-left: -40px;
+  position: absolute;
+  top: 97px;
+  width: 360px;
+
+}
+
+li{
+  list-style: none;
+}
+
+#myclaims{
+height: 455px;
+}
+
+.feed_item{
+  height: 100px;
+  position: relative;
+
+}
+
+.claims_article{
+  height: 85px;
   background: #efefef;
+  border-bottom: 1px solid #d4d4d4;
+  border-top: 1px solid white;
+  padding: 10px 15px;
+  display: block;
+}
+
+.claims_article .user_data{
+  margin-top: 5px;
+}
+
+
+.claims_article .title{
+  font: bold 22px arial;
+  color: #444444;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.user_avatar{
+  float: left;
+  margin-right: 10px;
+}
+
+.claims_article .username{
+  font: bold 14px arial;
+  color: #444444;
+  line-height: 10px;
+  display: block;
+}
+
+.claims_article .rating_text{
+  text-transform: uppercase;
+  color: #7c7c7c;
+  font: 10px arial;
+  display: block;
+}
+
+.claims_article .user_score{
+color: #535353;
+font: bold 25px arial;
+line-height: 20px;
+display: block;
+}
+
+.claims_article .cost{
+  font: bold arial;
+  font-size: 40px;
+  color: #777777;
+  position: absolute;
+  top: 35px;
+  right: 15px;
+
+}
+
+.claims_article .time_left{
+  font: arial;
+  font-size: 12px;
+  color: #7c7c7c;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+
+
+
+
+#myposts{
+height: 455px;
+}
+.posts_article{
+  padding: 10px;
+  height: 85px;
+  background: #efefef;
+  border-bottom: 1px solid #d4d4d4;
+  border-top: 1px solid white;
+  display: block;
+}
+
+.posts_article .title{
+  font: bold arial 15px;
+  font-weight: bold;
+  color: #444444;
+  display: block;
+}
+
+.posts_article .description{
+  font: arial;
+  font-size: 15px;
+  color: #444444;
+  display: block;
+
+}
+.posts_article .claims{
+  font:arial 14px;
+  color: #888888;
+  line-height: 11px;
+  position: absolute;
+  bottom: 10px;
+  
+}
+
+.posts_article .time_left{
+  font:arial 14px;
+  color: #888888;
+  line-height: 11px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+#notifications{
+height: 455px;
+}
+
+.notif_article{
+  padding: 15px 10px;
+  height: 85px;
+  background: #efefef;
+  border-bottom: 1px solid #d4d4d4;
+  border-top: 1px solid white;
+  display: block;
+}
+
+.notif_article .message{
+font: arial;
+font-size: 15px;
+color: #444444;
+}
+
+.notif_article .username{
+  font-weight: bold;
+}
+
+.notif_article .title{
+  font-weight: bold;
+}
+
+.notif_article .date{
+  font: arial;
+  font-size: 14px;
+  color: #888888;
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
 }
