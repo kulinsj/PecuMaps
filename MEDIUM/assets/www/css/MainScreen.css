@@ -43,6 +43,14 @@ body{
 	height: 330px;
 	position: relative;
 }
+#bottom_icon{
+	height: 30px;
+	width: 30px;
+	background-image: url('../images/sort_box.png');
+		position: absolute;
+	right: 0;
+	top: 270px;
+}
 #map_canvas{
 	height: 235px;
 }
