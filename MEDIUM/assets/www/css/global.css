@@ -47,14 +47,14 @@ input.tiny {
 }
 
 #topBar{
-	height: 60px;
+	height: 48px;
 	background-color: #02d238;
 	border: 1px solid #009627;
 }
 
 #menu{
-	height: 60px;
-	width: 60px;
+	height: 49px;
+	width: 49px;
 	position:absolute;
 	right:0;
 	display: inline-block;

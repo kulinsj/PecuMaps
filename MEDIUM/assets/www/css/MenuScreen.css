@@ -2,9 +2,9 @@ body{
 	    position:relative;
 }
 .button {
-      line-height: 36px;
-      position: relative;
-      margin-right:-5px;
+  width: 145px;
+  height: 37px;
+  display: inline-block;
 }
 
 #bottomBar{
@@ -15,6 +15,7 @@ body{
 #pagecontents{
   height: 505px;
   background: #efefef;
+  width: auto;
 }
 
 #menu_bar{
@@ -22,7 +23,7 @@ body{
   background: #ececec;
 }
 
-.menuLabel{
+#notifications_tab{
   width: 119px;
   font-size: arial bold 17px;
   color: #444444;
@@ -30,26 +31,40 @@ body{
   display: inline-block;
   text-align: center;
   line-height: 50px;
-    background: -webkit-linear-gradient(top, #efefef, #dcdcdc);
-  background: -moz-linear-gradient(top, #efefef, #dcdcdc);
 }
 
-.menuLabel:active{
-  background: #efefef;
+#myposts_tab{
+  width: 119px;
+  font-size: arial bold 17px;
+  color: #444444;
+  border-right: 1px solid #d1d2d2;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+}
 
+#myclaims_tab{
+  width: 119px;
+  font-size: arial bold 17px;
+  color: #444444;
+  border-right: 1px solid #d1d2d2;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
 }
 
 ul{
   list-style-type: none;
   margin-left: -40px;
   position: absolute;
-  top: 97px;
+  top: 87px;
   width: 360px;
 
 }
 
 li{
   list-style: none;
+  position: relative;
 }
 
 #myclaims{
@@ -77,7 +92,7 @@ height: 455px;
 
 
 .claims_article .title{
-  font: bold 22px arial;
+  font: bold 15px arial;
   color: #444444;
   overflow: hidden;
   white-space: nowrap;
@@ -90,7 +105,8 @@ height: 455px;
 }
 
 .claims_article .username{
-  font: bold 14px arial;
+  font: arial;
+  font-size: 15px;
   color: #444444;
   line-height: 10px;
   display: block;
@@ -105,8 +121,7 @@ height: 455px;
 
 .claims_article .user_score{
 color: #535353;
-font: bold 25px arial;
-line-height: 20px;
+font-size: arial 20px bold;
 display: block;
 }
 

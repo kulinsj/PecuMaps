@@ -35,8 +35,8 @@ body{
 }
 
 #searchTools{
-	height: 150px;
-	background-color: #efefef;
+	height: 235px;
+	background: #90ee90;
 }
 #bottomBar{
 	background: #efefef;
@@ -47,7 +47,7 @@ body{
 	height: 30px;
 	width: 30px;
 	background-image: url('../images/sort_box.png');
-		position: absolute;
+	position: absolute;
 	right: 0;
 	top: 270px;
 }
@@ -58,6 +58,7 @@ body{
 #sort_tools{
 	height: 75px;
 	background: #c1c1c1;
+	/*position: absolute;*/
 }
 
 #sort_by{
@@ -195,72 +196,4 @@ a:hover{color:inherit}
 }
 div.sel{
 	background: #ddd;
-}
-
-#searchWindow{
-	width: 340px;
-	height: 150px;
-	margin: 10px 10px;
-	position:relative;
-	font-size: 18px;
-}
-
-#searchButton{
-	position:absolute;
-	right:0;
-	width:90px;
-	border: 1px solid black;
-	text-align: center;
-}
-
-#searchPayInput{
-	margin-bottom: 10px;
-}
-
-#searchPayInput input{
-	width: 90px;
-	height: 20px;
-}
-
-
-#searchJob{
-	margin-bottom: 10px;
-}
-#searchJobDropDown{
-   width: 240px;
-   height: 34px;
-   overflow: hidden;
-   background: url(../images/down_arrow.png) no-repeat right #ddd;
-   border: 1px solid #ccc;
-}
-#searchJob select{
-	position: absolute;
-	right: 0;
-	width: 270px;
-	height: 20px;
-	background: transparent;
-   line-height: 1;
-   border: 0;
-   font-size: 20px;
-   border-radius: 0;
-   height: 34px;
-   -webkit-appearance: none;
-}
-
-#searchLocation{
-	margin-bottom: 10px;
-}
-#searchLocation input{
-	position: absolute;
-	right: 0;
-	height: 20px;
-	width: 270px;
-}
-#searchDistance{
-	margin-bottom: 10px;
-}
-#searchDistance select{
-	position:absolute;
-	right: 0;
-	height: 20px;
 }
