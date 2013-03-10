@@ -1,4 +1,4 @@
-#MainContainerCust{
+div.MainContainerCust{
 	margin: 3px 10px 10px 10px;
 	width: 340px;
 }
@@ -13,6 +13,7 @@ h2{
 	font-size: 33px;
 	color: #444;
 	font-weight: normal;
+	margin-bottom: -7px;
 }
 #timeLeftSpan{
 	display: block;
@@ -41,6 +42,7 @@ h2{
 	width:85px;
 	display: inline-block;
 	font-size: 14px;
+	margin-top: -10px;
 }
 
 
