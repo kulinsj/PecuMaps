@@ -25,7 +25,7 @@ $(document).ready(function(){
 	});
 
 	$postButton.click(function(){
-		var title = $jobTitle.val();
+		/*var title = $jobTitle.val();
 		var location = $jobLocation.val();
 		var desc = $jobDescription.val();
 		var pay = $jobPay.val();
@@ -78,7 +78,7 @@ $(document).ready(function(){
 				}
 				var expiryDate = seconds + (timeNum*timeUnit);
 
-				/*HERE WE POST NOW THAT ALL DATA IS HAD AND VALID*/
+				*//*HERE WE POST NOW THAT ALL DATA IS HAD AND VALID*//*
 				var myJSONObject = {
 					"name": title,
 					"location": location,
@@ -92,7 +92,7 @@ $(document).ready(function(){
 		}
 		else{
 			alert("Some fields have been left blank, fill them in and try again");
-		}
+		}*/
 	});
 
 	function codeAddress(address) {
