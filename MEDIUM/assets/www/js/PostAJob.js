@@ -9,10 +9,7 @@ $(document).ready(function(){
 	var $postButton = $('#postButton');
 	var $jobDateNum = $('#dateNum');
 	var $jobDateType = $('#dateType');
-
-
-	geocoder = new google.maps.Geocoder();
-
+	//geocoder = new google.maps.Geocoder();
 	var $vanisher = $('#flatVanisher');
 	$jobFlatCheck.change(function(){
 		if(this.checked) {
@@ -97,7 +94,6 @@ $(document).ready(function(){
 			alert("Some fields have been left blank, fill them in and try again");
 		}
 	});
-
 
 	function codeAddress(address) {
 	    geocoder.geocode( { 'address': address}, function(results, status) {

@@ -23,37 +23,36 @@
 		<input type="text" class="mediumLarge" placeholder="Search" onfocus="searchDropDown()"/>
 		<a href="MenuScreen.html">
 			<div id="menu">
-				<img src="images/menu.png" style="vertical-align:middle">
+				<img src="images/Menu.png" style="vertical-align:middle">
 			</div>
 		</a>
-			<div id="searchWindow">
-				<div id="searchDistance">Search within <span id="searchDistanceDropDown">
-					<select>
-					  <option value="5km">5 km</option>
-					  <option value="10km">10 km</option>
-					  <option value="20km">20 km</option>
-					  <option value="50km">50 km</option>
-					</select>
+		<div id="searchWindow">
+			<div id="searchDistance">Search within <span id="searchDistanceDropDown">
+				<select>
+				  <option value="5km">5 km</option>
+				  <option value="10km">10 km</option>
+				  <option value="20km">20 km</option>
+				  <option value="50km">50 km</option>
+				</select>
 				</span>
 			</div>
-				<div id="searchLocation">Of <span id="searchLocationDropDown">
-					<input placeholder="my Location">
-				</span></div>
-				<div id="searchJob">For <span id="searchJobDropDown">
-					<select>
-  						<option value="jobs">jobs</option>
-  						<option value="items">items</option>
-					</select>
-				</span>
-			</div>
-				<div id="searchPay">Paying from $<span id="searchPayInput">
-					<input placeholder="min">
-				</span> to $<span id="searchPayInput" style="position:absolute;right:10px;">
-				<input placeholder="max">
+			<div id="searchLocation">Of <span id="searchLocationDropDown">
+				<input placeholder="my Location">
 			</span></div>
-				<div id="searchButton" onclick="searchRetract()">Search</div>
+			<div id="searchJob">For <span id="searchJobDropDown">
+				<select>
+					<option value="jobs">jobs</option>
+					<option value="items">items</option>
+				</select>
+			</span>
 			</div>
-		
+			<div id="searchPay">Paying from $<span id="searchPayInput">
+				<input placeholder="min">
+			</span> to $<span id="searchPayInput" style="position:absolute;right:10px;">
+			<input placeholder="max">
+			</span></div>
+			<div id="searchButton" onclick="searchRetract()">Search</div>
+		</div>
 	</div>
 	<div id="map_canvas" style="width:100%" ></div>
 	<div id="settingsButton" onclick="showSortTools()"></div>

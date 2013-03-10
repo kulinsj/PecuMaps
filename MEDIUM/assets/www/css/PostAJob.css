@@ -37,18 +37,11 @@ body{
 	top: 10px;
 }
 
-.job_title_locn_desc{
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 60px;
-	width: 300px;
-}
-
 #jobDescription{
 	display: block;
-	margin-top: 15px;
-	width: 293px;
+	width: 336px;
 	height: 125px;
+	margin-bottom: 12px;
 }
 
 #Description{
@@ -64,7 +57,7 @@ body{
 }
 #spacer{
 	display: inline-block;
-	margin: 0 20px;
+	margin: 0 12px;
 }
 #flatCheck{
 	font-size: 19px;
@@ -83,27 +76,45 @@ body{
 	font-family: arial;
 	width: 300px;
 }
-
-#postButton{
-	position: absolute;
-	margin-left:auto;
-	bottom:15px;
-	left: 14px;
-	display:block;
-	width: 300px;
-}
 input.invalid{
 	border-color: red;
 }
-
 #checkWrap{
 	margin: 15px 0 0 0;
 }
-
 #expiryWrap{
 	margin-top: 15px;
 }
-
-select{
-	margin-left: 10px;
+#jobPay{
+	width: 86px;
+}
+#payPer{
+	width: 161px;
+}
+#jobTitle{
+	width: 285px;
+}
+#jobLocation{
+	width: 248px;
+}
+#postTypeSelect{
+	width:284px;
+}
+#typeSelWrap{
+	width: 243px;
+}
+#numSelWrap{
+	width: 75px;
+}
+#dateNum{
+	width: 100px;
+}
+#dateSelWrap{
+	width: 100px;
+}
+#dateType{
+	width: 125px;
+}
+#titleSpan{
+	width: 34px;
 }
