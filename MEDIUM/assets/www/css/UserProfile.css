@@ -6,6 +6,18 @@
 	position: relative;
 	}
 
+	#backButton{
+		height: 49px;
+		width: 89px;
+		font: bold 20px arial;
+		color: #009627;
+		border-right: 1px solid #009627;
+		position: relative;
+		left: 0;
+		line-height: 50px;
+		text-align: center;
+	}
+
 	#profilearea{
 		height: 115px;
 		padding: 15px 10px;
