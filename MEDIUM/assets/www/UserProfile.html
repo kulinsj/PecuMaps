@@ -1,163 +1,55 @@
 <!doctype html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="allPages.css"/>
+	<link rel="stylesheet" type="text/css" href="css/global.css"/>
+	<link rel="stylesheet" type="text/css" href="css/UserProfile.css"/>
 	<title>User Profile</title>
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/userProfile.js"></script>
-	<style type="text/css">
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-	body{
-		height: 615px;
-		width: 360px;
-		margin: 20px;
-	}
-
-	.profilepic{
-		height: 100px;
-		display: inline-block;
-		padding-left: 20px;
-	}
-
-	.userinfo{
-		height: 100px;
-		padding-left: 20px;
-		display: inline-block;
-
-	}
-
-	.username{
-		color: #444444;
-        font: 20px arial;
-	}
-
-	.emailaddress{
-      	color: #777;
-      	font: bold 14px arial;
-      	padding-bottom: 10px;
-    }
-
-	.rating{
-		color: #999999;
-        font: 18px arial; 
-
-	}
-
-	.percentage{
-		font: 25px arial;
-    	color: #535353;
-	}
-
-	.block{
-		height: 450px;
-		width: 360px;
-		padding: 20px;
-	}
-
-	.feeds{
-		height: 400px;
-		width: 360px;
-		background-color: #dfdfdf;
-
-	}
-
-
-	.tabname{
-		height: 40px;
-		background-color:#f5f5f5; 
-		width: auto;
-		font: bold 20px arial;
-        color: #444444;
-        padding-top: 20px;
-        padding-left: 20px;
-        position: relative;
-        bottom: -15px;
-	}
-
-	.feeditem{
-		height: 100px;
-		width: 360px;
-		border-bottom: 1px solid #d4d4d4;
-		border-top: 1px solid white;
-		background-color: #f5f5f5;
-	}
-
-	ul{
-		list-style-type: none;
-		margin-left: -40px;
-		margin-right: -20px
-	}
-
-	.title{
-		font: bold 22px arial;
-		padding:17px 0 0 15px;
-
-	}
-
-	.description{
-		font: 14px arial;
-
-	}
-
-	.timeleft{
-		font: 12px arial;
-		text-align: right;
-		position: relative;
-		top: -20px;
-		right: 20px;
-
-
-	}
-
-	.price{
-		font: 40px arial;
-		text-align: right;
-		position: relative;
-		right: 20px;
-		bottom: 10px;
-
-	}
-
-
-	</style>
-
 </head>
+
+
 <body onload="switch()">
 
-	<!-- User Information/Profile Picture -->
-	<div class="profilepic"><img src="./images/small-largegif.gif"></div>
-	<div class ="userinfo">
-		<div class="username">User1234</div>
-		<div class="emailaddress"></div>
-		<div class="rating">RATING</div>
-		<div class="percentage">90%</div>
+	<div id="topBar">
+		<div id="backButton">Back</div>
 	</div>
 
-	
+	<div id="profilearea">
+		<img class="user_avatar" height="55px" width="55px" src="./images/small-largegif.gif">
+		<span class="user_name">RickyBobby</span>
+		<span class="rating">rating</span>
+		<span class="user_score">98%</span>
+		<div id="tabName">Posts</div>
+	</div>
 
-	<!--Current Posts feed -->
-	<div class="block">
-		<div class="tabname">Current Posts</div>
-	<div class="feeds">
+	<div id="feeds">
 		<ul>
 			<li class="feeditem">
-				<div class="title">Clean my yard</div>
-				<div class="description"></div>
-				<div class="timeleft">2 days left</div>
-				<div class="price">$12</div>
+				<article class="feedarticle">
+					<span class="title">Mow my lawn</span>
+					<span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate...</span>
+					<span class="claims">4 claims</span>
+					<span class="timeleft">4 days left</span>
+					<span class="price">$150</span>
+				</article>
 			</li>
 
 			<li class="feeditem">
-				<div class="title">Old PC for sale</div>
-				<div class="description"></div>
-				<div class="timeleft">2 days left</div>
-				<div class="price">$112</div>
+				<article class="feedarticle">
+					<span class="title">Change my oil</span>
+					<span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate...</span>
+					<span class="claims">12 claims</span>
+					<span class="timeleft">2 days left</span>
+					<span class="price">$25</span>
+					<span class="per">per car</span>
+				</article>
 			</li>
 		</ul>
+
 	</div>
-	</div>
+
+
 
 
 </body>

@@ -1,0 +1,165 @@
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+	body{
+	position: relative;
+	}
+
+	#backButton{
+		height: 49px;
+		width: 89px;
+		font: bold 20px arial;
+		color: #009627;
+		border-right: 1px solid #009627;
+		position: relative;
+		left: 0;
+		line-height: 50px;
+		text-align: center;
+	}
+
+	#profilearea{
+		height: 115px;
+		padding: 15px 10px;
+		background: #efefef;
+	}
+
+	.user_avatar{
+	  float: left;
+	  margin-right: 10px;
+	  display: block;
+	}
+
+	.user_name{
+		font: bold 20px arial;
+		color: #444444;
+		display: block;
+
+	}
+
+	.rating{
+		font: arial;
+		font-size: 10px;
+		text-transform: uppercase;
+		color: #888888;
+		display: block;
+		line-height: 10px;
+
+	}
+
+	.user_score{
+		font: bold arial;
+		font-size: 22px;
+		color: #444444;
+		display: block;
+	}
+
+	#tabName{
+		padding-top: 30px;
+		font-size: 20px;
+		font: arial;
+		font-weight: bold;
+		color: #444444
+	}
+
+	h1{
+
+	}
+
+
+
+	li{
+		list-style: none;
+  		position: relative;
+
+	}
+
+	#feeds{
+		height: 450px;
+		background-color: #efefef;
+
+	}
+
+	.feeditem{
+		height: 85px;
+	}
+
+	.feedarticle{
+		height: 83px;
+		width: auto;
+		border-bottom: 1px solid #d4d4d4;
+		border-top: 1px solid white;
+		background-color: #efefef;
+		padding: 7px 10px;
+	}
+
+	ul{
+		list-style-type: none;
+		margin-left: -40px;
+		position: relative;
+		top: -20px;
+		width: 360px;
+
+	}
+
+	.feedarticle .title{
+		font: bold 18px arial;
+	  	color: #444444;
+	  	overflow: hidden;
+	  	white-space: nowrap;
+	  	width: 100%;
+	  	display: block;
+
+	}
+
+	.feedarticle .description{
+		font: 15px arial;
+		line-height: 10px;
+		color: #444444;
+		width: 260px;
+		height: 40px;
+		display: block;
+
+	}
+
+	.feedarticle .claims{
+		font:arial 14px;
+		color: #888888;
+		line-height: 11px;
+		position: relative;
+		display: block;
+	}
+
+	.feedarticle .timeleft{
+		font: 14px arial;
+		color: #888888;
+		text-align: right;
+		position: relative;
+		top: -70px;
+		right:10px;
+		display: block;
+
+
+	}
+
+	.feedarticle .price{
+		font: 33px arial;
+		text-align: right;
+		position: relative;
+		color: #777777;
+		right: 10px;
+		bottom: 60px;
+		display: block;
+
+	}
+
+	.feedarticle .per{
+		font: 14px arial;
+		color: #777777;
+		text-align: right;
+		display: block;
+		position: relative;
+		bottom: 60px;
+		right: 10px;s
+
+	}

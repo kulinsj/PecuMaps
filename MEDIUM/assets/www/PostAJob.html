@@ -1,54 +1,77 @@
 <!doctype html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/global.css"/>
+	<link rel="stylesheet" type="text/css" href="css/globalJ.css"/>
 	<link rel="stylesheet" href="css/PostAJob.css" type="text/css"/>
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<script type="text/javascript" src="js/PostAJob.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
 </head>
 <body>
-
-	<div class="postTitle">Post a Job</div>
-
-	<a href="MenuScreen.html"><div class="button" id="cancelButton">Cancel</div></a>
-
-	<div class="job_title_locn_desc">
-		<input name="jobtitle" id="jobTitle" type="text" placeholder="Job Title" style="display:block" />
-		<input name="location" id="jobLocation"  type="text" placeholder="Location" style="display:block"/>
-		<textarea rows="10" id="jobDescription" cols="34" name="description" type="text" placeholder="Description"  id="Description"></textarea>
-
-
-		<span class="priceLabel">$</span>
-
-		<div class="priceInput">
-			<input id="jobPay"  name="price" type="text" class="tiny" maxlength="10" placeholder="CAD" /><span id="flatVanisher"><span id="spacer"> per </span><input id="payPer" name="per" type="text" class="small" placeholder="per what?" /></span>
+<div id="topBar">
+		<div class="topBarLink">
+			Cancel
 		</div>
-		<div id="checkWrap">
-			<input type="checkbox" id="flatCheck" checked="true"> Flat Fee
+	</div>
+	<div class="MainContainer">
+		<div class="basicRow">
+			<span class="light" id="titleSpan">Title</span><input name="title" id="jobTitle" type="text" />
 		</div>
-		<div id="expiryWrap">
-			<span>Post will expire in</span><select id="dateNum">
-			    <option value="1">1</option>
-			    <option value="2" selected="selected">2</option>
-			    <option value="3">3</option>
-			    <option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-			</select>
-			<select id="dateType" >
-				<option value="days">days</option>
-				<option value="weeks" selected="selected">weeks</option>
-				<option value="months">months</option>
-			</select>
+		<div class="basicRow">
+			<span class="light">Post Type</span>
+			<div class="selectWrap" id="typeSelWrap">
+				<select id="postTypeSelect">
+					<option value="job">Job</option>
+					<option value="sale">Item for sale</option>
+				</select>
+				<div class="selArrow"></div>
+			</div>
+		</div>
+		<div class="basicRow">
+			<span class="light" id="locSpan">Location</span><input name="location" id="jobLocation" type="text"/>
+		</div>
+		<div class="basicRow">
+			<span class="light">Description</span>
+		</div>
+		<textarea rows="10" id="jobDescription" cols="34" name="description" type="text"></textarea>
+		<div class="basicRow">
+			<span class="light" id="dollaSpan">$</span><input id="jobPay"  name="price" type="text" class="tiny" maxlength="7"/><span id="flatVanisher"><span id="spacer" class="light"> per </span><input id="payPer" name="per" type="text"/></span>
+		</div>
+		<div class="basicRow">
+			<input type="checkbox" id="flatCheck" checked="true"><span class="light">Flat</span>
+		</div>
+		<div class="basicRow">
+			<input type="checkbox" id="allowMultip" checked="false"><span class="light">Allow multiple accepted claims</span>
+		</div>
+		<div class="basicRow">
+			<span class="light">Post for</span>
+			<div class="selectWrap" id="numSelWrap">
+				<select id="dateNum">
+					<option value="1">1</option>
+					<option value="2" selected="selected">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</select>
+				<div class="selArrow"></div>
+			</div>
+			<div class="selectWrap" id="dateSelWrap">
+				<select id="dateType" >
+					<option value="days">days</option>
+					<option value="weeks" selected="selected">weeks</option>
+					<option value="months">months</option>
+				</select>
+				<div class="selArrow"></div>
+			</div>
 		</div>
 	</div>
 
-	<div class="button" id="postButton">Post</div>
-
+	<div class="singleBottomButton" id="postButton"><a href="MyPostDetails.html">Post</a></div>
 </body>
 
 </html>

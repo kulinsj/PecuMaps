@@ -149,3 +149,17 @@ var addMarkersToMap = function(map){
 		alert(jobs.message || "could not get jobss");
 	}
  }
+
+
+ function hideSortTools() {
+ 	document.getElementById("sort_tools").style.display='none'
+	document.getElementById("settingsButton").style.display='block'
+	document.getElementById("bottom_icon").style.display='none'
+ }
+
+ function showSortTools() {
+ 	document.getElementById("sort_tools").style.display='block'
+	document.getElementById("settingsButton").style.display='none'
+	document.getElementById("bottom_icon").style.display='block'
+
+ }

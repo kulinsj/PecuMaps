@@ -1,0 +1,106 @@
+body{
+	color: #444;
+}
+h1{
+	margin:0;
+	font-size: 19pt;
+	color: #444;
+}
+h2{
+	margin: 0;
+	text-align: right;
+	font-size: 33px;
+	color: #444;
+	font-weight: normal;
+	margin-bottom: -7px;
+}
+h3{
+	margin: 0;
+	color: #444;
+	font-size: 18px;
+}
+.pageContents{
+  /*height: 505px;*/
+  /*background: #efefef;*/
+  margin: 3px 10px 10px 10px;
+  width: 340px;
+}
+#topContainer{
+	margin: 0 -10px;
+	padding: 0 10px;
+	border-bottom: 1px solid #cdcdcd;
+}
+#topUpperContainer{
+	display: block;
+	width: 341px;
+	padding: 0 10px 0 10px;
+	vertical-align: top;
+}
+#topLeftContainer{
+	display: inline-block;
+	overflow: hidden;
+	width: 245px;
+	vertical-align: top;
+}
+#topRightContainer{
+	display: inline-block;
+	width: 85px;
+	margin-left: 6px;
+	vertical-align: top;
+}
+#userStuff{
+	display: inline-block;
+	width: 250px;
+	height: 56px;
+}
+#profileImage{
+	display: inline-block;
+	height: 56px;
+	width: 56px;
+	background-image: url('../images/usericon41.png');
+}
+#leftWrap{
+	display: inline-block;
+	width: 197px;
+	vertical-align: top;
+	/*margin-top: 6px;*/
+}
+#posterName{
+	display: inline-block;
+	/*color: ;*/
+}
+#ratingLabel{
+	font-size: 9px;
+}
+#ratingValue{
+	margin-top: -4px;
+	font-size: 22px;
+}
+#timeLeftSpan{
+	display: block;
+	color: #888;
+	font-size: 14px;
+}
+#perWrap{
+	text-align: right;
+	color: #444;
+	width:85px;
+	display: inline-block;
+	font-size: 14px;
+	margin-top: -10px;
+}
+#description{
+	margin-top: 10px;
+	color: #333;
+}
+#ScrollerWrap{
+	height: 435px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin: 0 -10px;
+	padding: 0 10px;
+}
+#bottomBar{
+	bottom: 80px;
+	position: absolute;
+}
