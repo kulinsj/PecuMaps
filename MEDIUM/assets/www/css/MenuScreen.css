@@ -1,5 +1,7 @@
 body{
 	    position:relative;
+      width: 360px;
+      height: 615px;
 }
 .button {
   width: 145px;
