@@ -18,7 +18,7 @@
 	</script>
 <head>
 </head>
-<body>
+<body onload="hideSortTools()">
 	<div id="topBar">
 		<input type="text" class="mediumLarge" placeholder="Search" onfocus="searchDropDown()"/>
 		<a href="MenuScreen.html">
@@ -55,7 +55,8 @@
 		</div>
 	</div>
 	<div id="map_canvas" style="width:100%" ></div>
-	<div id="bottom_icon"></div>
+	<div id="settingsButton" onclick="showSortTools()"></div>
+	<div id="bottom_icon" onclick="hideSortTools()"></div>
 	<div id="bottomBar">
 		<div id ="sort_tools">
 			<div id="sort_by">

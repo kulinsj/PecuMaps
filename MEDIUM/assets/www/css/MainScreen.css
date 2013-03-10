@@ -1,12 +1,18 @@
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 html{
 	background: #444;
 }
 body{
 	background: white;
 	position: relative;
+	height: 615px;
+	width: 360px;
+	font-family: arial;
 }
 #topBar{
-	height: 60px;
+	height: 50px;
 	background-color: #02d238;
 	border: 1px solid #009627;
 }
@@ -19,20 +25,16 @@ body{
 }
 
 #menu{
-	height: 60px;
-	width: 60px;
+	height: 50px;
+	width: 50px;
 	position:absolute;
 	right:0;
 	display: inline-block;
 	background: #ddd;
-	line-height: 60px;
+	line-height: 50px;
 	text-align: center;
 	background-color: #02d238;
 	border-left: 1px solid #009627;
-}
-
-#title{
-
 }
 
 #searchTools{
@@ -58,12 +60,21 @@ body{
 	background-image: url('../images/sort_box.png');
 	position: absolute;
 	right: 0;
-	top: 270px;
+	top: 260px;
 }
 #map_canvas{
 	height: 235px;
+}
 
+#settingsButton{
+	height: 40px;
+	width: 40px;
+	background-image: url('../images/settings_button.png');
+	position: absolute;
+	left: 0;
+	top: 250px;
 
+}
 #sort_tools{
 	height: 75px;
 	background: #c1c1c1;
@@ -221,6 +232,7 @@ div.sel{
 	width: 340px;
 	height: 160px;
 	position:relative;
+	top: -11px;
 	font-size: 18px;
 	font-weight: bold;
 	background-color: #EFEFEF;
