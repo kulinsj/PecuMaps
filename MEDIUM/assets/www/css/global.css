@@ -47,9 +47,8 @@ input.tiny {
 }
 
 #topBar{
-	height: 48px;
+	height: 50px;
 	background-color: #02d238;
-	border: 1px solid #009627;
 }
 
 #menu{
