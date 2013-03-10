@@ -1,10 +1,14 @@
-body{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    body{
 	margin:0;
 	padding: 0;
 	border: 0;
 	height: 615px;
 	width: 360px;
-	font-family: arial, sans-serif;
+	font-family: arial;
 }
 input[type=text]{
 	width:284px;
@@ -47,19 +51,19 @@ input.tiny {
 }
 
 #topBar{
-	height: 48px;
+	height: 50px;
 	background-color: #02d238;
 	border: 1px solid #009627;
 }
 
 #menu{
-	height: 49px;
-	width: 49px;
+	height: 50px;
+	width: 50px;
 	position:absolute;
 	right:0;
 	display: inline-block;
 	background: #ddd;
-	line-height: 60px;
+	line-height: 50px;
 	text-align: center;
 	background-color: #02d238;
 	border-left: 1px solid #009627;
