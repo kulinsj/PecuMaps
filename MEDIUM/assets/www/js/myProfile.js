@@ -4,7 +4,6 @@
 	$().ready(function() {
 		var $primaryInputs = $('div.detailitem input');
 		var $secondary = $('div.pw');
-		console.log($secondary);
 		var $edit = $('#edit');
 
 		var editting = false;
