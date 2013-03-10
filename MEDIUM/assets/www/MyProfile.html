@@ -5,35 +5,8 @@
 	<title>User Profile</title>
 	<link rel="stylesheet" type="text/css" href="css/myProfile.css">
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	<script type="text/javascript">
-
-	$().ready(function() {
-		var $primaryInputs = $('div.detailitem input');
-		var $secondary = $('div.pw');
-		console.log($secondary);
-		var $edit = $('#edit');
-
-		var editting = false;
-	    $edit.click(function() {
-	    	if(!editting){
-	    		$primaryInputs.removeAttr('disabled');
-	    		$primaryInputs.addClass('enabled');
-	    		$secondary.show();
-	    		$edit.html('Save');
-	    		editting = true;
-	    	}
-	    	else{
-	    		$primaryInputs.attr('disabled');
-	    		$primaryInputs.removeClass('enabled');
-	    		$secondary.hide();
-	    		$edit.html('Edit');
-	    		editting=false;
-	    	}
-
-
-	    });
-	});
-	</script>
+	<script src="js/myProfile.js" type="text/javascript"></script>
+	
 </head>
 <body>
 	<!--Edit & Close Buttons -->
@@ -43,9 +16,9 @@
 	</div>
 	<!-- User Information/Profile Picture -->
 	
-		<div id="profilepic">
-			<img src="./images/small-largegif.gif">
-		</div>
+	<div id="profilepic">
+		<img src="./images/small-largegif.gif">
+	</div>
 	<div id="userinfo">
 		<div id="username">user1234</div>
 		<div id="ratinglabel">RATING</div>
