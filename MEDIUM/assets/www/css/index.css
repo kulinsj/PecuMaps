@@ -34,9 +34,10 @@
       }
 
 input{
-	height: 30px;
-	width: 307px;
+	height: 40px;
+	width: 320px;
 	margin-bottom: 20px;
+	border-radius: 5px;
 }
 
 #topBar{
