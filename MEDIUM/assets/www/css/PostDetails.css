@@ -33,13 +33,13 @@ h3{
 #topUpperContainer{
 	display: block;
 	width: 341px;
-	padding: 0 10px 0 10px;
+	height: 38px;
 	vertical-align: top;
 }
 #topLeftContainer{
 	display: inline-block;
 	overflow: hidden;
-	width: 245px;
+	width: 250px;
 	vertical-align: top;
 }
 #topRightContainer{
@@ -61,7 +61,7 @@ h3{
 }
 #leftWrap{
 	display: inline-block;
-	width: 197px;
+	width: 190px;
 	vertical-align: top;
 	/*margin-top: 6px;*/
 }
