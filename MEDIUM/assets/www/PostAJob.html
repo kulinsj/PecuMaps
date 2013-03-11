@@ -1,77 +1,80 @@
 <!doctype html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/globalj.css"/>
+	<link rel="stylesheet" type="text/css" href="css/globalJ.css"/>
 	<link rel="stylesheet" href="css/PostAJob.css" type="text/css"/>
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script type="text/javascript" src="js/PostAJob.js"></script>
 	<script type="text/javascript" src="js/global.js"></script>
+	<script type="text/javascript" src="js/submit-override.js"></script>
+	<script type="text/javascript" src="js/PostAJob.js"></script>
 </head>
 <body>
-<div id="topBar">
-		<div class="topBarLink">
+	<nav>
+		<a class="backBtn back" nohref="nohref">
 			Cancel
-		</div>
-	</div>
+		</a>
+	</nav>
 	<div class="MainContainer">
-		<div class="basicRow">
-			<span class="light" id="titleSpan">Title</span><input name="title" id="jobTitle" type="text" />
-		</div>
-		<div class="basicRow">
-			<span class="light">Post Type</span>
-			<div class="selectWrap" id="typeSelWrap">
-				<select id="postTypeSelect">
-					<option value="job">Job</option>
-					<option value="sale">Item for sale</option>
-				</select>
-				<div class="selArrow"></div>
+		<form class="" onsubmit="return false;" id="postForm">
+			<div class="basicRow">
+				<span class="light" id="titleSpan">Title</span><input required="true" name="title" id="jobTitle" type="text" />
 			</div>
-		</div>
-		<div class="basicRow">
-			<span class="light" id="locSpan">Location</span><input name="location" id="jobLocation" type="text"/>
-		</div>
-		<div class="basicRow">
-			<span class="light">Description</span>
-		</div>
-		<textarea rows="10" id="jobDescription" cols="34" name="description" type="text"></textarea>
-		<div class="basicRow">
-			<span class="light" id="dollaSpan">$</span><input id="jobPay"  name="price" type="text" class="tiny" maxlength="7"/><span id="flatVanisher"><span id="spacer" class="light"> per </span><input id="payPer" name="per" type="text"/></span>
-		</div>
-		<div class="basicRow">
-			<input type="checkbox" id="flatCheck" checked="true"><span class="light">Flat</span>
-		</div>
-		<div class="basicRow">
-			<input type="checkbox" id="allowMultip" checked="false"><span class="light">Allow multiple accepted claims</span>
-		</div>
-		<div class="basicRow">
-			<span class="light">Post for</span>
-			<div class="selectWrap" id="numSelWrap">
-				<select id="dateNum">
-					<option value="1">1</option>
-					<option value="2" selected="selected">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-				</select>
-				<div class="selArrow"></div>
+			<div class="basicRow">
+				<span class="light">Post Type</span>
+				<div class="selectWrap" id="typeSelWrap">
+					<select id="postTypeSelect" name="type" required="true">
+						<option value="oddJobs">Odd Job</option>
+						<option value="sellSomething">Sell something</option>
+					</select>
+					<div class="selArrow"></div>
+				</div>
 			</div>
-			<div class="selectWrap" id="dateSelWrap">
-				<select id="dateType" >
-					<option value="days">days</option>
-					<option value="weeks" selected="selected">weeks</option>
-					<option value="months">months</option>
-				</select>
-				<div class="selArrow"></div>
+			<div class="basicRow">
+				<span class="light" id="locSpan">Location</span><input required="true" name="address" id="jobLocation" type="text"/>
 			</div>
-		</div>
+			<div class="basicRow">
+				<span class="light">Description</span>
+			</div>
+			<textarea rows="10" id="jobDescription" cols="34" name="description" required="true" type="text"></textarea>
+			<div class="basicRow">
+				<span class="light" id="dollaSpan">$</span><input id="jobPay" required="true" name="cost" type="text" class="tiny" maxlength="7"/><span id="flatVanisher"><span id="spacer" class="light"> per </span><input id="payPer" name="per" type="text"/></span>
+			</div>
+			<div class="basicRow">
+				<input type="checkbox" name="flatCheck" id="flatCheck" checked="true"><span class="light">Flat</span>
+			</div>
+			<div class="basicRow">
+				<input type="checkbox" name="multipleUsers" id="allowMultip" checked="false"><span class="light">Allow multiple accepted claims</span>
+			</div>
+			<div class="basicRow">
+				<span class="light">Post for</span>
+				<div class="selectWrap" id="numSelWrap">
+					<select id="dateNum" required="true" name="timeNum">
+						<option value="1">1</option>
+						<option value="2" selected="selected">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+					</select>
+					<div class="selArrow"></div>
+				</div>
+				<div class="selectWrap" id="dateSelWrap">
+					<select id="dateType" name="timeType" required="true">
+						<option value="days">days</option>
+						<option value="weeks" selected="selected">weeks</option>
+						<option value="months">months</option>
+					</select>
+					<div class="selArrow"></div>
+				</div>
+			</div>
+		</form>
 	</div>
 
-	<div class="singleBottomButton" id="postButton"><a href="MyPostDetails.html">Post</a></div>
+	<div class="singleBottomButton iosBtn" id="postButton">Post</div>
 </body>
 
 </html>

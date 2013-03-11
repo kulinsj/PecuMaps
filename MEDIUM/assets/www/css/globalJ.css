@@ -42,18 +42,6 @@ span.light{
 	margin-right: 10px;
 	display: inline-block;
 }
-div.singleBottomButton{
-	width: 360px;
-	background: #c2c2c2;
-	position: absolute;
-	bottom: 0;
-	height: 50px;
-	color: #444;
-	text-align: center;
-	line-height: 50px;
-	font-size: 23px;
-	font-weight: bold;
-}
 select,input{
 	font-weight: bold;
 	color: #444;
@@ -91,3 +79,178 @@ textarea{
 	color: #444;
 	font-family: arial, sans-serif;
 }
+textarea.invalid{
+	border-color: red;
+}
+
+/* Nav Container */
+
+  nav{
+    display:                -webkit-box;
+    /*position:               fixed;*/
+    bottom:                 0;
+    width:                  100%;
+    border-top:             1px solid rgba(255,255,255,.33);
+    -webkit-box-shadow:     0 -0.05em 0 rgba(0,0,0,0.9);
+    height:                 50px;
+    -webkit-box-orient:     horizontal;
+    -webkit-box-align:      center;
+    -webkit-box-pack:       justify;
+    -webkit-box-sizing:     border-box;
+    background-color: #02d238;
+    background-image: url('../images/logo_white_transparent.png');
+	  background-repeat: no-repeat;
+	  background-position: 159px 5px;
+    font-family:            'Helvetica Neue', HelveticaNeue, Helvetica-Neue, Helvetica, sans-serif;
+    bottom:                 0px;
+    left:                   0px;
+    right:                  0px;
+}
+
+    /* Nav item */
+
+.iosBtn,
+nav a {
+	display: inline-block;
+	position: relative;
+	margin: 8px 8px 0 8px;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0 1px 1px rgba(131,209,131, 1);
+	text-decoration: none;
+	text-align: center;
+	padding: 8px 12px;
+	font-size: 12px;
+	font-weight: 700;
+	font-family: helvetica, arial, sans-serif;
+	border-radius: 4px;
+	border: 1px solid #bcbcbc;
+	border-top-color: #1e501e;
+	border-left-color: #399839;
+	border-right-color: #399839;
+	border-bottom-color: #2e7c2e;
+
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+
+	background-image: -webkit-linear-gradient(top, rgba(96,196,96,1) 0%,rgba(68,183,68,1) 50%,rgba(61,164,61,1) 50.5%,rgba(62,167,62,1) 100%);
+	background-image: -moz-linear-gradient(top, rgba(96,196,96,1) 0%,rgba(68,183,68,1) 50%,rgba(61,164,61,1) 50.5%,rgba(62,167,62,1) 100%);
+	background-image: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+	background-image: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+	}
+}
+/*
+
+nav a > strong{
+        position:               absolute;
+        font-size:              .65em;
+        color:                  #999;
+        bottom:                 0;
+        width:                  100%;
+        text-align:             center;
+        line-height:            1.5em;
+        font-weight:            bold;
+        -webkit-font-smoothing: antialiased;
+}
+
+*/
+/* Images for eeach class of link *//*
+
+nav a.settings::before,
+nav a.settings:after {
+        -webkit-mask-image:     url('../icons/settings.svg');
+}
+
+nav a.upcoming::before,
+nav a.upcoming::after {
+        -webkit-mask-image:     url('../icons/eye.svg');
+}
+
+nav a.recordings::before,
+nav a.recordings::after {
+        -webkit-mask-image:     url('../icons/film.svg');
+}
+
+nav a.schedule::before,
+nav a.schedule::after {
+        -webkit-mask-image:     url('../icons/calendar.svg');
+}
+
+nav a.refresh::before,
+nav a.refresh::after {
+        -webkit-mask-image:     url('../icons/refresh.svg');
+}
+
+*/
+/* Rest of image manipulation css *//*
+
+nav a::after,
+nav a::before {
+        position:               absolute;
+        content:                " ";
+        top:                    -1em;
+        left:                   0;
+        right:                  0;
+        bottom:                 0;
+
+        -webkit-mask-position:  center center;
+        -webkit-mask-repeat:    no-repeat;
+        zoom:                   .5; */
+/* Scales to 50% Size - has better rendering than transform *//*
+
+}
+
+      */
+/* Grey Icon *//*
+
+
+nav a::before{
+        background-image:       -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ccc), to(#333));
+        z-index:                1;
+}
+
+      */
+/* Icon Shadow *//*
+
+
+nav a::after{
+        margin-top:             -.2em;
+        background-color:       rgba(0,0,0,.75);
+        z-index:                0;
+      }
+
+      */
+/* Active Settings *//*
+
+
+nav a[selected~=true] {
+        background-color:       rgba(255,255,255,.10);
+      }
+
+nav a[selected~=true] > strong{
+        color:                  #fff;
+      }
+
+nav a[selected~=true]::before{
+        background:             -webkit-gradient(linear, 38% 0%, 60% 70%, from(#DDE9F0), color-stop(0.6, #79B2EC), color-stop(0.7, #2E91E5), to(#3FC5F8));
+      }
+
+nav a[selected~=true]::after{
+        margin-top:             .2em;
+      }
+nav a:hover{
+        background-color:       rgba(255,255,255,.10);
+      }
+
+nav a:hover > strong{
+        color:                  #fff;
+      }
+
+nav a:hover::before{
+        background:             -webkit-gradient(linear, 38% 0%, 60% 70%, from(#DDE9F0), color-stop(0.6, #79B2EC), color-stop(0.7, #2E91E5), to(#3FC5F8));
+      }
+
+nav a:hover::after{
+        margin-top:             .1em;
+      }*/
