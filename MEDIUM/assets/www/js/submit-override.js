@@ -7,29 +7,30 @@
         var invalid = false, d = {};
         $form.find("select, input, textarea").each(function(){
             var $field = $(this);
-            var value = $field.val(),
-                name = $field.attr("name"),
-                type = $field.attr("type"),
-                fieldInvalid = false;
             if (!$field.attr("disabled")) {
-                switch(type) {
-                    case 'text':
-                    case 'password':
-                        if (value.trim() === "") fieldInvalid = true; break;
-                    case 'number':
-                        if (value === "" || isNaN(value)) fieldInvalid = true;
-                        else value = parseFloat(value);
-                        break;
-                    case 'email':
-                        if (!value.isEmail()) fieldInvalid = true; break;
-                    case 'checkbox':
-                        value = $field.is(":checked"); break;
-                }
-                if (name && value !== "") d[name] = value;
-                if ($field.attr("required")) {
-                    $field.toggleClass("invalid", fieldInvalid);
+                var value = $field.val(),
+                    name = $field.attr("name"),
+                    type = $field.attr("type"),
+                    isRequired = $field.attr("required"),
+                    fieldInvalid = false;
+                if (name && (value.trim() !== "" || isRequired && value.trim() === "")) {
+                    switch(type) {
+                        case 'text':
+                        case 'password':
+                            if (value.trim() === "") fieldInvalid = true; break;
+                        case 'number':
+                            if (value === "" || isNaN(value)) fieldInvalid = true; 
+                            else value = parseFloat(value);
+                            break;
+                        case 'email':
+                            if (!value.isEmail()) fieldInvalid = true; break;
+                        case 'checkbox':
+                            value = $field.is(":checked"); break;
+                    }
+                    if (name && value !== "") d[name] = value;
                     invalid = fieldInvalid;
                 }
+                $field.toggleClass("invalid", fieldInvalid);
             }
         });
         if (invalid) {
@@ -37,7 +38,7 @@
         }
         return d;
     }
-
+   
     var oldSubmit = $.fn.submit;
     $.fn.submit = function(){
         if (arguments.length == 1 && arguments[0].call) {
@@ -45,7 +46,7 @@
             this.find("select, input").keyup(function(e){
                 if (e.which==13) validateAndGetFields($(this).parents("form"));
             });
-
+            
             // Hijack the submit and do validation and get form data
             var fn = arguments[0];
             arguments[0] = function(){

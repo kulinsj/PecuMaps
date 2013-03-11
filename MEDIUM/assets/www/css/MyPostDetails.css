@@ -25,7 +25,7 @@ div.MainContainerCust{
 }
 #topContainer{
 	margin: 0 -10px;
-	padding: 0 10px;
+	padding: 0 10px 10px;
 	border-bottom: 1px solid #cdcdcd;
 }
 #topLeftContainer{
@@ -118,19 +118,11 @@ div.ratingActual{
 	margin-top: -4px;
 	font-size: 22px;
 }
-div.decline{
-	font-weight: bold;
-	background: #f05555;
-	padding: 5px 10px;
-	display: inline-block;
-	margin-left: 146px;
-}
 div.accept{
 	font-weight: bold;
-	background: #02d238;
-	padding: 5px 25px;
 	display: inline-block;
-	margin-left: 10px;
+	margin-left: 249px;
+	width: 60px;
 }
 #claimsUsersWrap{
 	margin-top: 5px;

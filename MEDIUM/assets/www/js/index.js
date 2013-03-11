@@ -42,6 +42,7 @@ $().ready(function(){
 			if (response.success){
 				if ($loginbutton.hasClass('selected')){
 					localStorage.setItem("myInfo", JSON.stringify(response.data));
+					console.log(1);
 					window.location="MainScreen.html";
 				}else{
 					$goLink.attr("href", "UserDetail.html");

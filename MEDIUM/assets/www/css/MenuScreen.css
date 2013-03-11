@@ -51,7 +51,9 @@ ul{
   position: absolute;
   top: 87px;
   width: 360px;
-
+	height: 455px;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 li{
@@ -137,7 +139,9 @@ display: block;
 }
 
 #myposts{
-height: 455px;
+	height: 455px;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .posts_article{
