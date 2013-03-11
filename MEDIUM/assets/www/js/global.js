@@ -121,3 +121,9 @@ function daysLeft(date, notEndPrefix) {
         }
     }
 }
+
+function formatDate(date){
+	console.log(date);
+	var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+	return m[date.getMonth()]+" "+date.getDate();
+}

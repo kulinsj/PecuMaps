@@ -73,7 +73,8 @@ $(document).ready(function(){
 					returnValue = parseFloat(a.cost) - parseFloat(b.cost);
 					break;
 				case "date":
-					returnValue = new Date(parseInt(a.postDate.substr(6))) - new Date(parseInt(b.postDate.substr(6)));
+					console.log(a.expiryDate);
+					returnValue = new Date(parseInt(a.expiryDate.substr(6))) - new Date(parseInt(b.expiryDate.substr(6)));
 					break;
 				/* TODO sort by distance
 				case "distance":
@@ -90,7 +91,7 @@ $(document).ready(function(){
 	}
 
 
-function toSort(){
+	function toSort(){
 		if ($LoToHi.parent().hasClass("selected")){
 			if ($dollar.parent().hasClass("selected")){
 				sort(itemsArray, "cost");
@@ -102,15 +103,14 @@ function toSort(){
 				sort(itemsArray, "cost", false);
 			}else if ($calender.parent().hasClass("selected")){
 				sort(itemsArray, "date", false);
-			}
-		}
-
-		for (var i=0; i<itemsArray.length; i++){
-			console.log(itemsArray[i].cost);
-			console.log(Date(parseInt(itemsArray[i].postDate.substr(6))));
-		}
 			
+			/*for (var i=0; i<itemsArray.length; i++){
+				console.log(itemsArray[i].cost);
+				console.log(Date(itemsArray[i].expiryDate));
+			}*/
+		}
 	}
+}
 
 	
 	var $searchBox = $('#topBar input');
@@ -129,14 +129,18 @@ function toSort(){
 	var $rating = $('#rating');
 
 	var $shortcuts = $('#resultsScrollChild>div');
-		
-	function updateSorted(){
-		console.log($shortcuts);
-		$shortcuts.each(function(i){
-			$(this).html(itemsArray[i].cost);
 
+	function updateSorted(){
+		$shortcuts.each(function(i){
+			if ($dollar.parent().hasClass("selected")){
+				$(this).html("$" + itemsArray[i].cost);
+			}else if($calender.parent().hasClass("selected")){
+				console.log('heh',itemsArray[i].expiryDate);
+				var date = formatDate(new Date(itemsArray[i].expiryDate));
+				console.log(date);
+				$(this).text(date);
+			}
 			$(this).click(function(){
-				console.log($(this));
 				$shortcuts.removeClass('sel');
 				$(this).addClass('sel');
 				$jobTitle.html(itemsArray[i].name);
@@ -149,42 +153,47 @@ function toSort(){
 			});
 		});
 	}
+	updateSorted();
 
-		$dollar.click(function(){
-			$dollar.parent().addClass("selected");
-			$kilometer.parent().removeClass("selected");
-			$calender.parent().removeClass("selected");
-			toSort();
-			updateSorted();
-		});
+	$dollar.click(function(){
+		$dollar.parent().addClass("selected");
+		$kilometer.parent().removeClass("selected");
+		$calender.parent().removeClass("selected");
+		$("#sortParameter").html("Sort by Cost");
+		toSort();
+		updateSorted();
+	});
 
-		$kilometer.click(function(){
-			$dollar.parent().removeClass("selected");
-			$kilometer.parent().addClass("selected");
-			$calender.parent().removeClass("selected");
-		});
+	$kilometer.click(function(){
+		$dollar.parent().removeClass("selected");
+		$kilometer.parent().addClass("selected");
+		$calender.parent().removeClass("selected");
+	});
 
-		$calender.click(function(){
-			$dollar.parent().removeClass("selected");
-			$kilometer.parent().removeClass("selected");
-			$calender.parent().addClass("selected");
-			toSort();
-			updateSorted()
-		});
+	$calender.click(function(){
+		$dollar.parent().removeClass("selected");
+		$kilometer.parent().removeClass("selected");
+		$calender.parent().addClass("selected");
+		$("#sortParameter").html("Sort by Date");
+		toSort();
+		updateSorted()
+	});
 
-		$LoToHi.click(function(){
-			$LoToHi.parent().addClass("selected");
-			$HiToLo.parent().removeClass("selected");
-			toSort();
-			updateSorted()
-		});
+	$LoToHi.click(function(){
+		$LoToHi.parent().addClass("selected");
+		$HiToLo.parent().removeClass("selected");
+		$("#sortHiLo").html("Low to High");
+		toSort();
+		updateSorted()
+	});
 
-		$HiToLo.click(function(){
-			$LoToHi.parent().removeClass("selected");
-			$HiToLo.parent().addClass("selected");
-			toSort();
-			updateSorted()
-		});
+	$HiToLo.click(function(){
+		$LoToHi.parent().removeClass("selected");
+		$HiToLo.parent().addClass("selected");
+		$("#sortHiLo").html("High to Low");
+		toSort();
+		updateSorted()
+	});
 /*
 	$searchBox.focus(function(){
 		$topBar.animate({
@@ -262,13 +271,15 @@ var addMarkersToMap = function(map){
  	document.getElementById("sort_tools").style.display='block';
 	document.getElementById("settingsButton").style.display='none';
 	document.getElementById("bottom_icon").style.display='block';
+	searchRetract();
 
  }
  
 function searchDropDown(){
 		document.getElementById('searchWindow').style.visibility="visible";
+		hideSortTools();
 	}
 
-	function searchRetract(){
-		document.getElementById('searchWindow').style.visibility="hidden";
-	}
+function searchRetract(){
+	document.getElementById('searchWindow').style.visibility="hidden";
+}

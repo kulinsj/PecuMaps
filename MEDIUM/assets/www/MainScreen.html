@@ -7,6 +7,7 @@
 	<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/MainScreen.css" type="text/css"/>
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
 	<script type="text/javascript" src="js/MainScreen.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
@@ -60,7 +61,7 @@
 			
 			<div id="sort_by">
 			
-				<div class="sort_text">Sort by $ amount</div>
+				<div class="sort_text" id="sortParameter">Sort by Cost</div>
 			
 				<div class="sort_button selected">
 					<img src="images/dolla.png" id="dollar"/>
@@ -78,7 +79,7 @@
 
 			<div id="lo-hi">
 			
-				<div class="sort_text">Lo to Hi</div> <!-- temporary-->
+				<div class="sort_text" id="sortHiLo">Low to High</div> <!-- temporary-->
 			
 				<div class ="sort_button selected">
 					<img src="images/LoToHi.png" id="LoToHi"/>
