@@ -34,6 +34,7 @@ if(data){
 	$timeLeftSpan.html(convertUnixTimeLeft(parseInt(data.expiryDate)));
 	$location.html(data.address);
 	$description.html(data.description);
+
 }
 else{
 	alert('no passed data found');

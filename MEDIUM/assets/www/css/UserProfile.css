@@ -81,7 +81,7 @@
 	}
 
 	.feeditem{
-		height: 85px;
+		height:99px;
 	}
 
 	.feedarticle{
@@ -114,20 +114,20 @@
 
 	.feedarticle .description{
 		font: 15px arial;
-		line-height: 10px;
+		line-height: 15px;
 		color: #444444;
 		width: 260px;
-		height: 40px;
+		height: 30px;
 		display: block;
-
+		overflow: hidden;
+		margin-top: 4px;
 	}
 
 	.feedarticle .claims{
-		font:arial 14px;
 		color: #888888;
-		line-height: 11px;
 		position: relative;
 		display: block;
+		margin-top: 4px;
 	}
 
 	.feedarticle .timeleft{
@@ -135,7 +135,7 @@
 		color: #888888;
 		text-align: right;
 		position: relative;
-		top: -70px;
+		top: -75px;
 		right:10px;
 		display: block;
 
@@ -148,7 +148,7 @@
 		position: relative;
 		color: #777777;
 		right: 10px;
-		bottom: 60px;
+		bottom: 70px;
 		display: block;
 
 	}
@@ -159,7 +159,7 @@
 		text-align: right;
 		display: block;
 		position: relative;
-		bottom: 60px;
+		bottom:75px;
 		right: 10px;s
 
 	}
