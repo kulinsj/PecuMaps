@@ -1,14 +1,4 @@
-body{
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-	margin:0;
-	padding: 0;
-	border: 0;
-	height: 615px;
-	width: 360px;
-	font-family: arial;
-}
+
 input[type=text]{
 	width:284px;
 	background-image: url('../images/textBG300.png');

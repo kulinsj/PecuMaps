@@ -1,17 +1,7 @@
-body{
-	    position:relative;
-      width: 360px;
-      height: 615px;
-}
-.button {
-  width: 145px;
-  height: 37px;
-  display: inline-block;
-}
-
 #bottomBar{
   height: 60px;
   background: #dcdcdc;
+  position:relative;
 }
 
 #pagecontents{
@@ -146,13 +136,10 @@ display: block;
   right: 15px;
 }
 
-
-
-
-
 #myposts{
 height: 455px;
 }
+
 .posts_article{
   padding: 10px;
   height: 85px;
@@ -228,4 +215,22 @@ color: #444444;
   position: absolute;
   left: 10px;
   bottom: 15px;
+}
+
+#toMyProfile{
+  line-height: 2em;
+  margin-top: 10px;
+  width:120px;
+  height:25px;
+  position:absolute;
+  left:0;
+}
+
+#toPostAJob{
+  line-height: 2em;
+  margin-top: 10px;
+  width:120px;
+  height:25px;
+  position:absolute;
+  right:0;
 }

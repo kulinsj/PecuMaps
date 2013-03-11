@@ -61,20 +61,20 @@
 }
 
 #plus{
-	background-color: #02D238;
+	line-height: 1.5em;
 	right:0;
-	height:40px;
-	width:100px;
+	height:30px;
+	width:120px;
 	position: absolute;
 	bottom: 0;
 	font-size: 20px;
 }
 
 #minus{
-	background-color: #F05555;
+	line-height: 1.5em;
 	left: 0;
-	height:40px;
-	width:100px;
+	height:30px;
+	width:120px;
 	position: absolute;
 	bottom: 0;
 	font-size: 20px;
