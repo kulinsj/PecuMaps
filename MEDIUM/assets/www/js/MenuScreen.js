@@ -24,3 +24,11 @@ function activateMyClaims() {
 	document.getElementById("myposts").style.display='none'
 	document.getElementById("myclaims").style.display='block'
 }
+
+$().ready(function(){
+	$loadingOverlay = $('#loadingOverlay');
+	var userData= localStorage.getItem("myInfo");
+	console.log(userData);
+	getUsersPosts(userData.screenName);
+
+});
