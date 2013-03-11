@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	login('a@a.aaa', '123456');
+	//login('a@a.aaa', '123456');
 	$("#flatCheck").change(function(){
 	    $('#flatVanisher').toggle(!this.checked);
 	    $("#payPer").prop("disabled", this.checked)

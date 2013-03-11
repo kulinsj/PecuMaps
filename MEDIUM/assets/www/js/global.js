@@ -92,7 +92,7 @@ function getUser(screenName, callback){
 			goTo("UserProfile.html",response.data);
 		}
 		else{
-			alert(response.message||"Failed");
+			alert(response.message||"Failed to retrieve user");
 		}
 	});
 }
@@ -130,4 +130,15 @@ function formatDate(date){
 	console.log(date);
 	var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 	return m[date.getMonth()]+" "+date.getDate();
+}
+
+function getUsersPosts(screenName){
+	get(BASE_URL+"/posts/user/"+screenName, function(response,a,b){
+		if(response.success){
+			return response.data;
+		}
+		else{
+			alert(response.message||"Failed to retrieve list of jobs");
+		}
+	});
 }
