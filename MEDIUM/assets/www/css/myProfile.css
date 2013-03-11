@@ -1,12 +1,15 @@
-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 
+html{
+	background: #000;
+}
 body{
 	background-color: #EFEFEF;
-	border: 1px solid black;
 	position: relative;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
+
 
 #userinfo{
 	height: 60px;
@@ -77,44 +80,52 @@ body{
 	margin-left: 25px;
 	color: #444444;
 }
-
 .detailvalue input{
-	border: none;
 	background: transparent;
 	font-size: 16px;
+	border: 1px solid #efefef;
+	width: 220px;
 }
 
 .detailvalue input[placeholder]{
-	margin-left: 25px;
 	color: #444444;
 }
 
+
+input.enabled{
+	border-color: #888;
+}
+
+input[type=password]{
+	width: 220px;
+	font-size:16px;
+	height: 22px;
+	padding: 0;
+
+}
+
+div.pw{
+	display: none;
+}
+
 .button {
-      border:1px solid #4297ce;
-      text-align: center;
-      line-height: 12px;
       display:inline-block;
-      color:#174e71;
       font-family:arial;
-      font-size:12px;
-      padding:10px 15px;
-      vertical-align: top;
-      text-decoration:none;
-      position: relative;
-      height:10px;
-      width:20px;
-      margin-right:-5px;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A7D6F4), color-stop(1, #85C7F2));
+      height:28px;
+      width:40px;
+      line-height: 1.3em;
+      
+}
 
-      }.button:hover {
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DCCF5), color-stop(1, #68AFDE));
-        border: 1px solid #2c7eb3;
-
-      }.button:active {
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #68AFDE), color-stop(1, #8DCCF5));
-        border: 1px solid #2c7eb3;
-      }
-
-      a{
+a{
 	text-decoration: none;
-      }
+}
+
+#back{
+	position: absolute;
+	left: 0;
+}
+#edit{
+	position: absolute;
+	right: 0;
+}
