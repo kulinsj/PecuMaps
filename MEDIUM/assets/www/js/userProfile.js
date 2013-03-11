@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 	var data = window.postedData;
 	if(data){
-		get("http://jademap.herokuapp.com/posts/user/"+data.screenName,function(response){
+		get(BASE_URL+"/posts/user/"+data.screenName,function(response){
 			if(response.success){
 				for(var i=0; i<response.data.length; i++){
 					var item = response.data[i];

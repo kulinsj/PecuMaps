@@ -1,3 +1,7 @@
+var LOCAL = '';
+var REMOTE = 'http://jademap.herokuapp.com';
+var BASE_URL = LOCAL;
+
 $(document).ready(function(){
 
 	var $back = $('.backBtn');
@@ -56,7 +60,7 @@ function login(email, pass){
         data.longitude = window.coords.longitude;
     }
 
-    post("http://jademap.herokuapp.com/login/", data, function(response){
+    post(BASE_URL+"/login/", data, function(response){
         if (response.success) {
 	        alert('Log in succeeded');
         } else {
@@ -83,12 +87,12 @@ function goTo(url, object){
 })();
 
 function getUser(screenName, callback){
-	get("http://jademap.herokuapp.com/users/"+screenName,function(response,a,b){
+	get(BASE_URL+"/users/"+screenName,function(response,a,b){
 		if(response.success){
 			goTo("UserProfile.html",response.data);
 		}
 		else{
-			alert(response.message||"Failed");
+			alert(response.message||"Failed to retrieve user");
 		}
 	});
 }
@@ -126,4 +130,15 @@ function formatDate(date){
 	console.log(date);
 	var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 	return m[date.getMonth()]+" "+date.getDate();
+}
+
+function getUsersPosts(screenName){
+	get(BASE_URL+"/posts/user/"+screenName, function(response,a,b){
+		if(response.success){
+			return response.data;
+		}
+		else{
+			alert(response.message||"Failed to retrieve list of jobs");
+		}
+	});
 }
