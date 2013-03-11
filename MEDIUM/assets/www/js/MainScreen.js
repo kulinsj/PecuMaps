@@ -146,20 +146,28 @@ var addMarkersToMap = function(map){
 		//map.fitBounds(mapBounds);
 	}
     else{
-		alert(jobs.message || "could not get jobss");
+		alert(jobs.message || "could not get jobs");
 	}
  }
 
 
  function hideSortTools() {
- 	document.getElementById("sort_tools").style.display='none'
-	document.getElementById("settingsButton").style.display='block'
-	document.getElementById("bottom_icon").style.display='none'
+ 	document.getElementById("sort_tools").style.display='none';
+	document.getElementById("settingsButton").style.display='block';
+	document.getElementById("bottom_icon").style.display='none';
  }
 
  function showSortTools() {
- 	document.getElementById("sort_tools").style.display='block'
-	document.getElementById("settingsButton").style.display='none'
-	document.getElementById("bottom_icon").style.display='block'
+ 	document.getElementById("sort_tools").style.display='block';
+	document.getElementById("settingsButton").style.display='none';
+	document.getElementById("bottom_icon").style.display='block';
 
  }
+ 
+function searchDropDown(){
+		document.getElementById('searchWindow').style.visibility="visible";
+	}
+
+	function searchRetract(){
+		document.getElementById('searchWindow').style.visibility="hidden";
+	}
