@@ -1,6 +1,6 @@
 #userDetail{
 	width: 320px;
-	height: 320px;
+	height: 380px;
 	margin:0 auto;
 	position: relative;
 }
@@ -8,17 +8,21 @@
 #title{
 	font-size: 20px;
 	color:#888888;
-	margin: 20px 20px;
+	margin: 50px 20px;
 }
 
 input{
-	font-size: 20px;
+
 	height: 34px;
 	width:320px;
 }
 
 #finish{
+	line-height: 2em;
+	height:30px;
+	width: 90px;
 	position: absolute;
 	right:0;
 	bottom: 0;
+	font-size: 16px;
 }

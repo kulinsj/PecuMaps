@@ -61,7 +61,7 @@ body{
 	background-image: url('../images/sort_box.png');
 	position: absolute;
 	right: 0;
-	top: 260px;
+	margin-top: -30px;
 }
 #map_canvas{
 	height: 235px;
@@ -76,16 +76,10 @@ body{
 	top: 250px;
 
 }
-#sort_tools{
-	height: 75px;
-	background: #c1c1c1;
-	/*position: absolute;*/
-}
 
 #sort_by{
 	margin-left: 19px;
 	margin-top: 10px;
-	margin-bottom: 7px;
 	width: 165px;
 	height: 60px;
 	padding-bottom: 5px;
@@ -96,8 +90,7 @@ body{
 	width: 105px;
 	height: 60px;
 	position: absolute;
-	top: 0;
-	right: 4px;
+	right:0;
 	display: inline-block;
 	text-align: center;
 	margin-top: 10px;
@@ -219,10 +212,12 @@ div.sel{
 
 
 #sort_tools{
-
+	position: absolute;
 	height: 75px;
 	background: #c1c1c1;
 	z-index: 10;
+	margin-top: -75px;
+	width: 360px;
 }
 
 #searchWindow{
@@ -329,3 +324,6 @@ div.sel{
    border: 1px solid #CDCDCD
 }
 
+.sort_button.selected{
+	background-position: 0 35px;
+}

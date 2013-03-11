@@ -1,31 +1,26 @@
 <!doctype html>
 <html>
+<head>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" href="css/global.css" type="text/css"/>
+	<link rel="stylesheet" href="css/globalJ.css" type="text/css"/>
 	<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/MainScreen.css" type="text/css"/>
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/MainScreen.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script>
-	function searchDropDown(){
-		document.getElementById('searchWindow').style.visibility="visible";
-	}
 
-	function searchRetract(){
-		document.getElementById('searchWindow').style.visibility="hidden";
-	}
-	</script>
-<head>
 </head>
 <body onload="hideSortTools()">
 	<div id="topBar">
 		<input type="text" class="mediumLarge" placeholder="Search" onfocus="searchDropDown()"/>
+		
 		<a href="MenuScreen.html">
 			<div id="menu">
 				<img src="images/Menu.png" style="vertical-align:middle">
 			</div>
 		</a>
+
 		<div id="searchWindow">
 			<div id="searchDistance">Search within <span id="searchDistanceDropDown">
 				<select>
@@ -56,23 +51,46 @@
 	</div>
 	<div id="map_canvas" style="width:100%" ></div>
 	<div id="settingsButton" onclick="showSortTools()"></div>
-	<div id="bottom_icon" onclick="hideSortTools()"></div>
-	<div id="bottomBar">
-		<div id ="sort_tools">
+	
+
+	<div id ="sort_tools">
+			
+			<div id="bottom_icon" onclick="hideSortTools()"></div>
+			
 			<div id="sort_by">
+			
 				<div class="sort_text">Sort by $ amount</div>
-				<div class="sort_button"></div>
-				<div class="sort_button"></div>
-				<div class="sort_button"></div>
+			
+				<div class="sort_button selected">
+					<img src="images/dolla.png" id="dollar"/>
+				</div>
+			
+				<div class="sort_button">
+					<img src="images/km.png" id="kilometer"/>
+				</div>
+			
+				<div class="sort_button">
+					<img src="images/calendarIcon.png" id="calender"/>
+				</div>
+			
 			</div>
 
 			<div id="lo-hi">
+			
 				<div class="sort_text">Lo to Hi</div> <!-- temporary-->
-				<div class ="sort_button"></div>
-				<div class ="sort_button"></div>
+			
+				<div class ="sort_button selected">
+					<img src="images/LoToHi.png" id="LoToHi"/>
+				</div>
+			
+				<div class ="sort_button">
+					<img src="images/HiToLo.png" id="HiToLo"/>
+				</div>
+			
 			</div>
+		
 		</div>
-
+	<div id="bottomBar">
 
 		<div id="resultsScroll">
 			<div id="resultsScrollChild">
