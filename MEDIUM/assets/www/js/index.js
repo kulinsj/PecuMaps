@@ -33,15 +33,16 @@ $().ready(function(){
 	});
 
 	$goBtn.click(function(){
-		window.location = "MainScreen.html";
-		//$('#credentialForm').submit();
+		//window.location = "MainScreen.html";
+		$('#credentialForm').submit();
 	});
 	$('#credentialForm').submit(function(event){
 		var data = event.formData;
 		post(BASE_URL+"/login/", data, function(response){
 			if (response.success){
 				if ($loginbutton.hasClass('selected')){
-					$goLink.attr("href", "MainScreen.html");
+					localStorage.setItem("myInfo", JSON.stringify(response.data));
+					window.location="MainScreen.html";
 				}else{
 					$goLink.attr("href", "UserDetail.html");
 				}
