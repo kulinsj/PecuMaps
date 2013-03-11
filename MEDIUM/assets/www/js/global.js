@@ -1,3 +1,7 @@
+var LOCAL = '';
+var REMOTE = 'http://jademap.herokuapp.com';
+var BASE_URL = LOCAL;
+
 $(document).ready(function(){
 
 	var $back = $('.backBtn');
@@ -56,7 +60,7 @@ function login(email, pass){
         data.longitude = window.coords.longitude;
     }
 
-    post("http://jademap.herokuapp.com/login/", data, function(response){
+    post(BASE_URL+"/login/", data, function(response){
         if (response.success) {
 	        alert('Log in succeeded');
         } else {
@@ -83,7 +87,7 @@ function goTo(url, object){
 })();
 
 function getUser(screenName, callback){
-	get("http://jademap.herokuapp.com/users/"+screenName,function(response,a,b){
+	get(BASE_URL+"/users/"+screenName,function(response,a,b){
 		if(response.success){
 			goTo("UserProfile.html",response.data);
 		}

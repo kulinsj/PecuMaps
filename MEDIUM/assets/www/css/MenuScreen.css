@@ -234,3 +234,7 @@ color: #444444;
   position:absolute;
   right:0;
 }
+
+span.description{
+	overflow-y: hidden;
+}

@@ -38,7 +38,7 @@ $().ready(function(){
 	});
 	$('#credentialForm').submit(function(event){
 		var data = event.formData;
-		post("http://jademap.herokuapp.com/login/", data, function(response){
+		post(BASE_URL+"/login/", data, function(response){
 			if (response.success){
 				if ($loginbutton.hasClass('selected')){
 					$goLink.attr("href", "MainScreen.html");
