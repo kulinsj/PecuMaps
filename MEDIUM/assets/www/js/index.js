@@ -36,9 +36,6 @@ $().ready(function(){
 		window.location = "MainScreen.html";
 		//$('#credentialForm').submit();
 	});
-
-
-
 	$('#credentialForm').submit(function(event){
 		var data = event.formData;
 		post("http://jademap.herokuapp.com/login/", data, function(response){

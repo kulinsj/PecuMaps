@@ -22,7 +22,5 @@
 	    		$edit.html('Edit');
 	    		editting=false;
 	    	}
-
-
 	    });
 	});
