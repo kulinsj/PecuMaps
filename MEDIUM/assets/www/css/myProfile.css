@@ -128,4 +128,60 @@ a{
 #edit{
 	position: absolute;
 	right: 0;
+	width:30px;
+	margin-top: -33px;
+}
+nav{
+	position: relative;
+	display: -webkit-box;
+    /*position:fixed;*/
+    width:100%;
+    border-top:             1px solid rgba(255,255,255,.33);
+    -webkit-box-shadow:     0 -0.05em 0 rgba(0,0,0,0.9);
+    height:                 50px;
+    -webkit-box-orient:     horizontal;
+    -webkit-box-align:      center;
+    -webkit-box-pack:       justify;
+    -webkit-box-sizing:     border-box;
+    background-color: #02d238;
+    background-image: url('../images/logo_white_transparent.png');
+	  background-repeat: no-repeat;
+	  background-position: 159px 5px;
+    font-family:            'Helvetica Neue', HelveticaNeue, Helvetica-Neue, Helvetica, sans-serif;
+    bottom:                 0px;
+    left:                   0px;
+    right:                  0px;
+}
+
+    /* Nav item */
+
+.iosBtn,
+nav a {
+	display: inline-block;
+	position: relative;
+	margin: 0 8px 0 8px;
+	color: #fff;
+	font-weight: bold;
+	vertical-align: top;
+	text-decoration: none;
+	text-align: center;
+	padding: 8px 12px;
+	font-size: 12px;
+	font-weight: 700;
+	font-family: helvetica, arial, sans-serif;
+	border-radius: 4px;
+	border: 1px solid #bcbcbc;
+	border-top-color: #1e501e;
+	border-left-color: #399839;
+	border-right-color: #399839;
+	border-bottom-color: #2e7c2e;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+
+	text-shadow: 0 1px 1px rgba(131,209,131, 1);
+	background-image: -webkit-linear-gradient(top, rgba(96,196,96,1) 0%,rgba(68,183,68,1) 50%,rgba(61,164,61,1) 50.5%,rgba(62,167,62,1) 100%);
+	background-image: -moz-linear-gradient(top, rgba(96,196,96,1) 0%,rgba(68,183,68,1) 50%,rgba(61,164,61,1) 50.5%,rgba(62,167,62,1) 100%);
+	background-image: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+	background-image: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
 }
