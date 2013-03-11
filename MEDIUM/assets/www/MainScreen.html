@@ -10,49 +10,6 @@
 	<script type="text/javascript" src="js/MainScreen.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
-	<script>
-	
-
-	$().ready(function(){
-		$dollar = $("#dollar");
-		$kilometer = $("#kilometer");
-		$calender = $("#calender");
-
-
-		$LoToHi = $("#LoToHi");
-		$HiToLo = $("#HiToLo");
-	
-		$dollar.click(function(){
-			$dollar.parent().addClass("selected");
-			$kilometer.parent().removeClass("selected");
-			$calender.parent().removeClass("selected");
-		});
-
-		$kilometer.click(function(){
-			$dollar.parent().removeClass("selected");
-			$kilometer.parent().addClass("selected");
-			$calender.parent().removeClass("selected");
-		});
-
-		$calender.click(function(){
-			$dollar.parent().removeClass("selected");
-			$kilometer.parent().removeClass("selected");
-			$calender.parent().addClass("selected");
-		});
-
-		$LoToHi.click(function(){
-			$LoToHi.parent().addClass("selected");
-			$HiToLo.parent().removeClass("selected");
-		});
-
-		$HiToLo.click(function(){
-			$LoToHi.parent().removeClass("selected");
-			$HiToLo.parent().addClass("selected");
-		});
-	});
-
-
-	</script>
 </head>
 <body onload="hideSortTools()">
 	<div id="topBar">
