@@ -108,12 +108,12 @@ function toSort(){
 					sort(itemsArray, "date", false);
 				}
 			}
-			
+			/*
 			for (var i=0; i<itemsArray.length; i++){
 				console.log(itemsArray[i].cost);
 				console.log(Date(parseInt(itemsArray[i].postDate.substr(6))));
 			}
-			
+			*/
 	}
 
 	
@@ -133,10 +133,11 @@ function toSort(){
 	var $rating = $('#rating');
 
 	var $shortcuts = $('#resultsScrollChild>div');
-		
+		updateSorted();
+
 		function updateSorted(){
 			$shortcuts.each(function(i){
-				$(this).html(itemsArray[i].cost);
+				$(this).html("$" + itemsArray[i].cost);
 			
 			$(this).click(function(){
 				$shortcuts.removeClass('sel');
@@ -270,11 +271,13 @@ var addMarkersToMap = function(map){
  	document.getElementById("sort_tools").style.display='block';
 	document.getElementById("settingsButton").style.display='none';
 	document.getElementById("bottom_icon").style.display='block';
+	searchRetract();
 
  }
  
 function searchDropDown(){
 		document.getElementById('searchWindow').style.visibility="visible";
+		hideSortTools();
 	}
 
 	function searchRetract(){
