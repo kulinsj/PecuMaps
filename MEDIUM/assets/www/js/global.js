@@ -51,10 +51,8 @@ function login(email, pass){
     }
 
     post("http://jademap.herokuapp.com/login/", data, function(response){
-
         if (response.success) {
-	        console.log('Logged in success');
-	        alert('succeeeeed at login')
+	        alert('Log in succeeded');
         } else {
             alert(response.message || "Unable to login at this time.");
         }

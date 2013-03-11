@@ -118,3 +118,8 @@ input.invalid{
 #titleSpan{
 	width: 34px;
 }
+#postButton{
+	width: 318px;
+	position: absolute;
+	bottom: 7px;
+}

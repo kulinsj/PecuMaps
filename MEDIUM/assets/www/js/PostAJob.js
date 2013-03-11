@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	login('a@a.aaa', '123456');
-
 	$("#flatCheck").change(function(){
 	    $('#flatVanisher').toggle(!this.checked);
 	    $("#payPer").prop("disabled", this.checked)
@@ -63,7 +62,8 @@ $(document).ready(function(){
 	            post("http://jademap.herokuapp.com/posts/" + data.title, data, function(response){
 	                if (response.success) {
 	                    alert("Job is posted");
-	                    hideDropForms();
+		                localStorage.setItem("postedData", JSON.stringify(data));
+	                    window.location = "MyPostDetails.html";
 	                } else {
 	                    alert(response.message || "Unable to login at this time.");
 	                }
