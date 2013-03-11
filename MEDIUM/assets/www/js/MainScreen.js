@@ -108,12 +108,12 @@ function toSort(){
 					sort(itemsArray, "date", false);
 				}
 			}
-			/*
+			
 			for (var i=0; i<itemsArray.length; i++){
 				console.log(itemsArray[i].cost);
-				console.log(Date(parseInt(itemsArray[i].postDate.substr(6))));
+				console.log(Date(itemsArray[i].postDate));
 			}
-			*/
+			
 	}
 
 	
@@ -136,10 +136,17 @@ function toSort(){
 		updateSorted();
 
 		function updateSorted(){
-			$shortcuts.each(function(i){
-				$(this).html("$" + itemsArray[i].cost);
 			
-			$(this).click(function(){
+
+			$shortcuts.each(function(i){
+				if ($dollar.parent().hasClass("selected")){
+					$(this).html("$" + itemsArray[i].cost);
+				}else if($calender.parent().hasClass("selected")){
+					var date = Date(itemsArray[i].postDate).split(" ");
+					var monthDay = date[1] + " " + date[2];
+					$(this).html(monthDay);
+				}
+				$(this).click(function(){
 				$shortcuts.removeClass('sel');
 				$(this).addClass('sel');
 				$jobTitle.html(itemsArray[i].name);
@@ -157,6 +164,7 @@ function toSort(){
 			$dollar.parent().addClass("selected");
 			$kilometer.parent().removeClass("selected");
 			$calender.parent().removeClass("selected");
+			$("#sortParameter").html("Sort by Cost");
 			toSort();
 			updateSorted();
 		});
@@ -171,6 +179,7 @@ function toSort(){
 			$dollar.parent().removeClass("selected");
 			$kilometer.parent().removeClass("selected");
 			$calender.parent().addClass("selected");
+			$("#sortParameter").html("Sort by Date");
 			toSort();
 			updateSorted()
 		});
@@ -178,6 +187,7 @@ function toSort(){
 		$LoToHi.click(function(){
 			$LoToHi.parent().addClass("selected");
 			$HiToLo.parent().removeClass("selected");
+			$("#sortHiLo").html("Low to High");
 			toSort();
 			updateSorted()
 		});
@@ -185,6 +195,7 @@ function toSort(){
 		$HiToLo.click(function(){
 			$LoToHi.parent().removeClass("selected");
 			$HiToLo.parent().addClass("selected");
+			$("#sortHiLo").html("High to Low");
 			toSort();
 			updateSorted()
 		});
