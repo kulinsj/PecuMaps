@@ -62,6 +62,7 @@ body{
 	position: absolute;
 	right: 0;
 	margin-top: -30px;
+	display: none;
 }
 #map_canvas{
 	height: 235px;
@@ -218,6 +219,7 @@ div.sel{
 	z-index: 10;
 	margin-top: -75px;
 	width: 360px;
+	display: none;
 }
 
 #searchWindow{

@@ -50,10 +50,7 @@ $(document).ready(function(){
 	    marker.setTitle(j.toString());
 	    attachSecretMessage(marker, jobs.data[i].name, i);
 	  }
-	
 
-	// The five markers show a secret message when clicked
-	// but that message is not within the marker's instance data.
 	function attachSecretMessage(marker, msg, number) {
 	  var infowindow = new google.maps.InfoWindow(
 	      { content: msg,
@@ -64,7 +61,6 @@ $(document).ready(function(){
 	  });
 	}
 }
-
 
 	function sort(array, key, ascend){
 		if (ascend == null){
@@ -95,24 +91,24 @@ $(document).ready(function(){
 
 
 function toSort(){
-			if ($LoToHi.parent().hasClass("selected")){
-				if ($dollar.parent().hasClass("selected")){
-					sort(itemsArray, "cost");
-				}else if ($calender.parent().hasClass("selected")){
-					sort(itemsArray, "date");
-				}
-			}else if($HiToLo.parent().hasClass("selected")){
-				if ($dollar.parent().hasClass("selected")){
-					sort(itemsArray, "cost", false);
-				}else if ($calender.parent().hasClass("selected")){
-					sort(itemsArray, "date", false);
-				}
+		if ($LoToHi.parent().hasClass("selected")){
+			if ($dollar.parent().hasClass("selected")){
+				sort(itemsArray, "cost");
+			}else if ($calender.parent().hasClass("selected")){
+				sort(itemsArray, "date");
 			}
-			
-			for (var i=0; i<itemsArray.length; i++){
-				console.log(itemsArray[i].cost);
-				console.log(Date(parseInt(itemsArray[i].postDate.substr(6))));
+		}else if($HiToLo.parent().hasClass("selected")){
+			if ($dollar.parent().hasClass("selected")){
+				sort(itemsArray, "cost", false);
+			}else if ($calender.parent().hasClass("selected")){
+				sort(itemsArray, "date", false);
 			}
+		}
+
+		for (var i=0; i<itemsArray.length; i++){
+			console.log(itemsArray[i].cost);
+			console.log(Date(parseInt(itemsArray[i].postDate.substr(6))));
+		}
 			
 	}
 
@@ -134,11 +130,13 @@ function toSort(){
 
 	var $shortcuts = $('#resultsScrollChild>div');
 		
-		function updateSorted(){
-			$shortcuts.each(function(i){
-				$(this).html(itemsArray[i].cost);
-			
+	function updateSorted(){
+		console.log($shortcuts);
+		$shortcuts.each(function(i){
+			$(this).html(itemsArray[i].cost);
+
 			$(this).click(function(){
+				console.log($(this));
 				$shortcuts.removeClass('sel');
 				$(this).addClass('sel');
 				$jobTitle.html(itemsArray[i].name);
@@ -149,8 +147,8 @@ function toSort(){
 				$rating.html(itemsArray[i].reviewID);
 				google.maps.event.trigger(markers[i], 'click');
 			});
-			});
-		}
+		});
+	}
 
 		$dollar.click(function(){
 			$dollar.parent().addClass("selected");
@@ -187,7 +185,6 @@ function toSort(){
 			toSort();
 			updateSorted()
 		});
-
 /*
 	$searchBox.focus(function(){
 		$topBar.animate({
@@ -214,12 +211,7 @@ function toSort(){
 		  });
 	});
 */
-
-	
-
 });
-
-
 
 function GoogleMap(){
 	this.initialize = function(){
