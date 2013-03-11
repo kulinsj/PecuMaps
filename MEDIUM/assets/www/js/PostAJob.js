@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	login('a@a.aaa', '123456');
+
+	$("#flatCheck").change(function(){
+	    $('#flatVanisher').toggle(!this.checked);
+	    $("#payPer").prop("disabled", this.checked)
+	});
 	var $jobTitle = $('#jobTitle');
 	var $jobLocation = $('#jobLocation');
 	var $jobDescription = $('#jobDescription');
@@ -20,81 +26,53 @@ $(document).ready(function(){
 		}
 	});
 	$jobFlatCheck.change();
+
 	$cancel.click(function(){
-		//Cancel Button Click Function
+		goBack();
 	});
 
+	var $submitForm=$('#postForm');
 	$postButton.click(function(){
-		/*var title = $jobTitle.val();
-		var location = $jobLocation.val();
-		var desc = $jobDescription.val();
-		var pay = $jobPay.val();
-		var payPer;
-		if(!$jobFlatCheck[0].checked)
-			payPer = $jobPayPer.val();
-		var timeNum = parseInt($jobDateNum.val());
-		var timeType = $jobDateType.val();
-
-		var valid = true;
-		if(title==""){
-			valid=false;
-			$jobTitle.addClass('invalid');
-		}
-		if(location==""){
-			valid=false;
-			$jobLocation.addClass('invalid');
-		}
-		if(desc==""){
-			valid=false;
-			$jobDescription.addClass('invalid');
-		}
-		if(pay==""){
-			valid=false;
-			$jobPay.addClass('invalid');
-		}
-		if(!$jobFlatCheck[0].checked && payPer==""){
-			valid=false;
-			$jobPayPer.addClass('invalid');
-		}
-		if(valid){
-			$('.invalid').removeClass('invalid');
-
-			var latLong = codeAddress(location);
-			if(latLong != null){
-				var lat = latLong.hb;
-				var longi = latLong.ib;
-				var seconds = new Date().getTime();
-				var timeUnit;
-				switch(timeType){
-					case 'days':
-						timeUnit= 86400000;
-						break;
-					case 'weeks':
-						timeUnit= 604800000;
-						break;
-					case 'months':
-						timeUnit= 2629740000;
-						break;
-				}
-				var expiryDate = seconds + (timeNum*timeUnit);
-
-				*//*HERE WE POST NOW THAT ALL DATA IS HAD AND VALID*//*
-				var myJSONObject = {
-					"name": title,
-					"location": location,
-					"lat": lat,
-					"long": longi,
-					"description":desc,
-					"pay":pay,
-					"expiry":expiryDate
-				}
-			}
-		}
-		else{
-			alert("Some fields have been left blank, fill them in and try again");
-		}*/
+		$submitForm.submit();
 	});
-
+	$submitForm.submit(function(e){
+	    var data = e.formData;
+		var start = new Date().getTime();
+		var timeUnit = $jobDateType.val();
+		var timeMultiple;
+		var timeNumber = parseInt($jobDateNum.val());
+		switch(timeUnit){
+			case "weeks":
+				timeMultiple = 604800000;
+				break;
+			case "days":
+				timeMultiple = 86400000;
+				break;
+			case "months":
+				timeMultiple = 2600000000;
+				break;
+		}
+		var expiry = start+timeMultiple*timeNumber;
+		data.expiryDate = expiry;
+	    getLocation(data.address, function(loc){
+	        $("#post-address").toggleClass('invalid', !loc);
+	        if (loc) {
+	            data.longitude = loc.longitude;
+	            data.latitude = loc.latitude;
+	            data.address = loc.address;
+	            post("http://jademap.herokuapp.com/posts/" + data.title, data, function(response){
+	                if (response.success) {
+	                    alert("Job is posted");
+	                    hideDropForms();
+	                } else {
+	                    alert(response.message || "Unable to login at this time.");
+	                }
+	            });
+	        }
+	    });
+	    return false;
+	});
+	navigator.geocoder = new google.maps.Geocoder();
 	function codeAddress(address) {
 	    geocoder.geocode( { 'address': address}, function(results, status) {
 	      if (status == google.maps.GeocoderStatus.OK) {
@@ -105,4 +83,41 @@ $(document).ready(function(){
 	      }
 	    });
 	  }
+	function getLocation(address, callback) {
+	    navigator.geocoder.geocode( { 'address': address}, function(results, status) {
+	        if (status == google.maps.GeocoderStatus.OK) {
+	            var geo = results[0].geometry.location;
+	            callback({
+	                address: results[0].formatted_address,
+	                latitude: geo.ib,
+	                longitude: geo.jb
+	            });
+	        } else {
+	            alert("Cannot find location, please provide a valid address");
+	            callback(null);
+	        }
+	    });
+	}
+
+	function getCurrentLocation(callback) {
+	    if (navigator.geolocation) {
+	        navigator.geolocation.getCurrentPosition(function(pos){
+	            var coords = {
+	                latitude: pos.coords.latitude,
+	                longitude: pos.coords.longitude
+	            };
+	            if (localStorage) {
+	                localStorage.setItem("latitude", coords.latitude);
+	                localStorage.setItem("longitude", coords.longitude);
+	            }
+	            window.coords = coords;
+	            if (callback) {
+	                callback(coords);
+	            }
+	        });
+	    } else {
+	        alert("Geolocation is not support on your browser, update it");
+	        if(callback) callback(null);
+	    }
+	}
 });
