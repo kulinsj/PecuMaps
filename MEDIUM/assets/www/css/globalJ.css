@@ -11,6 +11,17 @@ body{
 	background: #efefef;
 	position: relative;
 }
+#loadingOverlay{
+	position: absolute;
+	z-index: 1000;
+	background: rgba(0,0,0,0.5);
+	background-image: url('../images/loading_logo.gif');
+	background-repeat: no-repeat;
+	background-position: 117px 243px;
+	display: none;
+	width:360px;
+	height: 615px;
+}
 div.MainContainer{
 	margin: 10px 10px 10px 10px;
 	width: 340px;
@@ -91,8 +102,8 @@ textarea.invalid{
     right:                  0px;
 }
 
-    /* Nav item */
 
+/*BUTTON STYLES LIKE IOS*/
 .iosBtn,
 nav a {
 	display: inline-block;
