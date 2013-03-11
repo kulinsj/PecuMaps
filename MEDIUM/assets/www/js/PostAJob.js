@@ -32,6 +32,7 @@ $(document).ready(function(){
 
 	var $submitForm=$('#postForm');
 	$postButton.click(function(){
+		console.log('ye');
 		$submitForm.submit();
 	});
 	$submitForm.submit(function(e){
@@ -59,11 +60,10 @@ $(document).ready(function(){
 	            data.longitude = loc.longitude;
 	            data.latitude = loc.latitude;
 	            data.address = loc.address;
-	            post("http://jademap.herokuapp.com/posts/" + data.title, data, function(response){
+	            post(BASE_URL+"/posts/" + data.title, data, function(response){
 	                if (response.success) {
 	                    alert("Job is posted");
-		                localStorage.setItem("postedData", JSON.stringify(data));
-	                    window.location = "MyPostDetails.html";
+		                goTo("MyPostDetails.html",data);
 	                } else {
 	                    alert(response.message || "Unable to login at this time.");
 	                }

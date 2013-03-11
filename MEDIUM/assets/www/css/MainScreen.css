@@ -149,9 +149,10 @@ a:hover{color:inherit}
 
 #postDetail{
 	width:320px;
-	height:140px;
+	height:210px;
 	position:relative;
-	margin:20px;
+	margin:20px 20px 10px 20px;
+	overflow-y: auto;
 }
 
 #username{
@@ -328,4 +329,11 @@ div.sel{
 
 .sort_button.selected{
 	background-position: 0 35px;
+}
+#claimWrap{
+	height: 50px;
+	width:360px;
+}
+#claimWrap div{
+	width: 317px;
 }

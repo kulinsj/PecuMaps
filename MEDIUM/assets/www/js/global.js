@@ -8,10 +8,10 @@ $(document).ready(function(){
 	$back.click(function(){
 		goBack();
 	});
-	var $userLink = $(".userLink");
+	var $userLink = $(".profileLink");
 	$userLink.click(function(){
-		//TO DO
-
+		var name = $userLink.html();
+		getUser(name, function(){});
 	});
 });
 
@@ -132,13 +132,6 @@ function formatDate(date){
 	return m[date.getMonth()]+" "+date.getDate();
 }
 
-function getUsersPosts(screenName){
-	get(BASE_URL+"/posts/user/"+screenName, function(response,a,b){
-		if(response.success){
-			return response.data;
-		}
-		else{
-			alert(response.message||"Failed to retrieve list of jobs");
-		}
-	});
+function getUsersPosts(screenName, callback){
+	get(BASE_URL+"/posts/user/"+screenName, callback);
 }
