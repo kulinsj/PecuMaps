@@ -9,25 +9,23 @@
 		background-color: #02d23a;	
 	}
 
+	#loadingpage img{
+		height:100px; 
+		width: 360px; 
+		margin-top: 250px
+	}
+
 	.credential{
 		margin: 0px auto;
 	    width: 320px;
 	    height: 160px;
 	}
 							  
-	.buttongroup{
+	#buttongroup{
 	    width:320px;
 	    height:50px;
 		margin:80px auto 40px auto;
-	}
-
-	.button {
-		font-size: 20px;
-	    display:inline-block;
-	    vertical-align: top;
-	    height:50px;
-	    width:155px;
-	    line-height: 2.5em;
+		font-size: 16px;
 	}
      a{
 	text-decoration: none;
@@ -48,4 +46,34 @@ input{
 	height: 50px;
 	width: 180px;
 
+}
+
+.selected{
+	background: #02d238; 
+	color: #EFEFEF;
+
+}
+
+#loginBtn{
+	line-height: 2em;
+	font-size: 16px;
+	width: 115px;
+	height: 30px;
+}
+
+#signupBtn{
+	line-height: 2em;
+	font-size: 16px;
+	width: 115px;
+	height: 30px;
+}
+
+#goBtn{
+	line-height: 2em;
+	font-size: 16px;
+	display: block;
+	margin-left: 180px; 
+	margin-top: 35px;
+	width: 115px;
+	height: 30px;
 }

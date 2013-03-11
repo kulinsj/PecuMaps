@@ -11,8 +11,8 @@ function delayedHideLoadingPage(){
 
 
 $().ready(function(){
-	var $loginbutton = $("#loginbutton");
-	var $signupbutton = $("#signupbutton");
+	var $loginbutton = $("#loginBtn");
+	var $signupbutton = $("#signupBtn");
 	var $confirmpassword = $("#confirmpassword");
 	var $goBtn = $("#goBtn");
 	var $goLink = $("#goLink");
