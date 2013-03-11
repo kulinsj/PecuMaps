@@ -17,10 +17,17 @@
 		var $confirm = $('#confirm');
 
 		var userData = localStorage.getItem("myInfo");
-		$username.text(userData.screenName);
-		
-
-
+		userData = JSON.parse(userData);
+		console.log(userData);
+		console.log(userData.screenName);
+		$userName.text(userData.screenName); //why .html?
+		$firstName.val(userData.firstName);
+		$lastName.val(userData.lastName);
+		$phone.val(userData.phone);
+		$email.val(userData.email);
+		$password.val(userData.password);
+		$newPassword.val(userData.newPassword);
+		$confirm.val(userData.confirm);
 
 		var editting = false;
 	    $edit.click(function() {
