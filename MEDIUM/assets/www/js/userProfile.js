@@ -1,53 +1,50 @@
-
 $(document).ready(function(){
-	var rating;
-	var name;
-	name = window.location.hash;
-	name = name.substr(1);
-	switch(name)
-	{
-	case 'BillyRayCharles':
-	  rating = 90;
-	  break;
+	var $loadingOverlay = $('#loadingOverlay');
+	var $user_name = $('span.user_name');
+	var $score =
 
-	case 'AnnaHeemes':
-	  rating = 96;
-	  break;
 
-	case 'JanKulinski':
-	  rating = 91;
-	  break;
+	$ul = $('#feeds ul');
+	$ul.delegate("li","click",function(){
+		console.log($(this));
+	});
+	$('img.user_avatar').click(function(){
+		getUser("theboss", function(){});
+		console.log($loadingOverlay);
+		$loadingOverlay.show();
+	});
 
-	case 'StevenWen':
-	  rating = 97;
-	  break;
+	var data = window.postedData;
+	if(data){
+		get("http://jademap.herokuapp.com/posts/user/"+data.screenName,function(response){
+			if(response.success){
+				for(var i=0; i<response.data.length; i++){
+					var item = response.data[i];
+					var title = item.title;
+					var description = item.description;
+					var numClaims = item.claimers.length;
+					var pay = item.cost;
+					var payper = '';
+					if(item.costPer){
+						payper = '<span class="per">per '+item.costPer+'</span>';
+					}
 
-	case 'WaterlooFeds':
-	  rating = 93;
-	  break;
-	  
-	case 'RogerFederer':
-	  rating = 98;
-	  break;
-	  
-	case 'LoisDane':
-	  rating = 93;
-	  break;
-	 
-	case 'FranciscoDestinee':
-	  rating = 95;
-	  break;
-	 
-	case 'JamesMatador':
-	  rating = 90;
-	  break;
-
-	case 'JustinDoaug':
-	  rating = 96;
-	  break;
+					var appendable = '<li class="feeditem">\
+								<article class="feedarticle">\
+									<span class="title">'+title+'</span>\
+									<span class="description">'+description+'</span>\
+									<span class="claims">'+numClaims+' claims</span>\
+									<span class="timeleft">'+daysLeft(item.expiryDate,"Ends")+'</span>\
+									<span class="price">$'+pay+'</span>\
+									'+payper+'\
+								</article>\
+							</li>';
+					$ul.append(appendable);
+				}
+			}
+			else{
+				alert(response.message||'Failed to retrieve postings. Please check your network connection and try again');
+			}
+		});
 	}
-	var $nameText = $('div.username');
-	var $ratingtext = $('div.percentage');
-	$nameText.html(name);
-	$ratingtext.html(rating);
 });

@@ -33,7 +33,8 @@ $().ready(function(){
 	});
 
 	$goBtn.click(function(){
-		$('#credentialForm').submit();
+		window.location = "MainScreen.html";
+		//$('#credentialForm').submit();
 	});
 
 
