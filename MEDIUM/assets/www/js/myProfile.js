@@ -6,6 +6,22 @@
 		var $secondary = $('div.pw');
 		var $edit = $('#edit');
 
+		var $userName = $('#username');
+		var $ratingValue = $('#ratingvalue');
+		var $firstName = $('#fName');
+		var $lastName = $('#lName');
+		var $phone = $('#phone');
+		var $email = $('#email');
+		var $password = $('#pwd');
+		var $newPassword = $('#newPwd');
+		var $confirm = $('#confirm');
+
+		var userData = localStorage.getItem("myInfo");
+		$username.text(userData.screenName);
+		
+
+
+
 		var editting = false;
 	    $edit.click(function() {
 	    	if(!editting){
