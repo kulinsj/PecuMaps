@@ -70,7 +70,7 @@ body{
 #settingsButton{
 	height: 40px;
 	width: 40px;
-	background-image: url('../images/settings_button.png');
+	background-image: url('../images/sort_gear.png');
 	position: absolute;
 	left: 0;
 	top: 250px;
