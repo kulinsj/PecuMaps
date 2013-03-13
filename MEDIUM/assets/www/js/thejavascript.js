@@ -13,6 +13,9 @@ var BASE_URL = LOCAL;
  */
 var UserData;
 var JobsArray;
+var screenLevel = 1;
+var $screenStack = [];
+var $currentScreen;
 
 var $viewPort = $('#viewPort');
 var $loadingOverlay = $('div.loading');
@@ -29,8 +32,9 @@ var $submenu = $('div.submenu');
 
 var $mainScreen = $('#MainScreenContainer');
 var $secondaryScreens = $('#slideContainer div.sec');
-var $screenSlider = $('#screenSlider');
+var $screenSlider = $('div.screenSlider');
 function openScreen(screen){
+	console.log(screen);
 	/*goes to the entered screen, valid inputs are
 	"Main"
 	"Post"
@@ -43,15 +47,22 @@ function openScreen(screen){
 	if(screen=="Main"){
 		//Go back to Main Screen
 		$secondaryScreens.hide();
+
 	}
-	else if(screen=="ReviewUser"){
-		//GO TO REVIEW USER SCREEN
-	}
+	var w = $screenSlider.css('width');
+	console.log(w);
+	w += 360;
+	var w = w.toString()+"px";
+	console.log(w);
+	$screenSlider.css('width',w);
 	var newScreenID = "#"+screen+"ScreenContainer"
 	$newScreen = $(newScreenID);
-
-	$newScreen.show();
-	$screenSlider.addClass('oneRight');
+	$newScreen.css('display','inline-block');
+	$currentScreen = $newScreen;
+	var LeftMargin = screenLevel*(-360);
+	screenLevel += 1;
+	var left = LeftMargin.toString() + "px";
+	$screenSlider.css('margin-left',left);
 }
 function ajax(method, url, data, success, error) {
     var func = function(){};

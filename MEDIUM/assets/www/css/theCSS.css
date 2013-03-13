@@ -14,6 +14,7 @@ div.screen{
 }
 div.sec{
 	display: none;
+	margin-left: -4px;
 }
 div.loading{
 	height: 615px;
@@ -188,6 +189,8 @@ div.submenuLink{
 
 div.screenSlider{
 	margin-left: 0;
+	height: 615px;
+	overflow: hidden;
 	transition:margin-left 0.5s;
     -webkit-transition: margin-left 0.5s;
     -moz-transition: margin-left 0.5s;
