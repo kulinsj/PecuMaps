@@ -35,10 +35,13 @@ $().ready(function(){
 	$goBtn.click(function(){
 		//window.location = "MainScreen.html";
 		$('#credentialForm').submit();
+		console.log(3);
 	});
 	$('#credentialForm').submit(function(event){
+		console.log(1);
 		var data = event.formData;
 		post(BASE_URL+"/login/", data, function(response){
+			console.log(2);
 			if (response.success){
 				if ($loginbutton.hasClass('selected')){
 					localStorage.setItem("myInfo", JSON.stringify(response.data));

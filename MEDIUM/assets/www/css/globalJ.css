@@ -80,26 +80,12 @@ textarea.invalid{
 
 /* Nav Container */
 
-  nav{
-    display:                -webkit-box;
-    /*position:               fixed;*/
-    bottom:                 0;
-    width:                  100%;
-    border-top:             1px solid rgba(255,255,255,.33);
+nav{
+    width:                  360px;
     -webkit-box-shadow:     0 -0.05em 0 rgba(0,0,0,0.9);
     height:                 50px;
-    -webkit-box-orient:     horizontal;
-    -webkit-box-align:      center;
-    -webkit-box-pack:       justify;
-    -webkit-box-sizing:     border-box;
     background-color: #02d238;
-    background-image: url('../images/logo_white_transparent.png');
-	  background-repeat: no-repeat;
-	  background-position: 159px 5px;
-    font-family:            'Helvetica Neue', HelveticaNeue, Helvetica-Neue, Helvetica, sans-serif;
-    bottom:                 0px;
-    left:                   0px;
-    right:                  0px;
+    font-family:            'Helvetica Neue', HelveticaNeue, Helvetica-Neue, Helvetica, Arial, arial, sans-serif;
 }
 
 

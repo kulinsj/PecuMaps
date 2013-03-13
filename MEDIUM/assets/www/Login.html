@@ -1,0 +1,50 @@
+<!doctype html>
+<html data-role="page">
+<head>
+	<link rel="stylesheet" href="css/globalJ.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="js/global.js" type="text/javascript"></script>
+	<script src="js/submit-override.js" type="text/javascript"></script>
+	<script src="js/index.js" type="text/javascript"></script>
+</head>
+
+
+<body onload="delayedHideLoadingPage();">
+	
+	<div id="loadingpage">
+		<img src="images/index.png"/>
+	</div>
+
+	<div id="loginpage">
+		<nav>
+		</nav>
+
+		<div id="buttongroup">
+
+			<div class="iosBtn selected" id="loginBtn">
+				Login
+			</div>
+			<div class="iosBtn" id="signupBtn">
+				Sign Up
+			</div>
+
+		</div>
+
+		<div class="credential">
+			<form onsubmit="return false;" id="credentialForm">
+			    <input class="mediumLarge" name="email" type="email" size="30" placeholder="Email" style="display:block" required="true"/>
+			    <input class="mediumLarge" name="password" type="password" size="30" placeholder="Password" style="display:block" required="true" />
+			    <input class="mediumLarge" name="confirmpassword" type="password" size="30" placeholder="Confirm Password" style="display:none" id="confirmpassword" required="true" />
+			    <input type="submit" style="display:none" />
+			</form>
+		</div>
+
+			<div class="iosBtn" id="goBtn">
+				Go
+			</div>
+
+	</div>
+</body>
+
+</html>
