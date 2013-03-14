@@ -15,6 +15,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
+.idea
 gen/com/pecumaps/R.java
 gen\com\pecumaps\R.java
 

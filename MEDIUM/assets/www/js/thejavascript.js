@@ -1,6 +1,6 @@
 var LOCAL = '';
 var REMOTE = 'http://jademap.herokuapp.com';
-var BASE_URL = LOCAL;
+var BASE_URL = REMOTE;
 
 /*---------------------------------------*/
 /*        MAJOR VARIABLES STUFF          */
@@ -9,32 +9,33 @@ var BASE_URL = LOCAL;
 	"UserData" is user data. JSON Object
 	"JobsArray" is current Jobs JSON Object
 	currentScreenLevel is current level of screens stacked
-	in view slider. Main Screen is = 1
+	in view slider. Main Screen is = 0
  */
 var UserData;
 var JobsArray;
-var screenLevel = 1;
-var $screenStack = [];
-var $currentScreen;
+
+
 
 var $viewPort = $('#viewPort');
 var $loadingOverlay = $('div.loading');
 var $openCloser = $("div.openCloser");
-var $shifters = $("div.leftMenu, div.mapCanvas");
+var $shifters = $("div.leftMenu, div.mapCanvas, div.openCloser");
 var $shortCutsContainer = $("#shortCutsContainer");
 var theMap;
 var $logos = $('nav div.logo');
-var $openSubmenu = $('#openSubmenu');
+var $openSubmenu = $('div.openSubmenu');
 var $submenu = $('div.submenu');
 
+var $PostAnItemScreen = $('#PostScreenContainer');
+var $backButtons = $('div.backBtn');
 
-
-
+var screenLevel = 0;
+var $currentScreen;
+var $screenStack = [];
 var $mainScreen = $('#MainScreenContainer');
 var $secondaryScreens = $('#slideContainer div.sec');
 var $screenSlider = $('div.screenSlider');
 function openScreen(screen){
-	console.log(screen);
 	/*goes to the entered screen, valid inputs are
 	"Main"
 	"Post"
@@ -47,9 +48,33 @@ function openScreen(screen){
 	if(screen=="Main"){
 		//Go back to Main Screen
 		$secondaryScreens.hide();
-
+		$screenSlider.css('margin-left','0');
 	}
-	var w = $screenSlider.css('width');
+	switch(screen){
+		case "Main":
+			break;
+		case "Post":
+			screenLevel += 1;
+			$screenStack[$screenStack.length] = $PostAnItemScreen;
+			var margin = 360*screenLevel;
+			var posLeft	=  margin.toString()+"px";
+			var negLeft = "-" + posLeft;
+			$screenSlider.css('margin-left', negLeft);
+			$PostAnItemScreen.css('margin-left',posLeft);
+			$PostAnItemScreen.show();
+			break;
+		case "UserProfile":
+			break;
+		case "MyPosts":
+			break;
+		case "MyProfile":
+			break;
+		case "MyClaims":
+			break;
+		case "Review User":
+			break;
+	}
+	/*var w = $screenSlider.css('width');
 	console.log(w);
 	w += 360;
 	var w = w.toString()+"px";
@@ -62,8 +87,19 @@ function openScreen(screen){
 	var LeftMargin = screenLevel*(-360);
 	screenLevel += 1;
 	var left = LeftMargin.toString() + "px";
-	$screenSlider.css('margin-left',left);
+	$screenSlider.css('margin-left',left);*/
 }
+function backAScreen(){
+	screenLevel -= 1;
+	var margin = 360*screenLevel;
+	var negLeft = "-" + margin.toString()+"px";
+	$screenSlider.css('margin-left', negLeft);
+	var timeoutClear = setInterval(function(){
+		clearInterval(timeoutClear);
+		//$screenStack[$screenStack.length].
+	},600);
+}
+
 function ajax(method, url, data, success, error) {
     var func = function(){};
     $.ajax({
@@ -144,6 +180,10 @@ function populateMap(){
 
 
 
+
+
+
+
 /* ----------------------------------------------------------------- */
 /* OFFICIAL START OF CODE TO EXECTUE
 /* ----------------------------------------------------------------- */
@@ -174,7 +214,6 @@ post(BASE_URL+"/login/", data, function(response){
 		    if (jobResponse.success) {
 			    JobsArray = jobResponse.data;
 			    setupSuccess = true;
-			    console.log(2);
 		    }else {
 	            alert(jobResponse.message || "Unable to  retrieve posts.");
 	            setupSuccess = false;
@@ -187,27 +226,26 @@ post(BASE_URL+"/login/", data, function(response){
 });
 var timeout = setInterval(function(){
 	if(setupSuccess){
-		console.log($loadingOverlay);
 		$loadingOverlay.addClass("hide");
 		clearInterval(timeout);
 		populateMap();
 	}
 },750);
+//start the screen stack
+$screenStack[0] = $mainScreen;
+
+
+
+//END OF INITIAL SETUP
 
 //Open/Close the left side menu on the Main Screen
 $openCloser.click(function(){
 	$shifters.toggleClass("leftOpen");
-	console.log($shifters);
 });
 
 //slide the search bar down and slide the top part in/out
 $logos.click(function(){
-	console.log($logos);
 	var $topAnmins=$(this).parent().find("div.navCont, div.logo");
-	console.log($topAnmins);
-	//$(this).to
-	console.log($topAnmins);
-
 	$topAnmins.toggleClass('down');
 });
 
@@ -216,3 +254,9 @@ $openSubmenu.click(function(){
 	$submenu.toggleClass('open');
 	console.log($submenu);
 });
+
+//set up all back buttons
+$backButtons.click(function(){
+	backAScreen();
+});
+

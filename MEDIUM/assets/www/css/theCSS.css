@@ -10,11 +10,11 @@ body{
 div.screen{
 	width: 360px;
 	height: 615px;
-	display:inline-block;
+	position: absolute;
 }
 div.sec{
 	display: none;
-	margin-left: -4px;
+	/*margin-left: -4px;*/
 }
 div.loading{
 	height: 615px;
@@ -53,29 +53,38 @@ div.leftMenu{
 	height: 565px;
 	text-align: center;
 	display: inline-block;
-	width:0px;
+	width:60px;
 	background: #efefef;
 	border-right: 1px solid #444;
-	margin-left: -1px;
-	transition: width 0.5s;
-    -webkit-transition: width 0.5s;
-    -moz-transition: width 0.5s;
+	margin-left: -61px;
+	position: relative;
+	transition: margin-left 0.5s;
+    -webkit-transition: margin-left 0.5s;
+    -moz-transition: margin-left 0.5s;
 }
 div.leftMenu.leftOpen{
-	width: 60px;
-	transition: width 0.5s;
-    -webkit-transition: width 0.5s;
-    -moz-transition: width 0.5s;
+	margin-left:-1px;
+	transition: margin-left 0.5s;
+    -webkit-transition: margin-left 0.5s;
+    -moz-transition: margin-left 0.5s;
 }
 
 div.openCloser{
-	position: fixed;
+	position: absolute;
 	width: 80px;
-	height: 80px;
-	background: purple;
+	height: 30px;
+	background: #efefef;
+	border-top: 1px solid #aaa;
+	border-right: 1px solid #aaa;
 	bottom: 0;
 	z-index: 100;
 	left:0;
+	background-image: url('../images/arrow_right.png');
+	background-repeat: no-repeat;
+	background-position: 65px 5px;
+}
+div.openCloser.leftOpen{
+	background-image: url('../images/arrow_left.png');
 }
 .relative{
 	position: relative;
@@ -88,8 +97,9 @@ div.openCloser{
 	position: absolute;
 }
 #shortCutsContainer{
-	height:523px;
+	height:492px;
 	padding-top: 42px;
+	padding-bottom: 31px;
 	width: 60px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -108,7 +118,7 @@ div.shortcut{
 nav .logo{
 	height: 50px;
 	width: 50px;
-	position: fixed;
+	position: absolute;
 	background-image: url('../images/logo_white_transparent.png');
 	background-repeat: no-repeat;
 	background-position: 4px 5px;
@@ -118,6 +128,7 @@ nav .logo{
     -webkit-transition: transform 0.5s;
     -moz-transition: transform 0.5s;
     -webkit-transition: -webkit-transform 0.5s;
+	z-index: 175;
 
 }
 nav .logo.down{
@@ -154,7 +165,7 @@ nav .navRow{
 	line-height: 50px;
 }
 
-#openSubmenu{
+div.openSubmenu{
 	height: 50px;
 	width:200px;
 }
@@ -214,10 +225,16 @@ input.search{
 	background-repeat: no-repeat;
 	background-position: 5px 4px;
 }
-#postBtn{
+div.postBtn{
 	position: absolute;
 	margin: -43px 0 0 230px;
 	width: 40px;
+	height: 20px;
+	line-height: 20px;
+}
+div.backBtn{
+	position: absolute;
+	margin: 6px 0 0 10px;
 	height: 20px;
 	line-height: 20px;
 }
