@@ -21,6 +21,8 @@
 
 			-->
 			<div id="MainScreenContainer" class="screen main">
+				<div class="topLeftCloser"></div>
+				<div class="topLeftCloser secondary"></div>
 				<nav>
 					<div class="logo">
 					</div>
@@ -41,9 +43,9 @@
 				</nav>
 				<div class="submenu">
 					<div class="submenuLink" onclick="openScreen('MyPosts');">My Posts</div>
-					<div class="submenuLink">My Claims</div>
-					<div class="submenuLink">My Profile</div>
-					<div class="submenuLink">Log out</div>
+					<div class="submenuLink" onclick="openScreen('MyClaims');">My Claims</div>
+					<div class="submenuLink" onclick="openScreen('MyProfile');">My Profile</div>
+					<div class="submenuLink" onclick="alert('Logging out has been turned off for the Symposium');">Log out</div>
 				</div>
 				<div class="mainContainerFull relative">
 					<div class="leftMenu">
@@ -61,6 +63,7 @@
 
 			-->
 			<div id="PostScreenContainer" class="screen sec">
+				<div class="topLeftCloser"></div>
 				<nav>
 					<div class="logo">
 					</div>
@@ -71,14 +74,21 @@
 								</div>
 							</div>
 							<div class="navRow">
-								<div class="backBtn iosBtn">
+								<div class="backBtn iosBtn" onclick="postAPostAt = 0;">
 									Cancel
 								</div>
+								<h1 class="pageTitle">Post</h1>
 							</div>
 						</div>
 					</div>
 				</nav>
-				<div class="MainContainer">
+				<div class="submenu">
+					<div class="submenuLink" onclick="openScreen('MyPosts');">My Posts</div>
+					<div class="submenuLink" onclick="openScreen('MyClaims');">My Claims</div>
+					<div class="submenuLink" onclick="openScreen('MyProfile');">My Profile</div>
+					<div class="submenuLink" onclick="alert('Logging out has been turned off for the Symposium');">Log out</div>
+				</div>
+				<div class="MainContainerPost">
 					<form class="" onsubmit="return false;" id="postForm">
 						<div class="basicRow">
 							<span class="light" id="titleSpan">Title</span><input required="true" name="title" id="jobTitle" type="text" />
@@ -155,31 +165,107 @@
 			MY POSTS SCREEN
 
 			-->
-
+				<div class="topLeftCloser"></div>
 				<nav>
 
+					<div class="logo">
+					</div>
+					<div class="relative reference">
+						<div class="navCont">
+							<div class="navRow relative">
+								<div class="openSubmenu">
+								</div>
+								<div class="postBtn iosBtn"  onclick="openScreen('Post');">
+									Post
+								</div>
+							</div>
+							<div class="navRow">
+								<div class="backBtn iosBtn" onclick="myPostsAt = 0;">
+									Back
+								</div>
+								<h1 class="pageTitle">My Posts</h1>
+								<div class="refreshBtn iosBtn"></div>
+							</div>
+						</div>
+					</div>
 				</nav>
-				MY POSTS
+				<div class="submenu">
+					<div class="submenuLink" onclick="openScreen('MyClaims');">My Claims</div>
+					<div class="submenuLink" onclick="openScreen('MyProfile');">My Profile</div>
+					<div class="submenuLink" onclick="alert('Logging out has been turned off for the Symposium');">Log out</div>
+				</div>
+				<div id="myposts">
+					<ul>
+					</ul>
+				</div>
 			</div><div id="MyProfileScreenContainer" class="screen sec">
 			<!--
 
 			MY PROFILE
 
 			-->
-
+				<div class="topLeftCloser"></div>
 				<nav>
-
+					<div class="logo">
+					</div>
+					<div class="relative reference">
+						<div class="navCont">
+							<div class="navRow relative">
+								<div class="openSubmenu">
+								</div>
+								<div class="postBtn iosBtn"  onclick="openScreen('Post');">
+									Post
+								</div>
+							</div>
+							<div class="navRow">
+								<div class="backBtn iosBtn" onclick="myPostsAt = 0;">
+									Back
+								</div>
+								<h1 class="pageTitle">My Profile</h1>
+								<div id="editProfileBtn iosBtn">Edit</div>
+							</div>
+						</div>
+					</div>
 				</nav>
+				<div class="submenu">
+					<div class="submenuLink" onclick="openScreen('MyPosts');">My Posts</div>
+					<div class="submenuLink" onclick="openScreen('MyClaims');">My Claims</div>
+					<div class="submenuLink" onclick="alert('Logging out has been turned off for the Symposium');">Log out</div>
+				</div>
 			</div><div id="MyClaimsScreenContainer" class="screen sec">
 			<!--
 
 			MY CLAIMS SCREEN
 
 			-->
-
+				<div class="topLeftCloser"></div>
 				<nav>
-
+					<div class="logo">
+					</div>
+					<div class="relative reference">
+						<div class="navCont">
+							<div class="navRow relative">
+								<div class="openSubmenu">
+								</div>
+								<div class="postBtn iosBtn"  onclick="openScreen('Post');">
+									Post
+								</div>
+							</div>
+							<div class="navRow">
+								<div class="backBtn iosBtn" onclick="myPostsAt = 0;">
+									Back
+								</div>
+								<h1 class="pageTitle">My Claims</h1>
+								<div class="refreshBtn iosBtn"></div>
+							</div>
+						</div>
+					</div>
 				</nav>
+				<div class="submenu">
+					<div class="submenuLink" onclick="openScreen('MyPosts');">My Posts</div>
+					<div class="submenuLink" onclick="openScreen('MyProfile');">My Profile</div>
+					<div class="submenuLink" onclick="alert('Logging out has been turned off for the Symposium');">Log out</div>
+				</div>
 			</div><div id="ReviewUserScreenContainer" class="screen sec">
 			<!--
 

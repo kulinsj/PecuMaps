@@ -6,6 +6,8 @@ body{
 	position: relative;
 	width: 360px;
 	height: 615px;
+	background-image: url('../images/green.png');
+	background-repeat: repeat-x;
 }
 div.screen{
 	width: 360px;
@@ -25,6 +27,16 @@ div.loading{
 	background-image: url('../images/index_small.png');
 	background-position: 20px 276px;
 	background-repeat: no-repeat;
+}
+h1.pageTitle{
+	position: absolute;
+	margin: 0;
+	color: #fff;
+	font-size: 18px;
+	width: 360px;
+	display: block;
+	text-align: center;
+	pointer-events: none;
 }
 div.loading.hide {
     opacity:0 !important;
@@ -85,6 +97,13 @@ div.openCloser{
 }
 div.openCloser.leftOpen{
 	background-image: url('../images/arrow_left.png');
+}
+div.refreshBtn{
+	height: 20px;
+	width: 20px;
+	background-image: url('../images/refresh.png');
+	background-repeat: no-repeat;
+	margin: 6px 0 0 250px;
 }
 .relative{
 	position: relative;
@@ -206,13 +225,6 @@ div.screenSlider{
     -webkit-transition: margin-left 0.5s;
     -moz-transition: margin-left 0.5s;
 }
-
-div.screenSlider.oneRight{
-	margin-left: -360px;
-	transition:margin-left 0.5s;
-    -webkit-transition: margin-left 0.5s;
-    -moz-transition: margin-left 0.5s;
-}
 input.search{
 	background: none repeat scroll 0 0 #67F18B;
     border: 1px solid #009627;
@@ -237,4 +249,126 @@ div.backBtn{
 	margin: 6px 0 0 10px;
 	height: 20px;
 	line-height: 20px;
+}
+
+/* MY POSTS STUFF */
+
+.feed_item {
+    height: 100px;
+    position: relative;
+}
+.posts_article {
+    background: none repeat scroll 0 0 #EFEFEF;
+    border-bottom: 1px solid #D4D4D4;
+    border-top: 1px solid white;
+    display: block;
+    height: 78px;
+    padding: 10px;
+}
+.posts_article .title {
+    color: #444444;
+    display: block;
+    font-weight: bold;
+}
+.posts_article p{
+	margin: 0;
+	overflow: hidden;
+	width: 340px;
+	height: 45px;
+	line-height: 22px;
+}
+
+.posts_article .time_left {
+    bottom: 10px;
+    color: #888888;
+    line-height: 11px;
+    position: absolute;
+    right: 10px;
+}
+.posts_article .claims {
+    bottom: 10px;
+    color: #888888;
+    line-height: 11px;
+    position: absolute;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+#myposts ul{
+	margin-top: 50px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 565px;
+}
+
+/* POST A POST STUFF */
+div.MainContainerPost {
+    margin: 60px 10px 10px;
+    width: 340px;
+}
+#jobTitle {
+    width: 285px;
+}
+#typeSelWrap {
+    width: 243px;
+}
+#postTypeSelect {
+    width: 284px;
+}
+#jobLocation {
+    width: 248px;
+}
+#jobPay {
+    width: 86px;
+}
+#flatVanisher {
+    font-size: 17px;
+}
+#spacer {
+    display: inline-block;
+    margin: 0 12px;
+}
+#payPer {
+    width: 161px;
+}
+#flatCheck {
+    font-size: 19px;
+}
+#numSelWrap {
+    width: 75px;
+}
+#dateNum {
+    width: 100px;
+}
+#dateSelWrap {
+    width: 100px;
+}
+#dateType {
+    width: 125px;
+}
+#jobDescription {
+    display: block;
+    height: 125px;
+    margin-bottom: 12px;
+    width: 336px;
+}
+div.topLeftCloser{
+	position: absolute;
+	width:360px;
+	height: 615px;
+	z-index: 120;
+	display: none;
+}
+div.topLeftCloser.secondary{
+	z-index: 200;
+	width:160px;
+	height: 50px;
+	margin-left: 200px;
+}
+div.topLeftCloser.open{
+	display: block;
 }
